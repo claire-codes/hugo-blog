@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+    <head>
+        <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+
+        {{ partial "head.html" . }}
+    </head>
+
+    <body>
+        {{ partial "header.html" . }}
+        <div class="container wrapper">
+            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            <h2>This is a SINGLE</h2>
+            <span class="post-date">{{ .Date.Format "Jan 2, 2006 " }}</span>
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        </div>
+        {{ partial "footer.html" . }}
+    </body>

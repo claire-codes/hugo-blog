@@ -1,0 +1,28 @@
+baseURL = "http://example.org/"
+languageCode = "en-gb"
+title = "Claire Parker-Jones Blog"
+theme = "Ted"
+
+[menu]
+  [[menu.header]]
+    name = "blog"
+    weight = 0
+    url = "/blog"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "/about"
+
+[params]
+  StackOverflowID = "your_stackoverflow_id"
+  GithubID = "claireparker"
+  TwitterID = "claireparkerpen"
+  CodepenID = "your_codepen"
+  LinkedInID = "your_linkedin"
+  InstagramID = "claire_codes"
+  Name = "Claire Parker-Jones"
+  HeaderUsername = "claire"
+  HeaderHostname = "her-blog"
+  About = "Womp womp"
+  ProfilePicture = "profile_picture_url"
+  GoogleAnalytics = "your_google_analytics_id"
