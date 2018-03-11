@@ -1,0 +1,23 @@
+.c-footer {
+    background-color: #fafafa;
+    border-top: thin solid #f3f3f3;
+    color: #737373;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+
+    div {
+        margin-bottom: 5px;
+    }
+}
+
+.c-footer__social-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.c-footer__social-icon {
+    font-size: 30px;
+}

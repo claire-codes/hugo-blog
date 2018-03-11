@@ -1,6 +1,11 @@
 @import 'partials/_fonts';
+@import 'partials/_colours';
+
+@import 'partials/_elements';
+
+// COMPONENTS
+@import 'partials/_footer';
 
 body {
      font-family: 'OpenSans', serif;
-    color: blue;
-} 
+}

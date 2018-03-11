@@ -3,6 +3,28 @@
   src: url("/fonts/opensans-regular-webfont.woff2") format("woff2"), url("/fonts/opensans-regular-webfont.woff") format("woff"); }
 
 body {
-  font-family: 'OpenSans', serif;
-  color: blue; }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvcGFydGlhbHMvX2ZvbnRzLnNjc3MiLCIuLi9zY3NzL3N0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usd0JBQXVCO0VBQ3ZCLDhIQUNnRSxFQUFBOztBQ0RsRTtFQUNLLCtCQUE4QjtFQUMvQixZQUFXLEVBQ2QiLCJmaWxlIjoic3R5bGVzLmNzcyJ9 */
+  padding: 0;
+  margin: 0; }
+
+.c-footer {
+  background-color: #fafafa;
+  border-top: thin solid #f3f3f3;
+  color: #737373;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center; }
+  .c-footer div {
+    margin-bottom: 5px; }
+
+.c-footer__social-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto; }
+
+.c-footer__social-icon {
+  font-size: 30px; }
+
+body {
+  font-family: 'OpenSans', serif; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvcGFydGlhbHMvX2ZvbnRzLnNjc3MiLCIuLi9zY3NzL3BhcnRpYWxzL19lbGVtZW50cy5zY3NzIiwiLi4vc2Nzcy9wYXJ0aWFscy9fZm9vdGVyLnNjc3MiLCIuLi9zY3NzL3N0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usd0JBQXVCO0VBQ3ZCLDhIQUNnRSxFQUFBOztBQ0hsRTtFQUNJLFdBQVU7RUFDVixVQUFTLEVBQ1o7O0FDSEQ7RUFDSSwwQkFBeUI7RUFDekIsK0JBQThCO0VBQzlCLGVBQWM7RUFDZCxnQkFBZTtFQUNmLGNBQWE7RUFDYixtQkFBa0IsRUFLckI7RUFYRDtJQVNRLG1CQUFrQixFQUNyQjs7QUFHTDtFQUNJLGNBQWE7RUFDYiwrQkFBOEI7RUFDOUIsaUJBQWdCO0VBQ2hCLGVBQWMsRUFDakI7O0FBRUQ7RUFDSSxnQkFBZSxFQUNsQjs7QUNkRDtFQUNLLCtCQUE4QixFQUNsQyIsImZpbGUiOiJzdHlsZXMuY3NzIn0= */
