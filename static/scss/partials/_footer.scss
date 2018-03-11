@@ -1,7 +1,6 @@
 .c-footer {
-    background-color: #fafafa;
-    border-top: thin solid #f3f3f3;
-    color: #737373;
+    background-color: $color-footer-background;
+    color: $color-footer-text;
     font-size: 14px;
     padding: 10px;
     text-align: center;
