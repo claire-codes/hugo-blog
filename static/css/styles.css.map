@@ -2,8 +2,9 @@
 	"version": 3,
 	"file": "styles.css",
 	"sources": [
-		"../scss/styles.scss"
+		"../scss/styles.scss",
+		"../scss/partials/_fonts.scss"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,UAAU;EACvB,KAAK,EAAE,IAAI,GACd"
+	"mappings": "ACAA,UAAU;EACR,WAAW,EAAE,UAAU;EACvB,GAAG,EAAG,4CAA4C,CAAC,eAAe,EAC5D,2CAA2C,CAAC,cAAc;;ADDlE,AAAA,IAAI,CAAC;EACA,WAAW,EAAE,iBAAiB;EAC/B,KAAK,EAAE,IAAI,GACd"
 }

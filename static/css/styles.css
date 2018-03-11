@@ -1,4 +1,8 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url("/fonts/opensans-regular-webfont.woff2") format("woff2"), url("/fonts/opensans-regular-webfont.woff") format("woff"); }
+
 body {
-  font-family: sans-serif;
+  font-family: 'OpenSans', serif;
   color: blue; }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3Mvc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx3QkFBdUI7RUFDdkIsWUFBVyxFQUNkIiwiZmlsZSI6InN0eWxlcy5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvcGFydGlhbHMvX2ZvbnRzLnNjc3MiLCIuLi9zY3NzL3N0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usd0JBQXVCO0VBQ3ZCLDhIQUNnRSxFQUFBOztBQ0RsRTtFQUNLLCtCQUE4QjtFQUMvQixZQUFXLEVBQ2QiLCJmaWxlIjoic3R5bGVzLmNzcyJ9 */
