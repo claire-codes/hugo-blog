@@ -13,6 +13,7 @@
             <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
             <h2>This is a SINGLE</h2>
             <span class="post-date">{{ .Date.Format "Jan 2, 2006 " }}</span>
+            <div class="reading-time">{{ .ReadingTime }} minutes</div>
             <div class="post-content">
                 {{ .Content }}
             </div>
