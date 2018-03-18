@@ -5,13 +5,17 @@ theme = "Ted"
 
 [menu]
   [[menu.header]]
-    name = "blog"
+    name = "Blog"
     weight = 0
     url = "/blog"
   [[menu.header]]
-    name = "about"
+    name = "About"
     weight = 1
     url = "/about"
+  [[menu.header]]
+    name = "Interesting"
+    weight = 1
+    url = "/interesting"
 
 [params]
   StackOverflowID = "your_stackoverflow_id"
