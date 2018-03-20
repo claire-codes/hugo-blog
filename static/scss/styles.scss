@@ -2,6 +2,7 @@
 @import 'partials/_colours';
 
 @import 'partials/_elements';
+@import 'partials/_site';
 
 // COMPONENTS
 @import 'partials/_footer';
@@ -9,5 +10,9 @@
 
 body {
     color: $color-body-font;
-     font-family: 'SourceSerif', serif;
+     font-family: 'Noto Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', serif;
 }

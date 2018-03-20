@@ -9,14 +9,22 @@
 
     <body>
         {{ partial "header.html" . }}
-        <div class="container wrapper">
-            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-            <h2>This is a SINGLE</h2>
-            <span class="post-date">{{ .Date.Format "Jan 2, 2006 " }}</span>
-            <div class="reading-time">{{ .ReadingTime }} minutes</div>
-            <div class="post-content">
-                {{ .Content }}
+        <main role="main">
+            <div class="o-main__wrapper">
+                <h1>{{ .Title }}</h1>
+                <span class="post-date">{{ .Date.Format "January 2, 2006 " }}</span>
+                <div class="reading-time">{{ .ReadingTime }} minute read</div>
+                <div class="post-content">
+                    {{ .Content }}
+                </div>
+                <div class="post-footer">
+                    {{ with .Site.Params.TwitterID }}
+                    Comments? <a href="https://twitter.com/{{.}}">Send me a Tweet <i class="fab fa-twitter" aria-hidden="true"></i></a>.
+                    {{ end }}
+                    <br />
+                    Typos? TODO <a href="">Edit this page on Github</a>.
+                </div>
             </div>
-        </div>
+        </main>
         {{ partial "footer.html" . }}
     </body>
