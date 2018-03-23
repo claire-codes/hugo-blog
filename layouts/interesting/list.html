@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+	<head>
+		<title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+
+		{{ partial "head.html" . }}
+	</head>
+
+	<body>
+		{{ partial "header.html" . }}
+		<main>
+			<div class="o-main__wrapper">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h1 id=>{{ .Title }}</h1>
+						{{.Content}}
+					</div>
+				</div>
+				<ul id="post-list">
+	        	{{ range .Paginator.Pages }}
+					<li>
+						<div class="post-list-item">
+							<div class="post-header">
+								<h2 class="post-link">{{ .Date.Format "Jan 2, 2006" }}</h2>
+							</div>
+							<div class="post-summary">
+                            {{ range .Params.interests }}
+                                <p>{{ . | markdownify }}</p>
+                            {{ end }}
+                            </div>
+						</div>
+					</li>
+				{{ end }}
+				</ul>
+			</div>
+		</main>
+		{{ partial "footer.html" . }}
+	</body>
+</html>
