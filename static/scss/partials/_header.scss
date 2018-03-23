@@ -1,27 +1,21 @@
-$color-text-stroke: #666;
-$color-text-fill: white;
-$color-text-shadow: #00b0ff;
+$color-header-text: #4527A0;
+$color-middle-shadow: #FFEA00;
+$color-back-shadow: #00E676;
 $size-stroke-width: 2px;
 
+.c-header {
+    background-color: $color-head-foot-bg;
+}
+
 .c-header__title {
-    color: $color-text-stroke; // This line is the fallback for browsers that don't support the following effects
+    color: $color-header-text;
     font-family: sans-serif;
     font-size: 50px;
     letter-spacing: 2px;
     margin: 0;
-    text-shadow: 4px 4px $color-text-shadow;
+    text-shadow: 3px 0px $color-middle-shadow, 6px 0px $color-back-shadow;
     width: 49%;
     display: inline-block;
-}
-@supports ((-webkit-text-stroke-color: $color-text-stroke) and (-webkit-text-fill-color: $color-text-fill)) or ((-moz-text-stroke-color: $color-text-stroke) and (-moz-text-fill-color: $color-text-fill)) {
-    .c-header__title {
-        -moz-text-fill-color: $color-text-fill;
-        -webkit-text-fill-color: $color-text-fill;
-        -moz-text-stroke-color: $color-text-stroke;
-        -webkit-text-stroke-color: $color-text-stroke;
-        -moz-text-stroke-width: $size-stroke-width;
-        -webkit-text-stroke-width: $size-stroke-width;
-    }
 }
 
 .c-header__links-container {
