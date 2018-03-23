@@ -1,6 +1,10 @@
 // GENERAL
 $color-body-font: #333;
+$color-head-foot-bg: #EDE7F6;
+
+// HEADER
+$color-header-background: $color-head-foot-bg;
 
 // FOOTER
-$color-footer-background: #fafafa;
+$color-footer-background: $color-head-foot-bg;
 $color-footer-text: #737373;
