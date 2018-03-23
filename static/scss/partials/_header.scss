@@ -5,6 +5,8 @@ $size-stroke-width: 2px;
 
 .c-header {
     background-color: $color-head-foot-bg;
+    background-image: linear-gradient(to bottom, $color-head-foot-bg 80%, $color-body-background);
+    margin-bottom: 40px; 
 }
 
 .c-header__title {
@@ -19,8 +21,7 @@ $size-stroke-width: 2px;
 }
 
 .c-header__links-container {
-    width: 50%;
-    display: inline-block;
+    float: right;
 }
 
 .c-header__links-list {
@@ -30,5 +31,7 @@ $size-stroke-width: 2px;
 }
 
 .c-header__link {
-
+    &:not(:last-child) {
+        margin-right: 25px;
+    }
 }

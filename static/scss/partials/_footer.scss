@@ -1,8 +1,10 @@
 .c-footer {
     background-color: $color-footer-background;
+    background-image: linear-gradient(to top, $color-head-foot-bg 80%, $color-body-background);
     color: $color-footer-text;
     font-size: 14px;
-    padding: 10px;
+    padding: 30px 10px 10px;
+    margin-top: 40px;
     text-align: center;
 
     div:not(.c-footer__social-container) {
@@ -19,8 +21,7 @@
 
 // Credit to https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css
 
-$color-body-background: $color-footer-background;
-$color-icon: $color-body-background;
+$color-icon: $color-footer-background;
 $color-icon-hover: #efefef;
 $color-background-start: #111;
 

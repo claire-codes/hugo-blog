@@ -6,7 +6,6 @@
                 <a href="{{ .Site.BaseURL }}">Home</a>
             </li>
             {{ range .Site.Menus.header }}
-            {{ $name := lower .Name }}
             <li class="c-header__link">
                 <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
