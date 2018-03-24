@@ -1,12 +1,12 @@
-$color-header-text: #4527A0;
-$color-middle-shadow: #FFEA00;
-$color-back-shadow: #00E676;
+$color-header-text: #4527a0;
+$color-middle-shadow: #ffea00;
+$color-back-shadow: #00e676;
 $size-stroke-width: 2px;
 
 .c-header {
     background-color: $color-head-foot-bg;
     background-image: linear-gradient(to bottom, $color-head-foot-bg 80%, $color-body-background);
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .c-header__title {
@@ -15,7 +15,7 @@ $size-stroke-width: 2px;
     font-size: 50px;
     letter-spacing: 2px;
     margin: 0;
-    text-shadow: 3px 0px $color-middle-shadow, 6px 0px $color-back-shadow;
+    text-shadow: 3px 0 $color-middle-shadow, 6px 0 $color-back-shadow;
     width: 49%;
     display: inline-block;
 }

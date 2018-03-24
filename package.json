@@ -8,13 +8,15 @@
     "build-task:autoprefixer": "postcss static/css/*.css --use autoprefixer -d static/css",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'static/scss/**/*.scss' -c 'npm run sass:build'",
-    "dev": "npm-run-all -p sass:*"
+    "dev": "npm-run-all -p sass:*",
+    "sass-lint": "./node_modules/.bin/sass-lint  -v -q"
   },
   "keywords": [],
   "author": "Claire Parker <claire.parker87@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass-chokidar": "^1.1.0"
+    "node-sass-chokidar": "^1.1.0",
+    "sass-lint": "^1.12.1"
   },
   "dependencies": {
     "autoprefixer": "^8.1.0",
