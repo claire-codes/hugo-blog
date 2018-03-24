@@ -40,7 +40,7 @@ $color-code-background: #272822;
 $color-code-color: #f8f8f2;
 
 code {
-    background-colour: $color-code-background;
+    background-color: $color-code-background;
     color: $color-code-color;
     border-radius: 0.3em;
     padding: 4px 5px 6px;
