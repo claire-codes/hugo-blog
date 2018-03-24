@@ -16,18 +16,16 @@
 				</div>
 				<ul class="c-post-list">
 				{{ range .Data.Pages }}
-					<li>
-						<div class="post-list-item">
-							<div>
-								<a class="c-post-list__link" href="{{ .Permalink }}"><h2 class="c-post-list__title">{{ .Title }}</h2></a>
-								<h3 class="post-date">{{ .Date.Format "Jan 2, 2006" }}</h3>
-							</div>
-							{{ if .Params.categories }}
-								{{ partial "categories.html" . }}
-							{{ end }}
-							<div class="post-summary">
-								<p>{{ .Params.summary }}</p>
-							</div>
+					<li class="c-post-list__item">
+						<div>
+							<a class="c-post-list__link" href="{{ .Permalink }}"><h2 class="c-post-list__title">{{ .Title }}</h2></a>
+							<h3 class="post-date">{{ .Date.Format "2 January 2006" }}</h3>
+						</div>
+						{{ if .Params.categories }}
+							{{ partial "categories.html" . }}
+						{{ end }}
+						<div class="post-summary">
+							<p>{{ .Params.summary }}</p>
 						</div>
 					</li>
 				{{ end }}
