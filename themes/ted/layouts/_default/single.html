@@ -5,6 +5,7 @@
         <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
 
         {{ partial "head.html" . }}
+        <link rel="stylesheet" href="/css/prism.css" />
     </head>
 
     <body>
@@ -12,7 +13,7 @@
         <main role="main">
             <div class="o-main__wrapper c-post">
                 <h1 class="c-post__title">{{ .Title }}</h1>
-                <span class="post-date">{{ .Date.Format "January 2, 2006 " }}</span>
+                <h3 class="post-date">{{ .Date.Format "2 January 2006 " }}</h3>
                 <div class="reading-time">{{ .ReadingTime }} minute read</div>
                 {{ if .Params.categories }}
                     {{ partial "categories.html" . }}
@@ -30,4 +31,5 @@
             </div>
         </main>
         {{ partial "footer.html" . }}
+        <script src="/js/prism.js"></script>
     </body>
