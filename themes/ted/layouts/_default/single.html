@@ -10,14 +10,14 @@
     <body>
         {{ partial "header.html" . }}
         <main role="main">
-            <div class="o-main__wrapper">
-                <h1>{{ .Title }}</h1>
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">{{ .Title }}</h1>
                 <span class="post-date">{{ .Date.Format "January 2, 2006 " }}</span>
                 <div class="reading-time">{{ .ReadingTime }} minute read</div>
                 <div class="post-content">
                     {{ .Content }}
                 </div>
-                <div class="post-footer">
+                <div class="c-post__footer">
                     {{ with .Site.Params.TwitterID }}
                     Comments? <a href="https://twitter.com/{{.}}">Send me a Tweet <i class="fab fa-twitter" aria-hidden="true"></i></a>
                     {{ end }}

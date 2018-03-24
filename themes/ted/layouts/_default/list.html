@@ -17,12 +17,12 @@
 						{{.Content}}
 					</div>
 				</div>
-				<ul id="post-list">
+				<ul class="c-post-list">
 	        	{{ range .Paginator.Pages }}
 					<li>
 						<div class="post-list-item">
 							<div class="post-header">
-								<h2 class="post-link"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+								<a class="c-post-list__link" href="{{ .Permalink }}"><h2 class="c-post-list__title">{{ .Title }}</h2></a>
 								<h3 class="post-date">{{ .Date.Format "Jan 2, 2006" }}</h3>
 							</div>
 							<div class="post-summary"><p>{{ .Params.summary }}</p></div>

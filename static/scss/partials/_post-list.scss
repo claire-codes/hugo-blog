@@ -1,0 +1,19 @@
+.c-post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.c-post-list__link {
+    text-decoration: none;
+}
+
+.c-post-list__title {
+    color: black;
+    font-size: 50px;
+    margin: 20px 0;
+    border-bottom: 5px solid rebeccapurple;
+    &:hover {
+        opacity: 0.7;
+    }
+}

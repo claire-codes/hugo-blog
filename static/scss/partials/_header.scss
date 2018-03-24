@@ -11,7 +11,7 @@ $size-stroke-width: 2px;
 
 .c-header__title {
     color: $color-header-text;
-    font-family: sans-serif;
+    font-family: $header-font;
     font-size: 50px;
     letter-spacing: 2px;
     margin: 0;
