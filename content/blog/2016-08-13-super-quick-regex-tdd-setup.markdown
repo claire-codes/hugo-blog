@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Super quick Regex TDD setup
-summary: When setting up a test harness is this quick there&#39;s no excuse for not doing TDD. Plus regexes!
+summary: When setting up a test harness is this quick there's no excuse for not doing TDD. Plus regexes!
 date: 2016-08-13 20:25:22
 comments: true
 published: true

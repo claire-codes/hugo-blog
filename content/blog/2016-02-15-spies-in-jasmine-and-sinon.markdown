@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spies in Jasmine &amp; Sinon
+title: Spies in Jasmine & Sinon
 date: 2016-02-15 18:13:45
 comments: true
 published: true

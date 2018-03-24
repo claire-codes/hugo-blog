@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Top tips for targeting your searches in Atom
-summary: Speed up Atom&#39;s slow file search with glob patterns.
+summary: Speed up Atom's slow file search with glob patterns.
 date: 2017-03-22 23:10:20
 comments: true
 published: true

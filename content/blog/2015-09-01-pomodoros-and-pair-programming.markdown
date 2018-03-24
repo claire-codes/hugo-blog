@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pomodoros &amp; Pair Programming"
+title: "Pomodoros & Pair Programming"
 date: 2015-09-01 23:00:16 +0100
 comments: true
 categories:

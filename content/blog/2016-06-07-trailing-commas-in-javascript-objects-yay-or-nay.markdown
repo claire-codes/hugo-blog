@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trailing commas in JavaScript objects, yay or nay?
-summary: And arrays too! It looks like you&#39;ve forgotten something but does it really matter?
+summary: And arrays too! It looks like you've forgotten something but does it really matter?
 date: 2016-06-07 17:33:47
 comments: true
 published: true

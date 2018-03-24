@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Changing Jekyll&#39;s Permalink
+title: Changing Jekyll's Permalink
 date: 2016-03-08 19:54:26
 comments: true
 published: true

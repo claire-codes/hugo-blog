@@ -15,7 +15,7 @@
 					{{.Content}}
 				</div>
 				<ul class="c-post-list">
-	        	{{ range .Paginator.Pages }}
+				{{ range .Data.Pages }}
 					<li>
 						<div class="post-list-item">
 							<div>
@@ -25,7 +25,9 @@
 							{{ if .Params.categories }}
 								{{ partial "categories.html" . }}
 							{{ end }}
-							<div class="post-summary"><p>{{ .Params.summary }}</p></div>
+							<div class="post-summary">
+								<p>{{ .Params.summary }}</p>
+							</div>
 						</div>
 					</li>
 				{{ end }}

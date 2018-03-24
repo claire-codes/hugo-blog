@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Global gitignores - is this thing on?
-summary: What are they, how to create one, whether they&#39;re a good idea and how to check it&#39;s working!!
+summary: What are they, how to create one, whether they're a good idea and how to check it's working!!
 date: 2017-04-06 22:05:26
 comments: true
 published: true

@@ -11,14 +11,12 @@
 		{{ partial "header.html" . }}
 		<main>
 			<div class="o-main__wrapper">
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<h1 id=>{{ .Title }}</h1>
-						{{.Content}}
+				<div>
+					<h1 id=>{{ .Title }}</h1>
+					{{.Content}}
 					</div>
-				</div>
 				<ul id="post-list">
-	        	{{ range .Paginator.Pages }}
+				{{ range .Data.Pages }}
 					<li>
 						<div class="post-list-item">
 							<div class="post-header">
