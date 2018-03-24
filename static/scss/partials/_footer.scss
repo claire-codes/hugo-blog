@@ -19,22 +19,9 @@
     margin: 10px auto 15px;
 }
 
-// Credit to https://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css
-
-$color-icon: $color-footer-background;
-$color-icon-hover: #fff;
-$color-background-start: #111;
-
-$color-twitter: #55acee;
-$color-magento: #f46f25;
-$color-linkedin: #0077b5;
-$color-instagram: #e4405f;
-$color-github: #bd2c00;
-$color-codepen: #fcd000;
-
 .c-footer__social-icon {
     font-size: 30px;
-    background-color: $color-background-start; //fallback
+    background-color: $color-footer-icon-background-start; //fallback
     background-size: 200% 100%;
     background-position: left bottom;
     height: 50px;
@@ -44,21 +31,21 @@ $color-codepen: #fcd000;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease;
-    color: $color-icon;
+    color: $color-footer-icon;
     text-decoration: none;
 
     &:hover,
     &:active {
         background-position: right bottom;
         cursor: pointer;
-        color: $color-icon-hover;
+        color: $color-footer-icon-hover;
     }
 }
 
 .icon--twitter {
     background-image: linear-gradient(
         to right,
-        $color-background-start 50%,
+        $color-footer-icon-background-start 50%,
         $color-twitter 50%
     );
 }
@@ -66,7 +53,7 @@ $color-codepen: #fcd000;
 .icon--magento {
     background-image: linear-gradient(
         to right,
-        $color-background-start 50%,
+        $color-footer-icon-background-start 50%,
         $color-magento 50%
     );
 }
@@ -74,7 +61,7 @@ $color-codepen: #fcd000;
 .icon--linkedin {
     background-image: linear-gradient(
         to right,
-        $color-background-start 50%,
+        $color-footer-icon-background-start 50%,
         $color-linkedin 50%
     );
 }
@@ -82,7 +69,7 @@ $color-codepen: #fcd000;
 .icon--instagram {
     background-image: linear-gradient(
         to right,
-        $color-background-start 50%,
+        $color-footer-icon-background-start 50%,
         $color-instagram 50%
     );
 }
@@ -90,21 +77,21 @@ $color-codepen: #fcd000;
 .icon--github {
     background-image: linear-gradient(
         to right,
-        $color-background-start 50%,
+        $color-footer-icon-background-start 50%,
         $color-github 50%
     );
     &:hover {
-        color: $color-background-start;
+        color: $color-footer-icon-background-start;
     }
 }
 
 .icon--codepen {
     background-image: linear-gradient(
         to right,
-        $color-background-start 50%,
+        $color-footer-icon-background-start 50%,
         $color-codepen 50%
     );
     &:hover {
-        color: $color-background-start;
+        color: $color-footer-icon-background-start;
     }
 }

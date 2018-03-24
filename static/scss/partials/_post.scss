@@ -4,11 +4,14 @@
 }
 
 .c-post__title {
-    border-bottom: 5px solid rebeccapurple;
+    border-bottom: 5px solid $color-post-title-border;
     line-height: initial;
 }
 
 .c-post__categories {
-    color: $color-post-category;
     font-style: italic;
+}
+
+.c-post__category {
+    color: $color-post-category;
 }

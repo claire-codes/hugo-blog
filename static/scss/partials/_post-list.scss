@@ -9,11 +9,18 @@
 }
 
 .c-post-list__title {
-    color: black;
+    color: $color-post-list-title;
     font-size: 50px;
     margin: 20px 0;
-    border-bottom: 5px solid rebeccapurple;
+    border-bottom: 5px solid $color-post-list-title-border;
+    padding-bottom: 5px;
     &:hover {
-        opacity: 0.7;
+        color: $color-post-list-title-border;
+        border-bottom-color: $color-post-list-title;
+        text-shadow: 3px 3px $color-post-hover-shadow;
     }
+}
+
+.c-post-list__item {
+    margin-bottom: 50px;
 }
