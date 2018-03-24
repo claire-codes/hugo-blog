@@ -14,7 +14,9 @@
                 <h1 class="c-post__title">{{ .Title }}</h1>
                 <span class="post-date">{{ .Date.Format "January 2, 2006 " }}</span>
                 <div class="reading-time">{{ .ReadingTime }} minute read</div>
-                {{ partial "categories.html" . }}
+                {{ if .Params.categories }}
+                    {{ partial "categories.html" . }}
+                {{ end }}
                 <div class="post-content">
                     {{ .Content }}
                 </div>

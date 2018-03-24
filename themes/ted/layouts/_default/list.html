@@ -25,7 +25,9 @@
 								<a class="c-post-list__link" href="{{ .Permalink }}"><h2 class="c-post-list__title">{{ .Title }}</h2></a>
 								<h3 class="post-date">{{ .Date.Format "Jan 2, 2006" }}</h3>
 							</div>
-							{{ partial "categories.html" . }}
+							{{ if .Params.categories }}
+								{{ partial "categories.html" . }}
+							{{ end }}
 							<div class="post-summary"><p>{{ .Params.summary }}</p></div>
 						</div>
 					</li>
