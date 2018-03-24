@@ -1,4 +1,18 @@
 body {
+    color: $color-body-font;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nobile', sans-serif;
+}
+
+code {
+    background-color: $color-code-background;
+    color: $color-code-color;
+    border-radius: 0.3em;
+    padding: 4px 5px 6px;
+    white-space: nowrap;
 }
