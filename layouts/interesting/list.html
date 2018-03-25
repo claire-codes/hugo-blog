@@ -12,22 +12,18 @@
 		<main>
 			<div class="o-main__wrapper">
 				<div>
-					<h1 id=>{{ .Title }}</h1>
+					<h1>{{ .Title }}</h1>
 					{{.Content}}
-					</div>
-				<ul id="post-list">
+				</div>
+				<ul class="c-interesting__list">
 				{{ range .Data.Pages }}
-					<li>
-						<div class="post-list-item">
-							<div class="post-header">
-								<h2 class="post-link">{{ .Date.Format "Jan 2, 2006" }}</h2>
-							</div>
-							<div class="post-summary">
-                            {{ range .Params.interests }}
-                                <p>{{ . | markdownify }}</p>
-                            {{ end }}
-                            </div>
-						</div>
+					<li class="c-interesting__item">
+						<h2 class="c-interesting__date">{{ .Date.Format "2 January 2006" }}</h2>
+						<ul class="c-interesting__entry-list">
+							{{ range .Params.interests }}
+							<li class="c-interesting__entry">{{ . | markdownify }}</li>
+							{{ end }}
+						</ul>
 					</li>
 				{{ end }}
 				</ul>
