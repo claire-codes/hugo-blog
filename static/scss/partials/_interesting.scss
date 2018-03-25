@@ -24,6 +24,11 @@
 }
 
 .c-interesting__entry {
+    // This is to stop dead long links mucking the width up on small screens
+    div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
     &:not(:last-child) {
         margin-bottom: 5px;
     }

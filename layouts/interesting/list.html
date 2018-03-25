@@ -21,7 +21,7 @@
 						<h2 class="c-interesting__date">{{ .Date.Format "2 January 2006" }}</h2>
 						<ul class="c-interesting__entry-list">
 							{{ range .Params.interests }}
-							<li class="c-interesting__entry">{{ . | markdownify }}</li>
+							<li class="c-interesting__entry"><div>{{ . | markdownify }}</div></li>
 							{{ end }}
 						</ul>
 					</li>
