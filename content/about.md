@@ -1,7 +1,6 @@
 +++
-title = "About Hugo"
-date = "2014-04-09"
-menu = "main"
+title = "About Me"
+type = "about"
 +++
 
 I'm a lumberjack and it's OK
