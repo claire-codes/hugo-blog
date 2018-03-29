@@ -27,8 +27,22 @@ $size-stroke-width: 2px;
     list-style: none;
 }
 
-.c-header__link {
+.c-header__nav-item {
     &:not(:last-child) {
-        margin-right: 25px;
+        margin-right: 5px;
+    }
+}
+
+.c-header__link {
+    text-decoration: none;
+    font-size: 20px;
+    color: $color-header-text;
+    padding: 5px 10px;
+
+    &:hover {
+        color: $color-nav-link-hover;
+        background-color: $color-header-text;
+        border: none;
+        border-radius: 0;
     }
 }
