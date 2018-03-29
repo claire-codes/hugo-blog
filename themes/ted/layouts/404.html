@@ -8,14 +8,16 @@
 	</head>
 	<body>
 		{{ partial "header.html" . }}
-		<div class="container wrapper">
-			<h1>404</h1>
-			<div class="c-404__emoji">(╯°□°）╯︵ ┻━┻</div>
-			<div class="c-404__emoji">┬──┬ ノ( ゜-゜ノ)</div>
-			<div class="c-404__emoji">(ノಠ益ಠ)ノ彡┻━┻</div>
-			<div class="c-404__emoji">┬──┬ ノ( ゜-゜ノ)</div>
-			<div class="c-404__emoji">(╯°Д°）╯︵/(.□ . \)</div>
-		</div>
+		<main role="main">
+			<div class="o-main__wrapper">
+				<div class="c-404__emoji">(╯°□°）╯︵ ┻━┻</div>
+				<div class="c-404__emoji">┬──┬ ノ( ゜-゜ノ)</div>
+				<div class="c-404__emoji">(╯°Д°）╯︵┻━┻</div>
+				<div class="c-404__emoji">┬──┬ ノ( ゜-゜ノ)</div>
+				<div class="c-404__emoji">(ノಠ益ಠ)ノ彡/(.□ . \)</div>
+				<p class="c-404__text">You've found the 404 page and appear to be lost. Go <a href="/">home</a>.</p>
+			</div>
+		</main>
 		{{ partial "footer.html" . }}
 	</body>
 </html>
