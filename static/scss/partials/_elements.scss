@@ -16,3 +16,15 @@ code {
     padding: 4px 5px 6px;
     white-space: nowrap;
 }
+
+a {
+    color: $color-link;
+
+    &:hover {
+        background-color: $color-link-hover-background;
+        border-top: 1px solid $color-link-hover-border;
+        border-bottom: 1px solid $color-link-hover-border;
+        transition: background-color 0.25s linear;
+        border-radius: 0.3em;
+    }
+}
