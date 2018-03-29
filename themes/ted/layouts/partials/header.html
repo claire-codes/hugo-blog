@@ -1,16 +1,18 @@
 <header class="c-header">
-    <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
-    <nav class="c-header__links-container">
-        <ul class="c-header__links-list">
-            <li class="c-header__nav-item">
-                <a class="c-header__link" href="{{ .Site.BaseURL }}">Home</a>
-            </li>
-            {{ range .Site.Menus.header }}
-            <li class="c-header__nav-item">
-                <a class="c-header__link" href="{{ .URL }}">{{ .Name }}</a>
-            </li>
-            {{end}}
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="{{ .Site.BaseURL }}">Home</a>
+                </li>
+                {{ range .Site.Menus.header }}
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{end}}
 
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </div>
 </header>

@@ -4,6 +4,12 @@ $size-stroke-width: 2px;
     background-color: $color-head-foot-bg;
     background-image: linear-gradient(to bottom, $color-head-foot-bg 80%, $color-body-background);
     margin-bottom: 40px;
+    padding: 2rem 1rem;
+}
+
+.c-header__container {
+    max-width: 50rem;
+    margin: 0 auto;
 }
 
 .c-header__title {
@@ -25,6 +31,7 @@ $size-stroke-width: 2px;
     display: flex;
     justify-content: space-between;
     list-style: none;
+    padding: 0;
 }
 
 .c-header__nav-item {
