@@ -6,6 +6,10 @@
 .c-post__title {
     border-bottom: 5px solid $color-post-title-border;
     line-height: initial;
+
+    @media (max-width: $mobile-breakpoint) {
+        margin-top: 0;
+    }
 }
 
 .c-post__categories {

@@ -34,6 +34,12 @@
     color: $color-footer-icon;
     text-decoration: none;
 
+    @media (max-width: $mobile-breakpoint) {
+        font-size: 22px;
+        height: 40px;
+        width: 40px;
+    }
+
     &:hover,
     &:active {
         background-position: right bottom;
