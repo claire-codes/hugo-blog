@@ -1,0 +1,15 @@
+.o-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.o-main__wrapper {
+    max-width: 42rem;
+    margin: 0 auto;
+
+    @media (max-width: $mobile-breakpoint) {
+        padding: 0 1rem;
+    }
+}

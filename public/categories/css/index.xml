@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/css/</link>
+    <description>Recent content in Css on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 19 Mar 2018 20:54:03 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reasons not to use IDs in CSS</title>
+      <link>http://example.org/blog/2018-03-19-reasons-not-to-use-ids-in-css/</link>
+      <pubDate>Mon, 19 Mar 2018 20:54:03 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-03-19-reasons-not-to-use-ids-in-css/</guid>
+      <description>Sometimes when I’m reviewing code, I advise a colleague not to use IDs for CSS styles, and inevitably get asked why. Like standing in queues, making a cup of tea or applying a full face of makeup in the dark at 6am, avoiding IDs in CSS is something I do without thinking. It takes me a minute before I can explain to other people why I do it. So with that in mind, here’s a list of reasons I avoid using IDs in my stylesheets, and prefer classes instead.</description>
+    </item>
+    
+    <item>
+      <title>Styling inline code tags</title>
+      <link>http://example.org/blog/2018-03-16-styling-inline-code-tags/</link>
+      <pubDate>Fri, 16 Mar 2018 08:58:21 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-03-16-styling-inline-code-tags/</guid>
+      <description>I like writing tech-related blog posts (you’re reading one right now!). My posts often contain the &amp;lt;code&amp;gt; tag as I illustrate code examples. The default browser style for this tag can be pretty dull, typically using the system monospace font and a beige background colour. I&amp;rsquo;ve added my own custom style to this tag. This is a step-by-step explanation of it, as I&amp;rsquo;d rather do that than watch some drivel on Netflix today.</description>
+    </item>
+    
+    <item>
+      <title>Multiline comments in Sass</title>
+      <link>http://example.org/blog/2017-11-21-multiline-comments-in-sass/</link>
+      <pubDate>Tue, 21 Nov 2017 21:35:19 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2017-11-21-multiline-comments-in-sass/</guid>
+      <description>Note: These rules are specifically for sass-lint, because that&amp;rsquo;s my linter of choice. However, equivalent rules will (probably) exist for other linters such as styelint or csslint. (provide links)
+If you lint your Sass code using an automated tool like sass-lint, you might have encountered the rule: no-css-comments. Depending on the severity level in your linter config, this will trigger an error or a warning when it encounters comments like this /* I am a CSS style comment */.</description>
+    </item>
+    
+    <item>
+      <title>So you think you know how clear works?</title>
+      <link>http://example.org/blog/2016-05-02-so-you-think-you-know-how-clear-works/</link>
+      <pubDate>Mon, 02 May 2016 23:03:12 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-05-02-so-you-think-you-know-how-clear-works/</guid>
+      <description>TL;DR  Clears floating elements preceding the one it&#39;s applied to Whether you need clear: left or clear: right depends on the direction the element is floating   I thought I understood the clear property in CSS, but it turns out I didn&amp;rsquo;t.
+Take 3 divs. Let&amp;rsquo;s float them side-by-side (excuse the pseudo-HTML):
+&amp;lt;style&amp;gt; .left { float: left; } &amp;lt;/style&amp;gt; &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;ALPHA&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;BETA&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;GAMMA&amp;lt;/div&amp;gt;  They will now look something like this on the screen:</description>
+    </item>
+    
+    <item>
+      <title>Selecting the last n elements in CSS</title>
+      <link>http://example.org/blog/2016-04-16-selecting-the-last-n-elements-in-css/</link>
+      <pubDate>Sat, 16 Apr 2016 16:25:27 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-04-16-selecting-the-last-n-elements-in-css/</guid>
+      <description>Let&amp;rsquo;s a take a bog-standard list: 🚽📋
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Doris Lessing&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Angela Carter&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Ann Patchett&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Iris Murdoch&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Quick, off the top of your head: 👴
+ How would you select only the last list item? li:last-child What if we added another item to the list. How would you select only the last 2 elements? li:nth-last-child(-n+2) A final list element is added: there&amp;rsquo;s now 6 li&amp;rsquo;s and we want only the last 3.</description>
+    </item>
+    
+    <item>
+      <title>The :not() pseudo-class</title>
+      <link>http://example.org/blog/2015-12-15-the-not-pseudo-class/</link>
+      <pubDate>Tue, 15 Dec 2015 00:00:01 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2015-12-15-the-not-pseudo-class/</guid>
+      <description>How do you use CSS to style a particular element differently from other similar elements? You&amp;rsquo;d stick a class or ID on it, like so:
+&amp;lt;style&amp;gt; .special { color: red; } &amp;lt;/style&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt; &amp;lt;p class=&amp;quot;special&amp;quot;&amp;gt;Special&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt;   .code-example, .code-example-two { border: 1px solid #dcdcdc; border-radius: 3px; padding: 15px; font-family: serif; font-size: 16px; } .code-example .special { color: red; }  Normal
+Normal
+Special
+Normal
+Normal
+ But what if you have the opposite problem - you want to exclude an element from a particular style?</description>
+    </item>
+    
+  </channel>
+</rss>

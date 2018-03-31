@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Global gitignores - is this thing on? &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Global gitignores - is this thing on?</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;6 April 2017 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/git </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>Do you get tired of typing out <code>echo node_modules/ &gt; .gitignore</code> every time you create a new JavaScript project? Do you always forget and commit those pesky node modules to GitHub anyway? And what about those <code>npm_debug.log</code> or <code>.DS_Store</code> files (what even is <code>.DS_Store</code>⁉️)?</p>
+
+<p>Well help is at hand to save you yet more precious keystrokes. Create a ✨global gitignore✨ file which will be used by all your git repos locally on your machine and you may never need to write a <code>.gitignore</code> file again! (if you only ever work on projects by yourself 🎻)</p>
+
+<h2 id="how">How</h2>
+
+<p>From the terminal (bash shell on Mac OS X in my case):</p>
+
+<pre><code class="language-bash"># Make sure you're in the home directory
+cd ~
+
+# Create the file for the gitignore
+touch .global_gitignore
+
+# Add this to your global git config
+git config --global core.excludesfile ~/.gitignore_global
+
+# Double check it's set up correctly :)
+# This should return the full path of the .global_gitignore file
+git config --global --get core.excludesfile
+</code></pre>
+
+<p>Use Vim (other command line editors are available) to edit this file and add all the stuff you want ignored in any future git commits. Write them out in the form of glob patterns as you would in a normal <code>.gitignore</code> file. Github have a helpful repo with all sorts of file types you may need to ignore depending on you project setup at <a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a>.</p>
+
+<h2 id="how-do-i-know-it-s-working">How do I know it&rsquo;s working??</h2>
+
+<p>For example, you add <code>node_modules/</code> to your global gitignore file. Create a new directory and run <code>git init</code> inside it. Run <code>mkdir node_modules</code>. When you run <code>git status</code> you won&rsquo;t see the new <code>node_modules/</code> directory in the output, because this repo is excluded by the global gitignore. This can be confusing at first as you don&rsquo;t have any explicit declarations inside the directory to prevent files and folders from being committed.</p>
+
+<p>Alternatively, go to an existing repo that contains a <code>.gitignore</code> file with the <code>node_modules/</code> pattern in it (I&rsquo;m assuming you&rsquo;ve got <code>node_modules/</code> in your all your <code>.gitignore</code> files - haven&rsquo;t you??). Delete that line from the local gitignore. Run <code>git status</code> from the command line and you should still see that <code>node_modules/</code> is being ignored, and is not appearing on the <code>git status</code> results.</p>
+
+<p>However having a global gitignore doesn&rsquo;t mean you can&rsquo;t have or don&rsquo;t need to have a gitignore file locally in your project. Use the local file to match repo-specific files you want to exclude from commits.</p>
+
+<h2 id="is-this-a-good-idea">Is this a good idea?</h2>
+
+<p>Hmm not really 😑 (now I&rsquo;ve explained all of this to you!):</p>
+
+<ul>
+<li>Confusing to beginners or veterans alike, as it abstracts an option away from the current directory (&ldquo;why isn&rsquo;t that file being committed when I expect it should be?&rdquo;)</li>
+<li>Can cause clashes on larger projects with many collaborators</li>
+<li>If someone else were to begin working on your project then they would probably end up creating a <code>.gitignore</code> in the repo anyway</li>
+</ul>
+
+<p>In my opinion, global gitignores can be helpful in speeding up local development, perhaps when you&rsquo;re experimenting or working on a personal project, but they shouldn&rsquo;t be relied upon to work effectively in larger projects.</p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2017-04-06-global-gitignores.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

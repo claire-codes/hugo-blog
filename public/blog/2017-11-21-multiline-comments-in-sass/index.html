@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Multiline comments in Sass &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Multiline comments in Sass</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;21 November 2017 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/css </span>
+    
+    <span class="c-post__category">/sass </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p><em>Note</em>: These rules are specifically for <a href="https://github.com/sasstools/sass-lint">sass-lint</a>, because that&rsquo;s my linter of choice. However, equivalent rules will (probably) exist for other linters such as styelint or csslint. (provide links)</p>
+
+<p>If you lint your Sass code using an automated tool like sass-lint, you might have encountered the rule: <code>no-css-comments</code>. Depending on the severity level in your linter config, this will trigger an error or a warning when it encounters comments like this <code>/* I am a CSS style comment */</code>. The first time I saw this rule, I was confused - why shouldn&rsquo;t I be using comments like this:</p>
+
+<pre><code class="language-css">/**************
+ *  Example
+ **************/
+</code></pre>
+
+<p><a href="https://github.com/sasstools/sass-lint/blob/develop/docs/rules/no-css-comments.md">The documentation for the <code>no-css-comments</code> rule</a> is unbiased and simply explains how to enforce the rule, rather than why it&rsquo;s a good idea to use. This is expected, as it’s not the linter’s job to decide how your code should be laid out, only to help you enforce consistent style. And so I fell down another rabbit hole one evening, investigating the pros and cons of multiline CSS comments.</p>
+
+<h2 id="a-quick-reminder-of-comment-types-in-css-and-sass">A quick reminder of comment types in CSS and Sass</h2>
+
+<h3 id="1-multiline-comments">1 Multiline comments</h3>
+
+<p>There is only one type of valid comment in vanilla CSS:</p>
+
+<pre><code class="language-css">/*
+ You can fit
+ carriage returns between the opening
+ and closing comment tags
+*/
+
+/*****
+ ** The extra asterisks are purely decorative here
+ ****/
+
+/* Comments can also just span one line too */
+
+.my-selector {
+    font-size: 28px; /* (1) */
+}
+</code></pre>
+
+<p>This is referred to as a multiline comment because it can span multiple lines before being closed.</p>
+
+<h3 id="2-single-line-comments">2 Single-line comments</h3>
+
+<p>If you use Sass, you can also use single-line comments like this:</p>
+
+<pre><code class="language-sass">// A comment on one line
+.my-selector {
+    // they can appear anywhere
+    font-size: 28px; // even on the same line after code
+}
+</code></pre>
+
+<p>This comment style is invalid in CSS.</p>
+
+<h2 id="why-are-multiline-comments-not-recommended">Why are multiline comments not recommended?</h2>
+
+<ul>
+<li>They can accidentally close other comments if incorrectly nested. For example:</li>
+</ul>
+
+<pre><code class="language-css">/*
+ The beginning of a comment
+/* I'm unexpectedly closing this comment */
+The end of a comment - this code will error
+*/
+</code></pre>
+
+<p>And also:</p>
+
+<pre><code class="language-css">/* Just a single-line comment /* cuckoo */ oh no */
+</code></pre>
+
+<p>These examples will cause errors in both CSS and Sass.</p>
+
+<ul>
+<li>Because they can <a href="https://css-tricks.com/sass-style-guide/#comment-450812">break error messages</a></li>
+</ul>
+
+<h2 id="why-use-single-line-comments">Why use single-line comments?</h2>
+
+<ul>
+<li><p>It&rsquo;s simpler and sometimes quicker to comment or uncomment single lines using this syntax, as your change only affects one line. If you have many lines to comment out, then your editor shortcut for commenting (normally <code>Cmd + /</code>) should apply single-line comments even if you have many lines selected.</p></li>
+
+<li><p>They aren&rsquo;t output in compiled code. Comments like <code>/***** Card Component *****/</code>, or <code>/* IE11 fix */</code> should only be seen by other developers in the source code.</p></li>
+</ul>
+
+<h2 id="however">However!</h2>
+
+<p>The Sass guidelines do recommend using multiline comments, mainly for DocBlock type information at the top of a section. See the <a href="https://sass-guidelin.es/#commenting">SASS guidelines documemtation</a>.</p>
+
+<h2 id="workaround">Workaround</h2>
+
+<p>If you’re willing to type a few extra keystrokes you can still have a good-looking (IMHO), stand-out title block without multiline comments:</p>
+
+<pre><code class="language-sass">//////////////////////////////
+// A nice title
+//////////////////////////////
+
+//* A faux multiline comment *//
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Personally, I&rsquo;ve decided to enforce this rule with a setting of 2 in my <code>sass-lint.yml</code> config file:</p>
+
+<pre><code class="language-yaml">rules:
+  no-css-comments: 2
+</code></pre>
+
+<p>Now my linter forces me to use single-line style comments in my Sass files. This means I can protect myself from preventable bugs caused by accidental comment nesting, and I&rsquo;m happy now that I&rsquo;ve found an alternative layout for header blocks using single-line comments.</p>
+
+<p>As with everything in programming, there is always more than one solution (and opinion!). It’s up to you to decide whether this rule makes sense within your project.</p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2017-11-21-multiline-comments-in-sass.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

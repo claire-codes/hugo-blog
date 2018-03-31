@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Paths in Ruby &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Paths in Ruby</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;1 January 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/ruby </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>You&rsquo;ve got a file, but where does it live? Which directory are <em>you</em> in? Where am I? What&rsquo;s my name?</p>
+
+<p>For the following examples, imagine:</p>
+
+<ul>
+<li>you&rsquo;re executing a file called <code>foo.rb</code></li>
+<li>which lives in the file system at <code>/Users/me/myDir/foo.rb</code></li>
+<li>you&rsquo;re located in <code>/Users/me/myDir</code></li>
+<li>you&rsquo;ve executed the command <code>ruby foo.rb</code> from the terminal</li>
+</ul>
+
+<p>Remember:</p>
+
+<ul>
+<li><em>absolute path</em> - the full path of the file in the file system: it starts with the root directory and includes all the directories between it and the file in question.</li>
+<li><em>relative path</em> - a partial representation of the absolute path because it starts from some other directory. An example would be <code>../myDir/foo.rb</code>.</li>
+</ul>
+
+<h3 id="wtf-is-file">WTF is <code>__FILE__</code></h3>
+
+<p>You&rsquo;ve probably seen this keyword used in Ruby. <code>__FILE__</code> is a constant that represents the name of the file that is currently executing. In our example it&rsquo;s <code>foo.rb</code>.</p>
+
+<h3 id="how-do-i-get-the-absolute-pathname-of-the-currently-executing-file">How do I get the absolute pathname of the currently executing file?</h3>
+
+<p>Now we know the name of the currently executing file, we can pass it to the <code>expand_path</code> method of the <code>File</code> class.</p>
+
+<p><code>expand_path</code> returns the absolute pathname of the file provided as an argument.</p>
+
+<pre><code class="language-ruby">File.expand_path(__FILE__)
+  =&gt; &quot;/Users/my/myDir/foo.rb&quot;
+</code></pre>
+
+<p>N.B. It can also take relative pathnames.</p>
+
+<h3 id="how-do-i-find-the-absolute-directory-name-of-the-currently-executing-file">How do I find the absolute directory name of the currently executing file?</h3>
+
+<p>If you aren&rsquo;t interested in the pathname and want the file&rsquo;s absolute directory without the filename, combine the previous method with the <code>dirname</code> method.</p>
+
+<pre><code class="language-ruby">File.dirname(File.expand_path(__FILE__))
+# Or also ...
+File.expand_path(File.dirname(__FILE__))
+# Or even ...
+File.dirname(File.realpath(__FILE__))
+  =&gt; &quot;/Users/my/myDir&quot;
+</code></pre>
+
+<h3 id="but-dir">But <code>__dir__</code>?</h3>
+
+<p>If you only have to worry about supporting Ruby 2.0.0 and above, you can use the <code>__dir__</code> constant instead.</p>
+
+<h3 id="what-s-the-working-directory-and-how-do-i-find-it">What&rsquo;s the working directory and how do I find it?</h3>
+
+<p>This is the folder you are currently in - nothing to do with the file that is executing. Use <code>Dir.pwd</code> to get it.</p>
+
+<h3 id="omg-i-ve-always-wanted-to-know-what-s-the-best-way-to-make-a-pathname-out-of-lots-of-different-strings">OMG I&rsquo;ve always wanted to know - what&rsquo;s the best way to make a pathname out of lots of different strings??</h3>
+
+<p>Well you might have tried <code>['a','b','c'].join('/')</code>, but you&rsquo;d be wrong!</p>
+
+<p>What you really need is <code>File.join()</code>: this method concatenates arguments with a single slash, and will ensure that there is only one slash between each argument. You&rsquo;d have to do this cleanup yourself if you used <code>.join('/')</code></p>
+
+<pre><code class="language-ruby">File.join('a','b')      =&gt; 'a/b'
+File.join('a/','b')     =&gt; 'a/b'
+File.join('a/','/b')    =&gt; 'a/b'
+
+['a/','b'].join('/')    =&gt; 'a//b'
+['a/','/b'].join('/')   =&gt; 'a///b'
+</code></pre>
+
+<h3 id="expand-path-bonus-time"><code>expand_path</code> bonus time!</h3>
+
+<p>So you already know that <code>File.expand_path</code> returns the absolute path of the 1st argument. But if you provide a 2nd argument it will find the absolute path of the 1st argument <em>relative</em> to the 2nd argument. Get that?</p>
+
+<p>So <code>File.expand_path('../lib', __FILE__)</code> gets the path to the lib directory <em>relative</em> to the currently executing file, meaning you don&rsquo;t have to worry about where you actually are when finding paths.</p>
+
+<h3 id="how-do-i-know-that-you-re-not-talking-baloney">How do I know that you&rsquo;re not talking baloney? 💩</h3>
+
+<p>Whip up a quick rb file and put the following:</p>
+
+<pre><code class="language-ruby">puts &quot;__FILE__ = #{__FILE__}&quot;
+puts &quot;Absolute pathname = #{File.expand_path(__FILE__)}&quot;
+puts &quot;Absolute directory = #{File.dirname(File.expand_path(__FILE__))}&quot;
+puts &quot;Alternative absolute directory = #{File.expand_path(File.dirname(__FILE__))}&quot;
+puts &quot;Another absolute directory = #{File.dirname(File.realpath(__FILE__))}&quot;
+puts &quot;Working directory = #{Dir.pwd}&quot;
+</code></pre>
+
+<p>Execute and see you for yourself.</p>
+
+<h4 id="the-following-stackoverflow-answers-were-upvoted-during-the-making-of-this-blog-post">The following StackOverflow answers were upvoted during the making of this blog post:</h4>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/4474918/file-expand-path-gemfile-file-how-does-this-work-where-is-the-fil">http://stackoverflow.com/questions/4474918/file-expand-path-gemfile-file-how-does-this-work-where-is-the-fil</a></li>
+<li><a href="https://tomafro.net/2010/01/tip-relative-paths-with-file-expand-path">https://tomafro.net/2010/01/tip-relative-paths-with-file-expand-path</a></li>
+<li><a href="http://stackoverflow.com/questions/9416578/relative-path-to-your-project-directory">http://stackoverflow.com/questions/9416578/relative-path-to-your-project-directory</a></li>
+</ul>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-01-01-paths-in-ruby.md">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

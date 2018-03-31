@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heroku on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/heroku/</link>
+    <description>Recent content in Heroku on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 06 Jan 2016 21:37:32 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/heroku/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scheduling Ruby and JavaScript jobs with Heroku</title>
+      <link>http://example.org/blog/2016-01-06-scheduling-ruby-and-javascript-jobs-with-heroku/</link>
+      <pubDate>Wed, 06 Jan 2016 21:37:32 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-01-06-scheduling-ruby-and-javascript-jobs-with-heroku/</guid>
+      <description>Need to do a job regularly in your app? If it&amp;rsquo;s on Heroku then there&amp;rsquo;s a free add-on that can run the job for you. It&amp;rsquo;s imaginatively called Heroku Scheduler. Here&amp;rsquo;s how I set up Ruby and JavaScript jobs ready to be scheduled.
+Create your app. From the root directory, initialise git and create a Heroku app. I like to use the Heroku toolbelt for all my Heroku command line needs.</description>
+    </item>
+    
+    <item>
+      <title>How to Deploy an AngularJS App on Heroku</title>
+      <link>http://example.org/blog/2015-09-30-how-to-deploy-an-angular-app-on-heroku/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-30-how-to-deploy-an-angular-app-on-heroku/</guid>
+      <description>Or getting an EAN app running on Heroku EAN rather than MEAN because we&amp;rsquo;ll be using Express, AngularJS and Node but not Mongo this time.
+When googling deploying an AngularJS app to Heroku, all the tutorials I looked at (i.e. the top 3 in the first page of results &amp;hellip;) assumed I&amp;rsquo;d cloned the Angular seed app - which I hadn&amp;rsquo;t and didn&amp;rsquo;t want to. I had a dead simple one controller, one service AngularJS app (note: 1.</description>
+    </item>
+    
+    <item>
+      <title>Deploying Jekyll on Heroku</title>
+      <link>http://example.org/blog/2015-09-20-deploying-jekyll-on-heroku/</link>
+      <pubDate>Sun, 20 Sep 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-20-deploying-jekyll-on-heroku/</guid>
+      <description>How I deployed my Jekyll blog to Heroku step-by-step If you use Jekyll for your blog you&amp;rsquo;ll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I&amp;rsquo;d used Heroku previously and I knew I wouldn&amp;rsquo;t be restricted in my choice of plug-ins further down the line. Alas, I didn&amp;rsquo;t find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn&amp;rsquo;t run for me!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,106 @@
+.c-footer {
+    background-color: $color-footer-background;
+    background-image: linear-gradient(to top, $color-head-foot-bg 80%, $color-body-background);
+    color: $color-footer-text;
+    font-size: 14px;
+    padding: 30px 10px 10px;
+    margin-top: 40px;
+    text-align: center;
+
+    div:not(.c-footer__social-container) {
+        margin-bottom: 5px;
+    }
+}
+
+.c-footer__social-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 10px auto 15px;
+}
+
+.c-footer__social-icon {
+    font-size: 30px;
+    background-color: $color-footer-icon-background-start; //fallback
+    background-size: 200% 100%;
+    background-position: left bottom;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    color: $color-footer-icon;
+    text-decoration: none;
+
+    @media (max-width: $mobile-breakpoint) {
+        font-size: 22px;
+        height: 40px;
+        width: 40px;
+    }
+
+    &:hover,
+    &:active {
+        background-position: right bottom;
+        cursor: pointer;
+        color: $color-footer-icon-hover;
+        border-radius: 50%;
+        border: none;
+        transition: all 0.5s ease;
+    }
+}
+
+.icon--twitter {
+    background-image: linear-gradient(
+        to right,
+        $color-footer-icon-background-start 50%,
+        $color-twitter 50%
+    );
+}
+
+.icon--magento {
+    background-image: linear-gradient(
+        to right,
+        $color-footer-icon-background-start 50%,
+        $color-magento 50%
+    );
+}
+
+.icon--linkedin {
+    background-image: linear-gradient(
+        to right,
+        $color-footer-icon-background-start 50%,
+        $color-linkedin 50%
+    );
+}
+
+.icon--instagram {
+    background-image: linear-gradient(
+        to right,
+        $color-footer-icon-background-start 50%,
+        $color-instagram 50%
+    );
+}
+
+.icon--github {
+    background-image: linear-gradient(
+        to right,
+        $color-footer-icon-background-start 50%,
+        $color-github 50%
+    );
+    &:hover {
+        color: $color-footer-icon-background-start;
+    }
+}
+
+.icon--codepen {
+    background-image: linear-gradient(
+        to right,
+        $color-footer-icon-background-start 50%,
+        $color-codepen 50%
+    );
+    &:hover {
+        color: $color-footer-icon-background-start;
+    }
+}

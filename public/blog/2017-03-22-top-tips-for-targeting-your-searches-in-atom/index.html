@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Top tips for targeting your searches in Atom &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Top tips for targeting your searches in Atom</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;22 March 2017 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;4 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/atom </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>Are you working on a large project in Atom? Dozens of directories? Thousands of files? Innumerable node modules? You may have discovered that Atom isn&rsquo;t the fatest editor out there when executing search queries across an entire project. Give Atom a helping hand by narrowing down the scope of your search with a few simple glob patterns.</p>
+
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
+    <ul>
+        <li>Exclude a directory from your search by adding an exclamation point in front of its name: <code>!node_modules/</code></li>
+        <li>Include or exclude several directories by separating their file paths with commas: <code>web/, !static/</code></li>
+        <li>Search for for a specific file type in all subdirectories: <code>frontend/**/*.js</code></li>
+   </ul>
+</div>
+
+<p><em>Note</em>: The trailing slashes are optional - I use them for clarity here to indicate a folder rather than a file.</p>
+
+<p>Every piece of functionality in Atom is provided by a package, and the search panel is no different. When you press <kbd>Cmd + Shift + F</kbd> on a Mac or <kbd>Ctrl + Shift + F</kbd> on Windows the search panel appears, courtesy of the <a href="https://atom.io/packages/find-and-replace">find-and-replace package</a>. Your search term goes in the first box, and any of the glob patterns in the following tips are placed in the third &ldquo;File/directory pattern&rdquo; box.</p>
+
+<p><img src="/assets/find-and-replace-panel.png" alt="The find and replace package panel" /></p>
+
+<p>A glob pattern is a filename that includes wildcard characters. The addition of the wildcard means that the pattern could match more than one path, so <code>foo*.js</code> could match the files <code>foobar.js</code>, <code>foo.js</code> and <code>foobaz.js</code>. A glob pattern may remind you of a regular expression, but doesn&rsquo;t behave in quite the same way and aren&rsquo;t as powerful - for example the wildcard <code>*</code> is equivalent to the regex <code>.*</code>.</p>
+
+<h2 id="1-exclude-gitignored-files">1. Exclude gitignored files</h2>
+
+<p>Open the Core Settings menu and make sure the <strong>Exclude VCS Ignored Paths</strong> option is selected. Now every file and directory in your <code>.gitignore</code> file will be excluded from your search. Typically you would add the <code>node_modules/</code> directory in the <code>.gitignore</code> file so that they aren’t committed to your repo, which can provide a big win in terms of search speed for JavaScript based projects</p>
+
+<p><img src="/assets/VCS-setting.png" alt="Exclude VCS Ignored Paths setting" /></p>
+
+<h2 id="2-search-in-a-specific-directory">2. Search in a specific directory</h2>
+
+<p>Do you only want to search for the string &ldquo;cheezeburger&rdquo; in the <code>kittehs/</code> directory? Then enter this <code>kittehs/</code> file path in the Find and Replace panel before hitting return to narrow the search scope to this folder.</p>
+
+<p><img src="/assets/only-dir.png" alt="Search only in this directory example" /></p>
+
+<h2 id="3-search-in-multiple-specific-directories">3. Search in multiple specific directories</h2>
+
+<p>Do you only want to search in either the <code>kittehs/</code> folder or the <code>doge/</code> folder? Then separate their file paths with a comma to search just within these directories.</p>
+
+<p><img src="/assets/multi-dir.png" alt="Search in multiple directories example" /></p>
+
+<h2 id="4-exclude-specific-directories-from-search">4. Exclude specific directories from search</h2>
+
+<p>How about when you know you definitely don&rsquo;t want to search within a particular folder, but want to look everywhere else in the project? Perhaps you don&rsquo;t want to search within the <code>tests/</code> directory for your snippet of code. Perhaps you don&rsquo;t have a <code>.gitignore</code> file, or if you do you still need to work with the files and folders listed in it (👋 hello Magento 2 projects and the <code>vendor/</code> folder).</p>
+
+<p>It&rsquo;s possible to exclude a directory from the scope of your search by typing its file path in the 3rd field preceded by an exclamation point.</p>
+
+<p>For example, look everywhere but the <code>node_modules/</code> directory by just typing <code>!node_modules/</code> and running the search.</p>
+
+<p><img src="/assets/not-dir.png" alt="Exclude a directory example" /></p>
+
+<h2 id="5-include-and-exclude-specific-directories">5. Include and exclude specific directories</h2>
+
+<p>You can combine the previous two techniques by separating your various include and exclude glob patterns with a comma. This is useful if you want to search within a directory but exclude a subdirectory of it, e.g. <code>javascript/, !javascript/tests/</code>.</p>
+
+<p><img src="/assets/all-the-dir.png" alt="Combining including and excluding patterns example" /></p>
+
+<h2 id="6-search-for-file-types-within-directories">6. Search for file types within directories</h2>
+
+<p>It&rsquo;s possible to filter by file type by using the wildcard character followed by the desired file extension: to search only for JavaScript files, type <code>*.js</code>.</p>
+
+<p>But what if we want to search for our term in JavaScript files but only within the <code>web/</code> directory? If we were to type <code>web/*.js</code>, this will only search for JavaScript files directly in the <code>web/</code> folder, and not in any of <code>web/</code>&rsquo;s subdirectories (if it has any). To include all subdirectories in the search, use the globstar pattern instead: <code>web/**/*.js</code></p>
+
+<p><img src="/assets/glob.png" alt="File types with glob pattern example" /></p>
+
+<h2 id="bonus-tip">🌟 Bonus tip</h2>
+
+<p>With the keyboard focus in any of the search panel fields, press up ⬆️ and your last search term will appear! You can toggle up and down through your previous terms which is really handy 👐 if you&rsquo;re searching for the same few terms over and over.</p>
+
+<h2 id="fin">Fin</h2>
+
+<p>Glob patterns are a useful skill to have in your development ninja toolbelt and will serve you well not only in Atom but in many other editors and search tools, hopefully saving millions of milliseconds of your life when searching for that pesky string. ⏱</p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2017-03-22-top-tips-for-targeting-your-searches-in-atom.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Why the title attribute is pointless in HTML5 &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Why the title attribute is pointless in HTML5</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;31 January 2017 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/html5 </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>I’ve been working a lot with Magento 2 recently (lucky me 😑) and I&rsquo;ve noticed the <code>title</code> attribute used heavily across the HTML and PHTML template files. I found examples on <code>&lt;input&gt;</code>, <code>&lt;a&gt;</code> , <code>&lt;textarea&gt;</code>, <code>&lt;p&gt;</code> and especially <code>&lt;div&gt;</code> tags, e.g.</p>
+
+<pre><code class="language-html">&lt;div title=&quot;&lt;?php /* @escapeNotVerified */ echo __(‘Buy me')?&gt;&quot;&gt;
+    &lt;?php /* @escapeNotVerified */ echo __(‘Buy me') ?&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>This is the pattern I&rsquo;ve seen used: the title attribute is used to repeat the text within the div or an equivalent “useful” value for other tags.</p>
+
+<p>This isn’t an attribute I&rsquo;ve come across much in the wild, which intrigued me: are the Magento team writing accessible, semantically correct HTML that I should copy? (Spoiler alert: no) So I investigated further.</p>
+
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
+    <ul>
+    <li>The title attribute creates a tooltip of its value when the element it belongs to is hovered over</li>
+    <li>👉 Don’t use tooltips!</li>
+    <li><pre>
+if (informationIsImportant === true) {
+   print directly to screen;
+else (informationIsNotThatImportant === true) {
+   don’t include it in your page;
+}</pre></li>
+</ul></div>
+
+<h2 id="what-does-the-title-attribute-do">What does the title attribute do?</h2>
+
+<p>The string provided to the title attribute is presented as a tooltip whenever the element is hovered over by the cursor. So in theory it contains supplementary information about the element it’s attached to. Try hovering over this example (if you’re on a device that allows you to hover of course!):</p>
+
+<div title="You'll only see me if you hover" style="margin: 15px; border: 5px dashed dark-gray; padding: 15px;">
+    <strong>Hover your cursor over me</strong>
+</div>
+
+<p>If it isn’t given an attribute itself but a parent element is, then it inherits and will show that instead.</p>
+
+<h2 id="which-elements-can-you-use-it-on">Which elements can you use it on?</h2>
+
+<p>In HTML5, it’s valid on any element.</p>
+
+<h2 id="why-would-i-use-it">Why would I use it?</h2>
+
+<p>To create a simple tooltip.</p>
+
+<h2 id="do-i-want-to-create-a-tooltip">Do I want to create a tooltip?</h2>
+
+<p>No. For starters, the HTML spec discourages the use of the title attribute for this purpose. You should not be storing potentially important, useful information in a tooltip, as certain user groups can’t access it:</p>
+
+<ul>
+<li>smartphone and tablet users are unable to hover</li>
+<li>the title attribute is ignored by screen readers and not read out</li>
+</ul>
+
+<h2 id="but-what-about-images">But what about images?</h2>
+
+<p>You&rsquo;re getting confused with the <code>alt</code> attribute. It&rsquo;s still valid HTML5 syntax to include a <code>title</code> attribute on an image, but again it won&rsquo;t be read out by screen reader software. If the image doesn&rsquo;t render on your page, then it&rsquo;s the text contained in the <code>alt</code> attribute that appears on the screen, not the <code>title</code> attribute text. The <code>alt</code> text is also the content read out by screen readers.</p>
+
+<h2 id="what-alternatives-are-there">What alternatives are there?</h2>
+
+<p>When building a web page, you should include clear, concise instructions and labels. A well-crafted web app won&rsquo;t need tooltips to assist the user. Ask yourself:</p>
+
+<ul>
+<li><p><strong>Is the information useful and does a user need to see it?</strong> If yes, then it should be clearly visible on the screen and not hidden.</p></li>
+
+<li><p><strong>Is the information non-essential?</strong> If not, then you should question whether it&rsquo;s necessary to include it on the page.</p></li>
+</ul>
+
+<p>For more information on this topic, I highly recommend any of the articles by the <a href="https://www.paciellogroup.com">Paciello Group</a>.</p>
+
+<p>Next time I work on a Magento 2 template and see the title attribute I’ll take pleasure in hitting the delete button and keeping my markup free of unnecessary attributes. 🔥</p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2017-01-31-why-the-title-attribute-is-pointless-in-html5.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/</link>
+    <description>Recent content in Categories on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 30 Sep 2015 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angularjs</title>
+      <link>http://example.org/categories/angularjs/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/categories/angularjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Atom</title>
+      <link>http://example.org/categories/atom/</link>
+      <pubDate>Wed, 22 Mar 2017 23:10:20 +0000</pubDate>
+      
+      <guid>http://example.org/categories/atom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>http://example.org/categories/bash/</link>
+      <pubDate>Sun, 04 Sep 2016 20:45:17 +0000</pubDate>
+      
+      <guid>http://example.org/categories/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Css</title>
+      <link>http://example.org/categories/css/</link>
+      <pubDate>Mon, 19 Mar 2018 20:54:03 +0000</pubDate>
+      
+      <guid>http://example.org/categories/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://example.org/categories/git/</link>
+      <pubDate>Tue, 13 Mar 2018 22:45:59 +0000</pubDate>
+      
+      <guid>http://example.org/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Heroku</title>
+      <link>http://example.org/categories/heroku/</link>
+      <pubDate>Wed, 06 Jan 2016 21:37:32 +0000</pubDate>
+      
+      <guid>http://example.org/categories/heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>http://example.org/categories/html/</link>
+      <pubDate>Mon, 19 Mar 2018 20:54:03 +0000</pubDate>
+      
+      <guid>http://example.org/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html5</title>
+      <link>http://example.org/categories/html5/</link>
+      <pubDate>Tue, 31 Jan 2017 22:29:26 +0000</pubDate>
+      
+      <guid>http://example.org/categories/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://example.org/categories/javascript/</link>
+      <pubDate>Mon, 07 Nov 2016 21:24:01 +0000</pubDate>
+      
+      <guid>http://example.org/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Longread</title>
+      <link>http://example.org/categories/longread/</link>
+      <pubDate>Sun, 10 Apr 2016 20:51:46 +0000</pubDate>
+      
+      <guid>http://example.org/categories/longread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>http://example.org/categories/ruby/</link>
+      <pubDate>Tue, 08 Mar 2016 19:54:26 +0000</pubDate>
+      
+      <guid>http://example.org/categories/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sass</title>
+      <link>http://example.org/categories/sass/</link>
+      <pubDate>Mon, 19 Mar 2018 20:54:03 +0000</pubDate>
+      
+      <guid>http://example.org/categories/sass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>http://example.org/categories/testing/</link>
+      <pubDate>Mon, 07 Nov 2016 21:24:01 +0000</pubDate>
+      
+      <guid>http://example.org/categories/testing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> This one crazy tip will help you write gold-plated tests!!!1! &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">This one crazy tip will help you write gold-plated tests!!!1!</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;18 May 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;2 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/javascript </span>
+    
+    <span class="c-post__category">/testing </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    <p>Here is my top tip to help you write better tests, be they unit tests, integration tests, functional tests or unicorn tests:</p>
+
+<p>Always write a failing test first.</p>
+
+<p>There are three steps to TDD. You may have heard of the 🚦 traffic lights*:</p>
+
+<ul>
+<li>❤️ <strong>Red</strong>: write a failing test</li>
+<li>💛 <strong>Amber</strong>: make the test pass</li>
+<li>💚 <strong>Green</strong>: improve the code you&rsquo;ve just written, refactor</li>
+</ul>
+
+<p>Or maybe red test -&gt; green test -&gt; refactor**. I believe that this first step, to have red test, is important it you&rsquo;re following Test-Driven-Development and writing tests first, or whether you&rsquo;re writing tests after you&rsquo;ve already implemented your feature.</p>
+
+<p>The only way you can truly be sure that your code works is to use it to fix a broken test.</p>
+
+<p>When you&rsquo;re getting cocky/confident in your testing ability, you may start writing one or more tests, run them against your code and watch them go green first time. This lulls you into a false sense of achievement, for all you know your code could be returning nulls and failing silently. Instead, you need to have a failing test first <em>and then</em> fix it and commit it.</p>
+
+<p>I need an example to convince you.</p>
+
+<!-- Why do I recommend this? You might be writing the equivalent of `expect(true).toEqual(true)` in your tests, pointless. You might not have tested the feature you think you have. You might have written a lovely test case that doesn't do anything, or doesn't behave as you expect, but because your tests are green you think everything is OK. It's important while you're writing your tests to break them to double check everything is working as you expect. -->
+
+<p>In summary, break your tests! Then fix them and commit them.</p>
+
+<p><sup>* I have no reference for this, maybe I made it up.</sup>
+<sup>** A red test is a failing one and a green test is a passing one, because that&rsquo;s the colours used by test runners to indicate this <em>everywhere</em>.</sup></p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-05-18-this-one-crazy-tip-will-help-you-write-gold-plated-tests1.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

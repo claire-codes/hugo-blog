@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Deleting multiple local git branches with grep &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Deleting multiple local git branches with grep</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;13 March 2018 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;2 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/git </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>After working for a while on a project, it’s likely that you’ll have a lot of branches checked out locally. Branches quickly expire and are no longer needed, so it’s a good idea to delete them. But if you’re like me, you don’t do this very regularly! When I type <code>git branch</code> into the terminal I&rsquo;m confronted with dozens of dead branches.</p>
+
+<p>Delete local branches by typing <code>git branch -D branch-name</code> in your terminal. However, it can be tedious to delete many branches by typing each name individually. But if you have several branch names that match a regular expression, then you can delete them all at once.</p>
+
+<pre><code class="language-shell">git branch -D `git branch | grep your-regex`
+</code></pre>
+
+<h2 id="how-does-this-command-work">How does this command work?</h2>
+
+<p>Imagine if you type <code>git branch</code> at your terminal and you see:</p>
+
+<pre><code class="language-bash">$ git branch
+  fix/ticket-123
+* master
+  task/ticket-123
+  task/ticket-123-v2
+  task/ticket-345
+</code></pre>
+
+<p>You&rsquo;re currently on the master branch. Ticket-123 was completed weeks ago and the branches associated with it are stale. They should be deleted to keep our enviroment tidy. Using grep, we can select only those branches, since the names have a common pattern:</p>
+
+<pre><code class="language-bash">$ git branch | grep ticket-123
+  fix/ticket-123
+  task/ticket-123
+  task/ticket-123-v2
+</code></pre>
+
+<p>This command lists all the branches and pipes the output to grep. Grep then filters the branches by the pattern provided. Grep can use complex regular expressions to search, but here all we need is a simple string pattern, <code>ticket-123</code>.</p>
+
+<p>Now we have our list of filtered branches, we can delete them all. Using backticks, we pass the branch names to the <code>git branch -D</code> command. This has the same result as writing <code>git branch -D fix/ticket-123 task/ticket-123 task/ticket-123-v2</code> which deletes each of these branches. We&rsquo;ve avoided writing out each branch name one-by-one!</p>
+
+<h2 id="danger">Danger ⚠️</h2>
+
+<p>Use caution when executing this command, as it will be difficult to recover branches deleted by accident. Always test the regular expression to select your branches <code>git branch | grep foo</code> before passing them to <code>git branch -D</code>.</p>
+
+<h2 id="note">Note</h2>
+
+<p><code>git branch -D</code> only deletes local branches, and not the remote versions in the repo.</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<p><a href="https://stackoverflow.com/questions/3670355/can-you-delete-multiple-branches-in-one-command-with-git">https://stackoverflow.com/questions/3670355/can-you-delete-multiple-branches-in-one-command-with-git</a></p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2018-03-13-deleting-multiple-local-git-branches-with-grep.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

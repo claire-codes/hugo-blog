@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Semver in package.json &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Semver in package.json</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;9 March 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/javascript </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
+    <ul>
+        <li><strong>Allow only patch changes</strong>: <code>~1.1.3</code>, e.g. >=1.1.3 <1.2.0</li>
+        <li><strong>Allow minor changes</strong>: <code>^1.1.3</code>, e.g. >=1.1.3 <2.0.0</li>
+   </ul>
+</div>
+
+<p>You might have noticed some unexpected characters next to the package versions of the <code>dependencies</code> or <code>devDependencies</code> properties in your <code>package.json</code> file:</p>
+
+<pre><code class="language-javascript">&quot;dependencies&quot;: {
+  &quot;backbone&quot;: &quot;^1.3.1&quot;,
+  &quot;express&quot;: &quot;~4.13.4&quot;
+}
+</code></pre>
+
+<h2 id="semver">Semver</h2>
+
+<p>First of all, let&rsquo;s understand how packages are versioned and what each of those numbers represent.</p>
+
+<p>A piece of software, e.g. a node module, evolves and changes over time. When new features have been added or existing functionality has been modified, new versions of packages are released. This lets the world know that the code has changed in some way. Semantic versioning, or &ldquo;semver&rdquo;, is a convention introduced to help give users of your package some idea of the changes in this version. A version number is made up of three figures, each of which represent a different type of change:</p>
+
+<blockquote>
+<p>MAJOR.MINOR.PATCH</p>
+</blockquote>
+
+<p>You should increment the version number to indicate what changes you&rsquo;ve made in this release. Quoting directly from <a href="http://semver.org/">semver.org</a>, release a:</p>
+
+<blockquote>
+<ul>
+<li>MAJOR version when you make incompatible API changes,</li>
+<li>MINOR version when you add functionality in a backwards-compatible manner, and</li>
+<li>PATCH version when you make backwards-compatible bug fixes.</li>
+</ul>
+</blockquote>
+
+<p>Reset the other increments as appropriate: a package on version 1.4.3 releasing a major version would be released as 2.0.0. See the <a href="http://semver.org/">semver site</a> for more examples of how to correctly version your software.</p>
+
+<h2 id="carets-tildes-ranges-oh-my">Carets &amp; Tildes &amp; Ranges, Oh my! 🐈 🐅 🐻</h2>
+
+<p>You&rsquo;ve installed a dependency to your app using npm, but you&rsquo;re not too precious about the version of the dependency - it&rsquo;s not critical and it&rsquo;ll probably still work if the version is 0.4.1 or 0.4.2. You can specify how flexible you want to be with versions using special symbols in the <code>package.json</code> file. but you want to specify what version is used. Here&rsquo;s a brief primer:</p>
+
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>-</code></td>
+<td>The hyphen creates an inclusive set</td>
+<td><code>1.2.0 - 1.3.3</code> allows versions 1.2.0, 1.3.3 and everything in between</td>
+</tr>
+
+<tr>
+<td><code>&gt;, &lt;, &gt;=, &lt;=</code></td>
+<td>Use one or combine a two to create an acceptable range</td>
+<td><code>&gt;=0.4.1 &lt;0.5.0</code> allows everything from 0.4.1 up to but not including 0.5.0</td>
+</tr>
+
+<tr>
+<td><code>^</code></td>
+<td><em>&ldquo;Compatible with version&rdquo;</em>: allows changes that do not modify the first non-zero version</td>
+<td><code>^1.2.3</code> allows 1.x.x but <code>^0.2.3</code> will only allow 0.2.x</td>
+</tr>
+
+<tr>
+<td><code>~</code></td>
+<td><em>&ldquo;Approximately equivalent to version&rdquo;</em>: allows patch level changes if minor provided, allows minor if not</td>
+<td><code>~1.2.3</code> the range &gt;=1.2.3 &lt;1.3.0, while <code>~1</code> is equivalent to 1.x.x</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Allow only patch changes:</strong> <code>~1.1.3</code> which is like &gt;=1.1.3 &lt;1.2.0</p>
+
+<p><strong>Allow minor changes:</strong> <code>^1.1.3</code> which is like &gt;=1.1.3 &lt;2.0.0</p>
+
+<h2 id="bear-in-mind">🐻 Bear in mind &hellip;</h2>
+
+<p>Semver is only a convention that developers should follow, and isn&rsquo;t strictly enforceable. While some delightful soul may just bump the minor version whilst adding breaking changes to a pivotal package used by your app, package versioning like this works on the assumption that humans can follow a simple set of rules.</p>
+
+<p>Do your bit: spread the word about semver to your colleagues so that we&rsquo;re all on the same page! 📖</p>
+
+<p>If you really want to lock down the dependency versions in your package.json, consider looking at <code>npm shrinkwrap</code>.</p>
+
+<h3 id="bumping-versions-in-npm">Bumping versions in npm</h3>
+
+<p>Is dead easy. Replace <code>type</code> with <code>patch</code>, <code>minor</code> or <code>major</code>:</p>
+
+<pre><code class="language-bash">npm version type -m 'Version %s'
+git push &amp;&amp; git push --tags
+npm publish
+</code></pre>
+
+<h2 id="references">References</h2>
+
+<p>This is only a brief summary - find out much more info at:</p>
+
+<ul>
+<li><a href="https://docs.npmjs.com/files/package.json">docs.npmjs.com/files/package.json</a></li>
+<li><a href="https://docs.npmjs.com/misc/semver">docs.npmjs.com/misc/semver</a></li>
+</ul>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-03-09-semver-in-package-json.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

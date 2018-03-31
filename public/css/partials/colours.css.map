@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "colours.css",
+	"sources": [
+		"../../scss/partials/colours.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

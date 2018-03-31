@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Scheduling Ruby and JavaScript jobs with Heroku &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Scheduling Ruby and JavaScript jobs with Heroku</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;6 January 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/ruby </span>
+    
+    <span class="c-post__category">/javascript </span>
+    
+    <span class="c-post__category">/heroku </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>Need to do a job regularly in your app? If it&rsquo;s on Heroku then there&rsquo;s a free add-on that can run the job for you. It&rsquo;s imaginatively called Heroku Scheduler. Here&rsquo;s how I set up Ruby and JavaScript jobs ready to be scheduled.</p>
+
+<p>Create your app. From the root directory, initialise git and create a Heroku app. I like to use the Heroku toolbelt for all my Heroku command line needs. So something along the lines of:</p>
+
+<pre><code class="language-bash">mkdir daily-task-app &amp;&amp; cd daily-task-app
+git init
+heroku login
+heroku create daily-task-app
+</code></pre>
+
+<p>You could make a rake task to define your scheduled jobs, but I prefer defining scripts. This way you can define a job in whatever language you like, depending on the shebang line at the top of the script.</p>
+
+<p>Make a bin directory in your project&rsquo;s root. This will be where the scripts live. The script names will become commands that you can invoke from your app&rsquo;s bash shell once it&rsquo;s running, so think of good filenames!</p>
+
+<pre><code class="language-bash">mkdir bin
+touch bin/ruby_hello
+touch bin/js_hello
+</code></pre>
+
+<p>Let&rsquo;s put some content in the scripts that we can test.</p>
+
+<h3 id="ruby">Ruby</h3>
+
+<p>Open <code>ruby_hello</code> and put something really simple like:</p>
+
+<pre><code class="language-bash">#!/usr/bin/env ruby
+puts 'Hello Ruby World'
+</code></pre>
+
+<p>I told you it was simple.</p>
+
+<h3 id="javascript">JavaScript</h3>
+
+<p>An equivalent JavaScript version for <code>js_hello</code> would be:</p>
+
+<pre><code class="language-bash">#! /app/bin/node
+function sayHello() {
+   console.log('Hello JS World');
+ }
+sayHello();
+</code></pre>
+
+<h3 id="deploying">Deploying</h3>
+
+<p>Commit and push this work to Heroku.</p>
+
+<pre><code class="language-bash">git add .
+git commit -m 'First commit'
+git push heroku master
+</code></pre>
+
+<p>Heroku will do it&rsquo;s stuff and deploy your app. Test that the commands are executable by running a unix shell from the app and trying them out:</p>
+
+<pre><code class="language-bash">heroku run bash
+$ ruby_hello
+ =&gt; 'Hello Ruby World'
+$ js_hello
+ =&gt; 'Hello JS World'
+$ exit
+</code></pre>
+
+<p>I hope that worked for you.</p>
+
+<p>N.B. You may need to edit the shebang line to point to the correct location for node or Ruby.</p>
+
+<h3 id="scheduler">Scheduler</h3>
+
+<p>Now you know the commands are working, you can schedule them to run at regular intervals using Scheduler.</p>
+
+<p>Install the add-on then open the dashboard from the command-line.</p>
+
+<pre><code class="language-bash">heroku addons:create scheduler:standard
+heroku addons:open scheduler
+</code></pre>
+
+<p>The dashboard will open in your browser. From the dashboard you can set up new jobs and schedule them to run at simple intervals, e.g. daily. The job name should be the same as the filename of the scripts in the <code>bin</code> directory, e.g. <code>hello_js</code> or <code>hello_ruby</code>.</p>
+
+<p>The dashboard gives details of when the job has last run, and you can test they&rsquo;ve worked by taking a look at your app&rsquo;s logs where you should be able to see output.</p>
+
+<pre><code class="language-bash">heroku logs
+</code></pre>
+
+<p>A nice alternative to cron.</p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-01-06-scheduling-ruby-and-javascript-jobs-with-heroku.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> How to Deploy an AngularJS App on Heroku &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">How to Deploy an AngularJS App on Heroku</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;30 September 2015 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/javascript </span>
+    
+    <span class="c-post__category">/angularjs </span>
+    
+    <span class="c-post__category">/heroku </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<h2 id="or-getting-an-ean-app-running-on-heroku">Or getting an EAN app running on Heroku</h2>
+
+<p><em>EAN rather than <a href="http://mean.io/">MEAN</a> because we&rsquo;ll be using Express, AngularJS and Node but not Mongo this time.</em></p>
+
+<p>When googling deploying an AngularJS app to Heroku, all the tutorials I looked at (i.e. the top 3 in the first page of results &hellip;) assumed I&rsquo;d cloned the <a href="https://github.com/angular/angular-seed">Angular seed app</a> - which I hadn&rsquo;t and didn&rsquo;t want to. I had a dead simple one controller, one service AngularJS app (note: 1.x) that I&rsquo;d started from scratch and wanted to host on Heroku. What did the the seed app provide that I didn&rsquo;t already have? TL;DR a package.json file.</p>
+
+<h3 id="let-s-begin">Let&rsquo;s begin</h3>
+
+<p>Let&rsquo;s say you&rsquo;ve got your Angular app and the project structure looks a bit like this:</p>
+
+<pre><code class="language-bash">root
+│   README.md
+│   index.html   
+│
+└───js
+│   │   controllers.js
+│   │   services.js
+│   |   angular.js
+│   └── myAmazingAngularApp.js
+│   
+└───css
+    │   styles.css
+</code></pre>
+
+<p>No, I am not telling you how to write an Angular app.</p>
+
+<p>Navigate to the root folder of your project in the terminal. If you haven&rsquo;t already, make sure you&rsquo;ve got the following installed:</p>
+
+<ul>
+<li><a href="https://nodejs.org/en/">Node &amp; NPM</a></li>
+<li><a href="https://git-scm.com/downloads">Git</a></li>
+<li><a href="https://toolbelt.heroku.com/">Heroku toolbelt</a></li>
+</ul>
+
+<p>Install Express from the command line (the <code>-g</code> installs it globally on your machine). We&rsquo;re using <a href="http://expressjs.com/">Express</a> for routing.</p>
+
+<pre><code class="language-bash">npm install -g express
+</code></pre>
+
+<p>Next make a <code>package.json</code> file for the app. From the command line, type the following command and answer the questions.</p>
+
+<pre><code class="language-bash">npm init
+</code></pre>
+
+<p>Use the <code>npm init</code> command because it does it interactively for you and because you&rsquo;re lazy. You can&rsquo;t go wrong with your answers - if in doubt accept the default.</p>
+
+<p>Add a couple more properties to the file so that Heroku will know exactly how to run your app:</p>
+
+<pre><code class="language-javascript">  &quot;dependencies&quot;: {
+    &quot;ejs&quot;: &quot;^2.3.1&quot;,
+    &quot;express&quot;: &quot;~4.9.x&quot;
+  },
+  &quot;engines&quot;: {
+    &quot;node&quot;: &quot;0.12.2&quot;
+  }
+</code></pre>
+
+<p>A <code>package.json</code> file contains lots of metadata about your Node app. Install all the stuff that it specifies to your machine by running from the command line:</p>
+
+<pre><code class="language-bash">npm install
+</code></pre>
+
+<p>Now you need a file which defines your project routes. Create a file called <code>app.js</code> and copy the following text:</p>
+
+<pre><code class="language-javascript">var express = require('express');
+var path = require('path');
+var app = express();
+
+app.get('/', function (req, res) {
+	res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.use(express.static(__dirname)); // set static files location, in this case the route, add a file name if not
+app.listen(process.env.PORT || 3000);
+</code></pre>
+
+<p>We&rsquo;ve set up the root route (not a typo), which returns the view we want to use. It&rsquo;s important to use the notation on line 6 instead of an absolute pathname: see <a href="http://stackoverflow.com/questions/25463423/res-sendfile-absolute-path">this StackOverflow question</a> for why.</p>
+
+<h3 id="nearly-there">Nearly there &hellip;</h3>
+
+<p>Heroku needs a Procfile to correctly run your app.</p>
+
+<p>Make a new file in your project&rsquo;s root called <code>Procfile</code> and enter the line:</p>
+
+<pre><code class="language-bash">web: node app.js
+</code></pre>
+
+<p>Now you just need to set up version control and we&rsquo;re good to go. From the command line, run the following commands:</p>
+
+<pre><code class="language-bash">git init
+heroku create
+git add .
+git commit -m 'First commit'
+git push heroku master
+</code></pre>
+
+<p>You&rsquo;ve initialised the directory as a Git project, created a Heroku project which will also have added it to your git remotes, then committed and pushed your work to Heroku.</p>
+
+<p>If you want to test the app out locally before pushing to Heroku, test it out locally with the command:</p>
+
+<pre><code class="language-bash">heroku local web
+</code></pre>
+
+<p>If it&rsquo;s not working, run <code>heroku logs</code> and solve the problem with Google&rsquo;s help. What, I&rsquo;m not holding your hand all the way through am I??</p>
+
+<p>Finally, view your app on Heroku and bask in all it&rsquo;s deployed glory.</p>
+
+<pre><code class="language-bash">heroku open
+</code></pre>
+
+<p>Of course you could use this handy tutorial to set this up but it&rsquo;s not as fun for me that way! <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction">www.devcenter.heroku.com/articles/getting-started-with-nodejs#introduction</a></p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2015-09-30-how-to-deploy-an-angular-app-on-heroku.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

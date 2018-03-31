@@ -1,0 +1,27 @@
+// sass-lint:disable variable-for-property
+
+@font-face {
+    font-family: 'Nobile';
+    src: url('/fonts/nobile-italic-webfont.woff2') format('woff2'),
+    url('/fonts/nobile-italic-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nobile';
+    src: url('/fonts/nobile-bolditalic-webfont.woff2') format('woff2'),
+    url('/fonts/nobile-bolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/opensans-regular-webfont.woff2') format('woff2'),
+    url('/fonts/opensans-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/opensans-italic-webfont.woff2') format('woff2'),
+    url('/fonts/opensans-italic-webfont.woff') format('woff');
+    font-style: italic;
+}

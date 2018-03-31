@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/bash/</link>
+    <description>Recent content in Bash on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 04 Sep 2016 20:45:17 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Command concatenation in the terminal</title>
+      <link>http://example.org/blog/2016-09-04-command-concatenation-in-the-terminal/</link>
+      <pubDate>Sun, 04 Sep 2016 20:45:17 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-09-04-command-concatenation-in-the-terminal/</guid>
+      <description>You may know that you can chain commands at the terminal. So instead of writing
+$ echo &#39;foo&#39; $ echo &#39;bar&#39;  And hitting return after each one, you could type:
+$ echo &#39;foo&#39; &amp;amp;&amp;amp; echo &#39;bar&#39;  And achieve much the same thing - not exactly the same output but often close enough. I frequently use this combination in my JavaScript app development:
+rm -rf node_modules &amp;amp;&amp;amp; npm i &amp;amp;&amp;amp; say done  That&amp;rsquo;s a freebie.</description>
+    </item>
+    
+  </channel>
+</rss>

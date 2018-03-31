@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Longread on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/longread/</link>
+    <description>Recent content in Longread on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 10 Apr 2016 20:51:46 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/longread/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A 101 day GitHub streak</title>
+      <link>http://example.org/blog/2016-04-10-a-101-day-github-streak/</link>
+      <pubDate>Sun, 10 Apr 2016 20:51:46 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-04-10-a-101-day-github-streak/</guid>
+      <description>📆 I was going to call this post &amp;ldquo;101 days of coding&amp;rdquo;, but that would be misleading. I&amp;rsquo;ve been getting paid to write code as a web developer for over 2 years now, but over the past 3+ months I&amp;rsquo;ve been writing code in my spare time - after work, after chores, after slobbing in front of the TV - and then committing and pushing it to GitHub. The really weird and pointless thing about this is that I&amp;rsquo;ve done it every day since the 1st of January this year and now I have a pretty good streak, just look at my GitHub scorecard:</description>
+    </item>
+    
+    <item>
+      <title>Coding After Codecademy</title>
+      <link>http://example.org/blog/2015-11-03-coding-after-codecademy/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:16 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-11-03-coding-after-codecademy/</guid>
+      <description>Last month, I gave a lightning talk called &amp;ldquo;Coding After Codecademy&amp;rdquo; which was inspired by people asking me how to improve their newly acquired web development skills, now they&amp;rsquo;ve completed some Codecademy/Udacity/Code School courses. They&amp;rsquo;ve got basic HTML, CSS and JavaScript syntax, so what are some good things to start building or learning next? I know how daunting it can be to be faced with a blank editor at that stage, so in my talk I gave some common-sense advice that I would have appreciated when I was in that position myself.</description>
+    </item>
+    
+    <item>
+      <title>LeedsHack</title>
+      <link>http://example.org/blog/2015-09-14-leedshack/</link>
+      <pubDate>Mon, 14 Sep 2015 22:14:07 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-14-leedshack/</guid>
+      <description>Or, what to expect at a hack I went to my first hack a couple of weeks ago and wanted to (belatedly) share with you my experience and maybe even convince you to go to one yourself!
+LeedsHack was held in Leeds City Museum on Saturday 22nd and Sunday 23rd August. The aim of the game was to create a demoable project or hack in just 24 hours, with coding starting at 12pm on Saturday and finishing at noon on Sunday.</description>
+    </item>
+    
+    <item>
+      <title>Pomodoros &amp; Pair Programming</title>
+      <link>http://example.org/blog/2015-09-01-pomodoros-and-pair-programming/</link>
+      <pubDate>Tue, 01 Sep 2015 23:00:16 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-01-pomodoros-and-pair-programming/</guid>
+      <description>TL;DR  Next time you pair program, try using the Pomodoro Technique to improve your productivity and mix things up a bit. Breaks up difficult or tedious stories Keeps morale high and dev&#39;s brains fresh Time box learning or research which is sometimes easier to do solo Not always possible - everything in moderation   I currently work in a team where we pair program most of the time, and I&amp;rsquo;ve found that applying the principles of the Pomodoro Technique to when pairing - focus for a bit then a short break - has helped me work more effectively.</description>
+    </item>
+    
+  </channel>
+</rss>

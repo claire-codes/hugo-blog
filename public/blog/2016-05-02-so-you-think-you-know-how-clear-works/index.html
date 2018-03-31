@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> So you think you know how clear works? &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">So you think you know how clear works?</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;2 May 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;2 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/css </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    <div class="c-tldr">
+    <h2 class="c-tldr__title">TL;DR</h2>
+    <ul>
+        <li>Clears floating elements <strong>preceding</strong> the one it's applied to</li>
+        <li>Whether you need <code>clear: left</code> or <code>clear: right</code> depends on the direction the element is floating</li>
+   </ul>
+</div>
+
+<p>I thought I understood the <code>clear</code> property in CSS, but it turns out I didn&rsquo;t.</p>
+
+<p>Take 3 divs. Let&rsquo;s float them side-by-side (excuse the pseudo-HTML):</p>
+
+<pre><code class="language-html">&lt;style&gt;
+.left {
+    float: left;
+}
+&lt;/style&gt;
+&lt;div class=&quot;left&quot;&gt;ALPHA&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;BETA&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;GAMMA&lt;/div&gt;
+</code></pre>
+
+<p>They will now look something like this on the screen:</p>
+
+<pre><code class="language-html">ALPHABETAGAMMA
+</code></pre>
+
+<p>Now let&rsquo;s clear BETA:</p>
+
+<pre><code class="language-html">&lt;style&gt;
+.left {
+    float: left;
+}
+.cleared {
+    clear: both;
+}
+&lt;/style&gt;
+&lt;div class=&quot;left&quot;&gt;ALPHA&lt;/div&gt;
+&lt;div class=&quot;left cleared&quot;&gt;BETA&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;GAMMA&lt;/div&gt;
+</code></pre>
+
+<p>How do expect the divs to display now? Think about it for a second before scrolling down &hellip;</p>
+
+<p>&hellip;</p>
+
+<p>If you think that they will all be on different lines, then you&rsquo;re wrong! In fact, they now look like this:</p>
+
+<pre><code class="language-html">ALPHA
+BETAGAMMA
+</code></pre>
+
+<p>Play along at home in JSBin or JSFiddle if you don&rsquo;t believe me. So why is this? The answer is given in the <a href="https://developer.mozilla.org/en/docs/Web/CSS/clear">MDN docs</a>:</p>
+
+<blockquote>
+<p>The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.</p>
+</blockquote>
+
+<p>See it? It&rsquo;s that word <strong>precede</strong>. Applying the clear property to an element means that it doesn&rsquo;t want floats in front of it. It doesn&rsquo;t care if the element immediately after it floats, hence why BETA and GAMMA are adjacent. So the <code>clear: both</code> is a slight red herring in that it will only apply in one direction. Using <code>both</code> is like safe-guarding in case you don&rsquo;t know whether your element is floating to the left or the right.</p>
+
+<p>Why wouldn;t you know which side the preceding element is? Well, remember that &lsquo;preceding&rsquo; looks different depending which direction you&rsquo;re floating in: let&rsquo;s float the boxes right and see what happens now:</p>
+
+<pre><code class="language-html">&lt;style&gt;
+.right {
+    float: right;
+}
+.cleared {
+    clear: both;
+}
+&lt;/style&gt;
+&lt;div class=&quot;right&quot;&gt;ALPHA&lt;/div&gt;
+&lt;div class=&quot;right cleared&quot;&gt;BETA&lt;/div&gt;
+&lt;div class=&quot;right&quot;&gt;GAMMA&lt;/div&gt;
+
+&lt;!-- Now look like: --&gt;
+
+                 ALPHA
+             GAMMABETA
+</code></pre>
+
+<p>The order is due to the divs being floated right, and BETA still only cares about preceding elements, i.e. ALPHA. In the both examples, try changing <code>clear:both</code> to <code>clear: left</code> to get a clearer picture.</p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-05-02-so-you-think-you-know-how-clear-works.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

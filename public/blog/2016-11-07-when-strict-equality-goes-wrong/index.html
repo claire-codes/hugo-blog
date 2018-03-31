@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> When strict equality goes wrong &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">When strict equality goes wrong</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;7 November 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;3 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/javascript </span>
+    
+    <span class="c-post__category">/testing </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    <p>I recently saw this code in the wild. <em>Names have been changed to protect those involved.</em></p>
+
+<pre><code class="language-javascript">function makeFizzbobs (widget) {
+    if (widget === null) {
+        return {};
+    } else {
+        // Does something interesting with widget
+        return 42;
+    }
+}
+</code></pre>
+
+<p>I could imagine what the author of the code thought they were doing: they were guarding against an empty function parameter right? Cos null sounds like what you&rsquo;d be left with if the user didn&rsquo;t supply an argument like <code>floop</code> or <code>321</code>. And all this linting software tells you to use triple equals instead of doubles so it must be right? User passes something in: carry on with the function, user doesn&rsquo;t pass something to the function: we return an empty object. Job done.</p>
+
+<p>🚨 No.</p>
+
+<p>This is what actually happens:</p>
+
+<pre><code class="language-javascript">makeFizzbobs(); // 42
+</code></pre>
+
+<p>Oh. So an empty argument isn&rsquo;t the same thing as <code>null</code>? 🤔 No. No it&rsquo;s not. Well what about an empty string, or maybe that <code>undefined</code> value, that sounds empty:</p>
+
+<pre><code class="language-javascript">makeFizzbobs(''); // 42
+makeFizzbobs(undefined); // 42
+makeFizzbobs(false); // 42
+makeFizzbobs(null); // {}
+</code></pre>
+
+<p>So it turns out that null only strictly equals itself, or <code>null === null</code>. Unsurprisingly, <code>null !== undefined</code> or any of the other values we tried above.</p>
+
+<p>In fact, when you call the method with no arguments, <code>widget</code> gets the value <code>undefined</code> (add a <code>console.log(widget)</code> in the method to see for yourself). So how can we fix this function to guard against an empty argument? We could change the check in the if-statement from <code>null</code> to <code>undefined</code>, but then we&rsquo;ll let <code>null</code>s through instead.</p>
+
+<p>Maybe you&rsquo;d think that we could have a long if-clause, like:</p>
+
+<pre><code class="language-javascript">if (widget === null || widget === undefined || widget === ... ) {
+</code></pre>
+
+<p>But there is a better way!</p>
+
+<p><em>You can play along at home by whipping up some quick unit tests like I outlined <a href="/blog/super-quick-regex-tdd-setup">in my other blog post</a>. Define the <code>makeFizzbobs</code> function at the top of the test file and write some test cases.</em></p>
+
+<p>Personally, I would short-circuit the function execution by checking for a falsey. There are 6 falsey values in JavaScript, and it&rsquo;s likely that you aren&rsquo;t interested in any of them:</p>
+
+<ul>
+<li>false</li>
+<li>NaN</li>
+<li>0</li>
+<li>undefined</li>
+<li>null</li>
+<li>&ldquo;</li>
+</ul>
+
+<p>A falsey evaluates to <code>false</code> in an if-clause, which we can use like so:</p>
+
+<pre><code class="language-javascript">function makeFizzbobs (widget) {
+    if (widget) {
+        // Do something exciting
+        return 42;
+    } else {
+        return {};
+    }
+}
+</code></pre>
+
+<p>You may notice that I&rsquo;ve swapped the order around, so I&rsquo;m dealing with desirable input first and then the falsey is dealt with in the <code>else</code> clause. This is because I think the if-clause reads a little clearer and is easier to comprehend this way, rather than having to reverse the logic in your head to work out what <code>!widget</code> means (I&rsquo;m lazy, so what 😴).</p>
+
+<p>So now the function works like:</p>
+
+<pre><code class="language-javascript">makeFizzbobs(); // {}
+makeFizzbobs(null); // {}
+makeFizzbobs(''); // {}
+makeFizzbobs(123); // 42
+makeFizzbobs('abc'); // 42
+</code></pre>
+
+<p>Of course, this may not be suitable for your needs: perhaps you want to do something really interesting with an empty string <code>''</code> or you just want to deal with <code>0</code> like any other number, or perhaps you really don&rsquo;t want an empty array passed in, or <code>Infinity</code>, or the string <code>&quot;flibbertigibbet&quot;</code>, but this is a good place to start in JavaScript&rsquo;s loosely typed Wild West, and a good reminder that things are never what they seem with type checking in JavaScript.</p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-11-07-when-strict-equality-goes-wrong.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

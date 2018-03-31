@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/testing/</link>
+    <description>Recent content in Testing on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 07 Nov 2016 21:24:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>When strict equality goes wrong</title>
+      <link>http://example.org/blog/2016-11-07-when-strict-equality-goes-wrong/</link>
+      <pubDate>Mon, 07 Nov 2016 21:24:01 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-11-07-when-strict-equality-goes-wrong/</guid>
+      <description>I recently saw this code in the wild. Names have been changed to protect those involved.
+function makeFizzbobs (widget) { if (widget === null) { return {}; } else { // Does something interesting with widget return 42; } }  I could imagine what the author of the code thought they were doing: they were guarding against an empty function parameter right? Cos null sounds like what you&amp;rsquo;d be left with if the user didn&amp;rsquo;t supply an argument like floop or 321.</description>
+    </item>
+    
+    <item>
+      <title>Super quick Regex TDD setup</title>
+      <link>http://example.org/blog/2016-08-13-super-quick-regex-tdd-setup/</link>
+      <pubDate>Sat, 13 Aug 2016 20:25:22 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-08-13-super-quick-regex-tdd-setup/</guid>
+      <description>When you need to build a regex you could either (A) hack around in the console, getting confused and lost, or instead (B) use TDD and write some tests: you can have a clear list of strings your regex should match and those it shouldn&amp;rsquo;t, run them quickly and see whether the regex works and have readymade documentation for future use 🏆
+But how do you set that up? If it sounds like a lot of work, it isn&amp;rsquo;t.</description>
+    </item>
+    
+    <item>
+      <title>This one crazy tip will help you write gold-plated tests!!!1!</title>
+      <link>http://example.org/blog/2016-05-18-this-one-crazy-tip-will-help-you-write-gold-plated-tests1/</link>
+      <pubDate>Wed, 18 May 2016 20:17:36 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-05-18-this-one-crazy-tip-will-help-you-write-gold-plated-tests1/</guid>
+      <description>Here is my top tip to help you write better tests, be they unit tests, integration tests, functional tests or unicorn tests:
+Always write a failing test first.
+There are three steps to TDD. You may have heard of the 🚦 traffic lights*:
+ ❤️ Red: write a failing test 💛 Amber: make the test pass 💚 Green: improve the code you&amp;rsquo;ve just written, refactor  Or maybe red test -&amp;gt; green test -&amp;gt; refactor**.</description>
+    </item>
+    
+  </channel>
+</rss>

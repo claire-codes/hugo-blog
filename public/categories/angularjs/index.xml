@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angularjs on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/angularjs/</link>
+    <description>Recent content in Angularjs on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 30 Sep 2015 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Deploy an AngularJS App on Heroku</title>
+      <link>http://example.org/blog/2015-09-30-how-to-deploy-an-angular-app-on-heroku/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-30-how-to-deploy-an-angular-app-on-heroku/</guid>
+      <description>Or getting an EAN app running on Heroku EAN rather than MEAN because we&amp;rsquo;ll be using Express, AngularJS and Node but not Mongo this time.
+When googling deploying an AngularJS app to Heroku, all the tutorials I looked at (i.e. the top 3 in the first page of results &amp;hellip;) assumed I&amp;rsquo;d cloned the Angular seed app - which I hadn&amp;rsquo;t and didn&amp;rsquo;t want to. I had a dead simple one controller, one service AngularJS app (note: 1.</description>
+    </item>
+    
+  </channel>
+</rss>

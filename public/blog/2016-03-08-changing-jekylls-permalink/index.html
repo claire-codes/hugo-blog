@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Changing Jekyll&#39;s Permalink &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Changing Jekyll&#39;s Permalink</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;8 March 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;2 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/ruby </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>Let&rsquo;s change the permalink format for your Jekyll blog.</p>
+
+<h1 id="what">🔗 What?</h1>
+
+<p>In your Jekyll blog, a <em>permalink</em> is the name for the URL that points directly to a specific blog post. It&rsquo;s a <em>permanent link</em> to a page.</p>
+
+<h1 id="why">🔗 Why?</h1>
+
+<p>Jekyll uses a really ugly, verbose permalink format by default which includes the date and category of the post:</p>
+
+<pre><code class="language-bash">/:categories/:year/:month/:day/:title.html
+</code></pre>
+
+<p>Which in the live site for this post would become:</p>
+
+<pre><code class="language-bash">http://www.claireparker-pen.com/ruby/2016/03/08/changing-jekylls-permalink.html
+</code></pre>
+
+<p>Why do you want all that extra info in your permalink? In my opinion all that&rsquo;s needed is the title to uniquely identify it, and this should also be snappy and to the point (a rule I admittedly don&rsquo;t always follow.). Any metadata such data or category should already be clearly included in the blog post itself.</p>
+
+<h1 id="how">🔗 How?</h1>
+
+<p>In the <code>_config.yml</code> file, either edit the <code>permalink</code> property or add it if it isn&rsquo;t already there. The pattern you provide creates the structure of your permalinks. You can use certain variables that Jekyll recognises that represent metadata for the post. For example, I&rsquo;ve got:</p>
+
+<pre><code class="language-bash">permalink: /blog/:title
+</code></pre>
+
+<p>The <code>:title</code> will map to the title of my blog post as taken from its filename and create a permalink that looks something like</p>
+
+<pre><code class="language-bash">http://www.claireparker-pen.com/blog/changing-jekyll-permalinks
+</code></pre>
+
+<p>You can find the other variables that Jekyll supports listed in <a href="https://jekyllrb.com/docs/permalinks/">Jekyll&rsquo;s docs</a>. Spoiler: there aren&rsquo;t any interesting ones except for <code>:title</code>.</p>
+
+<p>Commit, build and push to see your new more succinct permalinks.</p>
+
+<h2 id="references">References</h2>
+
+<p><a href="https://jekyllrb.com/docs/permalinks/">https://jekyllrb.com/docs/permalinks/</a></p>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-03-08-changing-jekylls-permalink.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

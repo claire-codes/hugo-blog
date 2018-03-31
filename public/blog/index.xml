@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Claire Parker-Jones Blog</title>
+    <link>http://example.org/blog/</link>
+    <description>Recent content in Blog on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 19 Mar 2018 20:54:03 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reasons not to use IDs in CSS</title>
+      <link>http://example.org/blog/2018-03-19-reasons-not-to-use-ids-in-css/</link>
+      <pubDate>Mon, 19 Mar 2018 20:54:03 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-03-19-reasons-not-to-use-ids-in-css/</guid>
+      <description>Sometimes when I’m reviewing code, I advise a colleague not to use IDs for CSS styles, and inevitably get asked why. Like standing in queues, making a cup of tea or applying a full face of makeup in the dark at 6am, avoiding IDs in CSS is something I do without thinking. It takes me a minute before I can explain to other people why I do it. So with that in mind, here’s a list of reasons I avoid using IDs in my stylesheets, and prefer classes instead.</description>
+    </item>
+    
+    <item>
+      <title>Styling inline code tags</title>
+      <link>http://example.org/blog/2018-03-16-styling-inline-code-tags/</link>
+      <pubDate>Fri, 16 Mar 2018 08:58:21 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-03-16-styling-inline-code-tags/</guid>
+      <description>I like writing tech-related blog posts (you’re reading one right now!). My posts often contain the &amp;lt;code&amp;gt; tag as I illustrate code examples. The default browser style for this tag can be pretty dull, typically using the system monospace font and a beige background colour. I&amp;rsquo;ve added my own custom style to this tag. This is a step-by-step explanation of it, as I&amp;rsquo;d rather do that than watch some drivel on Netflix today.</description>
+    </item>
+    
+    <item>
+      <title>Deleting multiple local git branches with grep</title>
+      <link>http://example.org/blog/2018-03-13-deleting-multiple-local-git-branches-with-grep/</link>
+      <pubDate>Tue, 13 Mar 2018 22:45:59 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-03-13-deleting-multiple-local-git-branches-with-grep/</guid>
+      <description>After working for a while on a project, it’s likely that you’ll have a lot of branches checked out locally. Branches quickly expire and are no longer needed, so it’s a good idea to delete them. But if you’re like me, you don’t do this very regularly! When I type git branch into the terminal I&amp;rsquo;m confronted with dozens of dead branches.
+Delete local branches by typing git branch -D branch-name in your terminal.</description>
+    </item>
+    
+    <item>
+      <title>Do your own dotfiles</title>
+      <link>http://example.org/blog/2018-02-19-dotfiles-new-machine/</link>
+      <pubDate>Mon, 19 Feb 2018 21:35:19 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-02-19-dotfiles-new-machine/</guid>
+      <description>A new job brings lots of changes, including a new laptop or computer. I’m lucky enough to have been able to use a MacBook in all of my developer jobs. (Once you go Mac you never go back!) I recently started a new job and found myself starting from scratch again. I began by downloading Atom, replaced Terminal with iTerm2 and installed some other handy apps.
+I used my dotfiles to customise my terminal prompt, and thanked Past Claire for committing the code for this to the repo.</description>
+    </item>
+    
+    <item>
+      <title>Multiline comments in Sass</title>
+      <link>http://example.org/blog/2017-11-21-multiline-comments-in-sass/</link>
+      <pubDate>Tue, 21 Nov 2017 21:35:19 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2017-11-21-multiline-comments-in-sass/</guid>
+      <description>Note: These rules are specifically for sass-lint, because that&amp;rsquo;s my linter of choice. However, equivalent rules will (probably) exist for other linters such as styelint or csslint. (provide links)
+If you lint your Sass code using an automated tool like sass-lint, you might have encountered the rule: no-css-comments. Depending on the severity level in your linter config, this will trigger an error or a warning when it encounters comments like this /* I am a CSS style comment */.</description>
+    </item>
+    
+    <item>
+      <title>Global gitignores - is this thing on?</title>
+      <link>http://example.org/blog/2017-04-06-global-gitignores/</link>
+      <pubDate>Thu, 06 Apr 2017 22:05:26 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2017-04-06-global-gitignores/</guid>
+      <description>Do you get tired of typing out echo node_modules/ &amp;gt; .gitignore every time you create a new JavaScript project? Do you always forget and commit those pesky node modules to GitHub anyway? And what about those npm_debug.log or .DS_Store files (what even is .DS_Store⁉️)?
+Well help is at hand to save you yet more precious keystrokes. Create a ✨global gitignore✨ file which will be used by all your git repos locally on your machine and you may never need to write a .</description>
+    </item>
+    
+    <item>
+      <title>Top tips for targeting your searches in Atom</title>
+      <link>http://example.org/blog/2017-03-22-top-tips-for-targeting-your-searches-in-atom/</link>
+      <pubDate>Wed, 22 Mar 2017 23:10:20 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2017-03-22-top-tips-for-targeting-your-searches-in-atom/</guid>
+      <description>Are you working on a large project in Atom? Dozens of directories? Thousands of files? Innumerable node modules? You may have discovered that Atom isn&amp;rsquo;t the fatest editor out there when executing search queries across an entire project. Give Atom a helping hand by narrowing down the scope of your search with a few simple glob patterns.
+TL;DR  Exclude a directory from your search by adding an exclamation point in front of its name: !</description>
+    </item>
+    
+    <item>
+      <title>Improving colour contrast ratios in Atom</title>
+      <link>http://example.org/blog/2017-03-07-improving-colour-contrast-ratios-in-atom/</link>
+      <pubDate>Tue, 07 Mar 2017 20:58:17 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2017-03-07-improving-colour-contrast-ratios-in-atom/</guid>
+      <description>Atom is an open source text editor and is as customisable as you’d expect a piece of open source software to be (i.e. very). If you want a new piece of functionality, chances are a package already exists for it. The same goes for design themes. But it&amp;rsquo;s also simple to make small style tweaks to your UI without overhauling your whole colour scheme. I recently did this to make the tree view easier to use for my poor old eyes 👀.</description>
+    </item>
+    
+    <item>
+      <title>Why the title attribute is pointless in HTML5</title>
+      <link>http://example.org/blog/2017-01-31-why-the-title-attribute-is-pointless-in-html5/</link>
+      <pubDate>Tue, 31 Jan 2017 22:29:26 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2017-01-31-why-the-title-attribute-is-pointless-in-html5/</guid>
+      <description>I’ve been working a lot with Magento 2 recently (lucky me 😑) and I&amp;rsquo;ve noticed the title attribute used heavily across the HTML and PHTML template files. I found examples on &amp;lt;input&amp;gt;, &amp;lt;a&amp;gt; , &amp;lt;textarea&amp;gt;, &amp;lt;p&amp;gt; and especially &amp;lt;div&amp;gt; tags, e.g.
+&amp;lt;div title=&amp;quot;&amp;lt;?php /* @escapeNotVerified */ echo __(‘Buy me&#39;)?&amp;gt;&amp;quot;&amp;gt; &amp;lt;?php /* @escapeNotVerified */ echo __(‘Buy me&#39;) ?&amp;gt; &amp;lt;/div&amp;gt;  This is the pattern I&amp;rsquo;ve seen used: the title attribute is used to repeat the text within the div or an equivalent “useful” value for other tags.</description>
+    </item>
+    
+    <item>
+      <title>When strict equality goes wrong</title>
+      <link>http://example.org/blog/2016-11-07-when-strict-equality-goes-wrong/</link>
+      <pubDate>Mon, 07 Nov 2016 21:24:01 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-11-07-when-strict-equality-goes-wrong/</guid>
+      <description>I recently saw this code in the wild. Names have been changed to protect those involved.
+function makeFizzbobs (widget) { if (widget === null) { return {}; } else { // Does something interesting with widget return 42; } }  I could imagine what the author of the code thought they were doing: they were guarding against an empty function parameter right? Cos null sounds like what you&amp;rsquo;d be left with if the user didn&amp;rsquo;t supply an argument like floop or 321.</description>
+    </item>
+    
+    <item>
+      <title>Command concatenation in the terminal</title>
+      <link>http://example.org/blog/2016-09-04-command-concatenation-in-the-terminal/</link>
+      <pubDate>Sun, 04 Sep 2016 20:45:17 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-09-04-command-concatenation-in-the-terminal/</guid>
+      <description>You may know that you can chain commands at the terminal. So instead of writing
+$ echo &#39;foo&#39; $ echo &#39;bar&#39;  And hitting return after each one, you could type:
+$ echo &#39;foo&#39; &amp;amp;&amp;amp; echo &#39;bar&#39;  And achieve much the same thing - not exactly the same output but often close enough. I frequently use this combination in my JavaScript app development:
+rm -rf node_modules &amp;amp;&amp;amp; npm i &amp;amp;&amp;amp; say done  That&amp;rsquo;s a freebie.</description>
+    </item>
+    
+    <item>
+      <title>Super quick Regex TDD setup</title>
+      <link>http://example.org/blog/2016-08-13-super-quick-regex-tdd-setup/</link>
+      <pubDate>Sat, 13 Aug 2016 20:25:22 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-08-13-super-quick-regex-tdd-setup/</guid>
+      <description>When you need to build a regex you could either (A) hack around in the console, getting confused and lost, or instead (B) use TDD and write some tests: you can have a clear list of strings your regex should match and those it shouldn&amp;rsquo;t, run them quickly and see whether the regex works and have readymade documentation for future use 🏆
+But how do you set that up? If it sounds like a lot of work, it isn&amp;rsquo;t.</description>
+    </item>
+    
+    <item>
+      <title>Trailing commas in JavaScript objects, yay or nay?</title>
+      <link>http://example.org/blog/2016-06-07-trailing-commas-in-javascript-objects-yay-or-nay/</link>
+      <pubDate>Tue, 07 Jun 2016 17:33:47 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-06-07-trailing-commas-in-javascript-objects-yay-or-nay/</guid>
+      <description>TL;DR  A trailing comma on the final property of a JavaScript object is valid syntax in ECMAScript5 ... but it will throw an error in IE8 *surprise* 🎉 Trailing commas are also allowed in arrays But if you try to parse an object with a trailing comma to JSON it will throw an error   Do you notice anything different about this object?
+{ cat: &amp;quot;miaow&amp;quot;, dog: &amp;quot;woof&amp;quot;, frog: &amp;quot;ribbit&amp;quot;, }  Maybe that trailing comma after &amp;ldquo;ribbit&amp;rdquo; strikes you as a bit off.</description>
+    </item>
+    
+    <item>
+      <title>This one crazy tip will help you write gold-plated tests!!!1!</title>
+      <link>http://example.org/blog/2016-05-18-this-one-crazy-tip-will-help-you-write-gold-plated-tests1/</link>
+      <pubDate>Wed, 18 May 2016 20:17:36 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-05-18-this-one-crazy-tip-will-help-you-write-gold-plated-tests1/</guid>
+      <description>Here is my top tip to help you write better tests, be they unit tests, integration tests, functional tests or unicorn tests:
+Always write a failing test first.
+There are three steps to TDD. You may have heard of the 🚦 traffic lights*:
+ ❤️ Red: write a failing test 💛 Amber: make the test pass 💚 Green: improve the code you&amp;rsquo;ve just written, refactor  Or maybe red test -&amp;gt; green test -&amp;gt; refactor**.</description>
+    </item>
+    
+    <item>
+      <title>So you think you know how clear works?</title>
+      <link>http://example.org/blog/2016-05-02-so-you-think-you-know-how-clear-works/</link>
+      <pubDate>Mon, 02 May 2016 23:03:12 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-05-02-so-you-think-you-know-how-clear-works/</guid>
+      <description>TL;DR  Clears floating elements preceding the one it&#39;s applied to Whether you need clear: left or clear: right depends on the direction the element is floating   I thought I understood the clear property in CSS, but it turns out I didn&amp;rsquo;t.
+Take 3 divs. Let&amp;rsquo;s float them side-by-side (excuse the pseudo-HTML):
+&amp;lt;style&amp;gt; .left { float: left; } &amp;lt;/style&amp;gt; &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;ALPHA&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;BETA&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;left&amp;quot;&amp;gt;GAMMA&amp;lt;/div&amp;gt;  They will now look something like this on the screen:</description>
+    </item>
+    
+    <item>
+      <title>How to chain functions in JavaScript</title>
+      <link>http://example.org/blog/2016-04-25-how-to-chain-functions-in-javascript/</link>
+      <pubDate>Tue, 26 Apr 2016 20:21:04 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-04-25-how-to-chain-functions-in-javascript/</guid>
+      <description>The chaining design pattern is lovely. 🌅 It means we can call several object methods in one line of code. You see this pattern used in jQuery a lot.
+Instead of several repetitive lines (A) we have a cleaner one-liner (B) 🍰:
+// (A) let sponge = new Cake(); sponge.mix(); sponge.bake(); sponge.eat(); // (B) let sponge = new Cake().mix().bake().eat();  But how? You can&amp;rsquo;t just randomly start chaining methods and hope they work.</description>
+    </item>
+    
+    <item>
+      <title>Selecting the last n elements in CSS</title>
+      <link>http://example.org/blog/2016-04-16-selecting-the-last-n-elements-in-css/</link>
+      <pubDate>Sat, 16 Apr 2016 16:25:27 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-04-16-selecting-the-last-n-elements-in-css/</guid>
+      <description>Let&amp;rsquo;s a take a bog-standard list: 🚽📋
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Doris Lessing&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Angela Carter&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Ann Patchett&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Iris Murdoch&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Quick, off the top of your head: 👴
+ How would you select only the last list item? li:last-child What if we added another item to the list. How would you select only the last 2 elements? li:nth-last-child(-n+2) A final list element is added: there&amp;rsquo;s now 6 li&amp;rsquo;s and we want only the last 3.</description>
+    </item>
+    
+    <item>
+      <title>A 101 day GitHub streak</title>
+      <link>http://example.org/blog/2016-04-10-a-101-day-github-streak/</link>
+      <pubDate>Sun, 10 Apr 2016 20:51:46 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-04-10-a-101-day-github-streak/</guid>
+      <description>📆 I was going to call this post &amp;ldquo;101 days of coding&amp;rdquo;, but that would be misleading. I&amp;rsquo;ve been getting paid to write code as a web developer for over 2 years now, but over the past 3+ months I&amp;rsquo;ve been writing code in my spare time - after work, after chores, after slobbing in front of the TV - and then committing and pushing it to GitHub. The really weird and pointless thing about this is that I&amp;rsquo;ve done it every day since the 1st of January this year and now I have a pretty good streak, just look at my GitHub scorecard:</description>
+    </item>
+    
+    <item>
+      <title>Semver in package.json</title>
+      <link>http://example.org/blog/2016-03-09-semver-in-package-json/</link>
+      <pubDate>Wed, 09 Mar 2016 21:56:35 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-03-09-semver-in-package-json/</guid>
+      <description>TL;DR  Allow only patch changes: ~1.1.3, e.g. =1.1.3  Allow minor changes: ^1.1.3, e.g. =1.1.3    You might have noticed some unexpected characters next to the package versions of the dependencies or devDependencies properties in your package.json file:
+&amp;quot;dependencies&amp;quot;: { &amp;quot;backbone&amp;quot;: &amp;quot;^1.3.1&amp;quot;, &amp;quot;express&amp;quot;: &amp;quot;~4.13.4&amp;quot; }  Semver First of all, let&amp;rsquo;s understand how packages are versioned and what each of those numbers represent.
+A piece of software, e.</description>
+    </item>
+    
+    <item>
+      <title>Changing Jekyll&#39;s Permalink</title>
+      <link>http://example.org/blog/2016-03-08-changing-jekylls-permalink/</link>
+      <pubDate>Tue, 08 Mar 2016 19:54:26 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-03-08-changing-jekylls-permalink/</guid>
+      <description>Let&amp;rsquo;s change the permalink format for your Jekyll blog.
+🔗 What? In your Jekyll blog, a permalink is the name for the URL that points directly to a specific blog post. It&amp;rsquo;s a permanent link to a page.
+🔗 Why? Jekyll uses a really ugly, verbose permalink format by default which includes the date and category of the post:
+/:categories/:year/:month/:day/:title.html  Which in the live site for this post would become:</description>
+    </item>
+    
+    <item>
+      <title>Spies in Jasmine &amp; Sinon</title>
+      <link>http://example.org/blog/2016-02-15-spies-in-jasmine-and-sinon/</link>
+      <pubDate>Mon, 15 Feb 2016 18:13:45 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-02-15-spies-in-jasmine-and-sinon/</guid>
+      <description>🔎 TL;DR 🔍  Terminology used by Jasmine, Sinon and other testing frameworks is not the same: one person&#39;s spy is another person&#39;s stub The equivalent of Sinon&#39;s sinon.spy(foo,&#39;bar&#39;) in Jasmine is spyOn(foo,&#39;bar&#39;).and.callThrough()   So you&amp;rsquo;re testing. In JavaScript. Perhaps you want to test:
+ whether a method has been called what arguments the method was called with what the method returns  A reasonable request. You turn to your testing framework and it turns back to you and it says &amp;ldquo;Bob, you need to use a spy.</description>
+    </item>
+    
+    <item>
+      <title>Git Aliases</title>
+      <link>http://example.org/blog/2016-02-03-git-aliases/</link>
+      <pubDate>Wed, 03 Feb 2016 19:42:23 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-02-03-git-aliases/</guid>
+      <description>How many times do type out the same repetitive commands for Git every day? Want to save some keystrokes? Use a Git alias. Consider the very useful but very long:
+git log --graph --oneline --decorate  What a mouthful. But all you need to do, from any directory at the command line, is type:
+git config --global alias.plog &#39;log --graph --oneline --decorate&#39;  Then from then on all you need to type is:</description>
+    </item>
+    
+    <item>
+      <title>npm all the things!</title>
+      <link>http://example.org/blog/2016-02-01-npm-all-the-things/</link>
+      <pubDate>Mon, 01 Feb 2016 21:43:35 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-02-01-npm-all-the-things/</guid>
+      <description>Are you one of those mugs ☕️ still downloading zip files of libraries for their JavaScript projects? Well you don&amp;rsquo;t have to be! Leverage the power of the command line today and npm that thing!
+npm is Node&amp;rsquo;s Package Manager (how did they come up with that name??) and I am having great fun with it at the moment - packaging, modularising and managing my JavaScript project dependencies with minimal pain.</description>
+    </item>
+    
+    <item>
+      <title>Scheduling Ruby and JavaScript jobs with Heroku</title>
+      <link>http://example.org/blog/2016-01-06-scheduling-ruby-and-javascript-jobs-with-heroku/</link>
+      <pubDate>Wed, 06 Jan 2016 21:37:32 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-01-06-scheduling-ruby-and-javascript-jobs-with-heroku/</guid>
+      <description>Need to do a job regularly in your app? If it&amp;rsquo;s on Heroku then there&amp;rsquo;s a free add-on that can run the job for you. It&amp;rsquo;s imaginatively called Heroku Scheduler. Here&amp;rsquo;s how I set up Ruby and JavaScript jobs ready to be scheduled.
+Create your app. From the root directory, initialise git and create a Heroku app. I like to use the Heroku toolbelt for all my Heroku command line needs.</description>
+    </item>
+    
+    <item>
+      <title>Paths in Ruby</title>
+      <link>http://example.org/blog/2016-01-01-paths-in-ruby/</link>
+      <pubDate>Fri, 01 Jan 2016 14:30:01 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2016-01-01-paths-in-ruby/</guid>
+      <description>You&amp;rsquo;ve got a file, but where does it live? Which directory are you in? Where am I? What&amp;rsquo;s my name?
+For the following examples, imagine:
+ you&amp;rsquo;re executing a file called foo.rb which lives in the file system at /Users/me/myDir/foo.rb you&amp;rsquo;re located in /Users/me/myDir you&amp;rsquo;ve executed the command ruby foo.rb from the terminal  Remember:
+ absolute path - the full path of the file in the file system: it starts with the root directory and includes all the directories between it and the file in question.</description>
+    </item>
+    
+    <item>
+      <title>The :not() pseudo-class</title>
+      <link>http://example.org/blog/2015-12-15-the-not-pseudo-class/</link>
+      <pubDate>Tue, 15 Dec 2015 00:00:01 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2015-12-15-the-not-pseudo-class/</guid>
+      <description>How do you use CSS to style a particular element differently from other similar elements? You&amp;rsquo;d stick a class or ID on it, like so:
+&amp;lt;style&amp;gt; .special { color: red; } &amp;lt;/style&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt; &amp;lt;p class=&amp;quot;special&amp;quot;&amp;gt;Special&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;Normal&amp;lt;/p&amp;gt;   .code-example, .code-example-two { border: 1px solid #dcdcdc; border-radius: 3px; padding: 15px; font-family: serif; font-size: 16px; } .code-example .special { color: red; }  Normal
+Normal
+Special
+Normal
+Normal
+ But what if you have the opposite problem - you want to exclude an element from a particular style?</description>
+    </item>
+    
+    <item>
+      <title>NodeLists are not Arrays</title>
+      <link>http://example.org/blog/2015-12-01-nodelists-are-not-arrays/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:16 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2015-12-01-nodelists-are-not-arrays/</guid>
+      <description>When you&amp;rsquo;re working with the DOM, it&amp;rsquo;s tempting to think that when you select a group of elements from the page that you&amp;rsquo;ve got an array. Right? Wrong! It might look like a duck and walk like a duck, but it moos like a cow. Just what is this monster?! It&amp;rsquo;s a NodeList.
+Try this in your browser console:
+&amp;gt; var whoami = document.querySelectorAll(&#39;div&#39;); &amp;gt; Object.getPrototypeOf(whoami) NodeList {}  Compare this with:</description>
+    </item>
+    
+    <item>
+      <title>Coding After Codecademy</title>
+      <link>http://example.org/blog/2015-11-03-coding-after-codecademy/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:16 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-11-03-coding-after-codecademy/</guid>
+      <description>Last month, I gave a lightning talk called &amp;ldquo;Coding After Codecademy&amp;rdquo; which was inspired by people asking me how to improve their newly acquired web development skills, now they&amp;rsquo;ve completed some Codecademy/Udacity/Code School courses. They&amp;rsquo;ve got basic HTML, CSS and JavaScript syntax, so what are some good things to start building or learning next? I know how daunting it can be to be faced with a blank editor at that stage, so in my talk I gave some common-sense advice that I would have appreciated when I was in that position myself.</description>
+    </item>
+    
+    <item>
+      <title>How to Deploy an AngularJS App on Heroku</title>
+      <link>http://example.org/blog/2015-09-30-how-to-deploy-an-angular-app-on-heroku/</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-30-how-to-deploy-an-angular-app-on-heroku/</guid>
+      <description>Or getting an EAN app running on Heroku EAN rather than MEAN because we&amp;rsquo;ll be using Express, AngularJS and Node but not Mongo this time.
+When googling deploying an AngularJS app to Heroku, all the tutorials I looked at (i.e. the top 3 in the first page of results &amp;hellip;) assumed I&amp;rsquo;d cloned the Angular seed app - which I hadn&amp;rsquo;t and didn&amp;rsquo;t want to. I had a dead simple one controller, one service AngularJS app (note: 1.</description>
+    </item>
+    
+    <item>
+      <title>Deploying Jekyll on Heroku</title>
+      <link>http://example.org/blog/2015-09-20-deploying-jekyll-on-heroku/</link>
+      <pubDate>Sun, 20 Sep 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-20-deploying-jekyll-on-heroku/</guid>
+      <description>How I deployed my Jekyll blog to Heroku step-by-step If you use Jekyll for your blog you&amp;rsquo;ll see that their docs suggest hosting your app on GitHub pages. However, I wanted to host mine on Heroku because - well, just because I could really. I&amp;rsquo;d used Heroku previously and I knew I wouldn&amp;rsquo;t be restricted in my choice of plug-ins further down the line. Alas, I didn&amp;rsquo;t find a single clear tutorial for setting it up: even the example linked on the Jekyll site didn&amp;rsquo;t run for me!</description>
+    </item>
+    
+    <item>
+      <title>LeedsHack</title>
+      <link>http://example.org/blog/2015-09-14-leedshack/</link>
+      <pubDate>Mon, 14 Sep 2015 22:14:07 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-14-leedshack/</guid>
+      <description>Or, what to expect at a hack I went to my first hack a couple of weeks ago and wanted to (belatedly) share with you my experience and maybe even convince you to go to one yourself!
+LeedsHack was held in Leeds City Museum on Saturday 22nd and Sunday 23rd August. The aim of the game was to create a demoable project or hack in just 24 hours, with coding starting at 12pm on Saturday and finishing at noon on Sunday.</description>
+    </item>
+    
+    <item>
+      <title>Scraping Sites That Use Ajax</title>
+      <link>http://example.org/blog/2015-09-04-scraping-websites-that-use-ajax/</link>
+      <pubDate>Sat, 05 Sep 2015 16:08:43 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-04-scraping-websites-that-use-ajax/</guid>
+      <description>Or, where&amp;rsquo;s the rest of my HTML?? TL;DR  If the website you&#39;re scraping uses Ajax to load content, open-uri and Nokogiri won&#39;t cut it Use Watir WebDriver (+ PhantomJS) instead   I recently wanted to do a one-off web-scrape of a single page to get the hrefs of the 100+ &amp;lt;a&amp;gt; tags within it. A cursory google suggested Nokogiri and open-uri would do the trick, so off I went:</description>
+    </item>
+    
+    <item>
+      <title>Pomodoros &amp; Pair Programming</title>
+      <link>http://example.org/blog/2015-09-01-pomodoros-and-pair-programming/</link>
+      <pubDate>Tue, 01 Sep 2015 23:00:16 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2015-09-01-pomodoros-and-pair-programming/</guid>
+      <description>TL;DR  Next time you pair program, try using the Pomodoro Technique to improve your productivity and mix things up a bit. Breaks up difficult or tedious stories Keeps morale high and dev&#39;s brains fresh Time box learning or research which is sometimes easier to do solo Not always possible - everything in moderation   I currently work in a team where we pair program most of the time, and I&amp;rsquo;ve found that applying the principles of the Pomodoro Technique to when pairing - focus for a bit then a short break - has helped me work more effectively.</description>
+    </item>
+    
+  </channel>
+</rss>

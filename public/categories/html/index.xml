@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/html/</link>
+    <description>Recent content in Html on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 19 Mar 2018 20:54:03 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reasons not to use IDs in CSS</title>
+      <link>http://example.org/blog/2018-03-19-reasons-not-to-use-ids-in-css/</link>
+      <pubDate>Mon, 19 Mar 2018 20:54:03 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-03-19-reasons-not-to-use-ids-in-css/</guid>
+      <description>Sometimes when I’m reviewing code, I advise a colleague not to use IDs for CSS styles, and inevitably get asked why. Like standing in queues, making a cup of tea or applying a full face of makeup in the dark at 6am, avoiding IDs in CSS is something I do without thinking. It takes me a minute before I can explain to other people why I do it. So with that in mind, here’s a list of reasons I avoid using IDs in my stylesheets, and prefer classes instead.</description>
+    </item>
+    
+    <item>
+      <title>Styling inline code tags</title>
+      <link>http://example.org/blog/2018-03-16-styling-inline-code-tags/</link>
+      <pubDate>Fri, 16 Mar 2018 08:58:21 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2018-03-16-styling-inline-code-tags/</guid>
+      <description>I like writing tech-related blog posts (you’re reading one right now!). My posts often contain the &amp;lt;code&amp;gt; tag as I illustrate code examples. The default browser style for this tag can be pretty dull, typically using the system monospace font and a beige background colour. I&amp;rsquo;ve added my own custom style to this tag. This is a step-by-step explanation of it, as I&amp;rsquo;d rather do that than watch some drivel on Netflix today.</description>
+    </item>
+    
+  </channel>
+</rss>

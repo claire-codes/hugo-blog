@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html5 on Claire Parker-Jones Blog</title>
+    <link>http://example.org/categories/html5/</link>
+    <description>Recent content in Html5 on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 31 Jan 2017 22:29:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/html5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why the title attribute is pointless in HTML5</title>
+      <link>http://example.org/blog/2017-01-31-why-the-title-attribute-is-pointless-in-html5/</link>
+      <pubDate>Tue, 31 Jan 2017 22:29:26 +0000</pubDate>
+      
+      <guid>http://example.org/blog/2017-01-31-why-the-title-attribute-is-pointless-in-html5/</guid>
+      <description>I’ve been working a lot with Magento 2 recently (lucky me 😑) and I&amp;rsquo;ve noticed the title attribute used heavily across the HTML and PHTML template files. I found examples on &amp;lt;input&amp;gt;, &amp;lt;a&amp;gt; , &amp;lt;textarea&amp;gt;, &amp;lt;p&amp;gt; and especially &amp;lt;div&amp;gt; tags, e.g.
+&amp;lt;div title=&amp;quot;&amp;lt;?php /* @escapeNotVerified */ echo __(‘Buy me&#39;)?&amp;gt;&amp;quot;&amp;gt; &amp;lt;?php /* @escapeNotVerified */ echo __(‘Buy me&#39;) ?&amp;gt; &amp;lt;/div&amp;gt;  This is the pattern I&amp;rsquo;ve seen used: the title attribute is used to repeat the text within the div or an equivalent “useful” value for other tags.</description>
+    </item>
+    
+  </channel>
+</rss>

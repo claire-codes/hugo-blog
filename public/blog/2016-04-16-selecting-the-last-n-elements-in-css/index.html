@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+    <head>
+        <title> Selecting the last n elements in CSS &middot; Claire Parker-Jones Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta name="generator" content="Hugo 0.37" />
+
+<link rel="stylesheet" href="http://example.org/css/styles.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://example.org/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon/favicon-16x16.png">
+
+<meta name="theme-color" content="#4527a0">
+
+        <link rel="stylesheet" href="http://example.org/css/prism.css"/>
+    </head>
+
+    <body>
+        <header class="c-header">
+    <div class="c-header__container">
+        <h1 class="c-header__title">Claire<br />Parker-Jones</h1>
+        <nav class="c-header__links-container">
+            <ul class="c-header__links-list">
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="http://example.org/">Home</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/about">About</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/interesting">Interesting</a>
+                </li>
+                
+                <li class="c-header__nav-item">
+                    <a class="c-header__link" href="/blog">Blog</a>
+                </li>
+                
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+        <main role="main">
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">Selecting the last n elements in CSS</h1>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;16 April 2016 </h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;2 minute read</div>
+                
+                    <div class="c-post__categories"><i class="fas fa-book"></i>&nbsp;&nbsp;Categories:&nbsp;
+    
+    <span class="c-post__category">/css </span>
+    
+</div>
+
+                
+                <div class="post-content">
+                    
+
+<p>Let&rsquo;s a take a bog-standard list: 🚽📋</p>
+
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;Doris Lessing&lt;/li&gt;
+    &lt;li&gt;Angela Carter&lt;/li&gt;
+    &lt;li&gt;Ann Patchett&lt;/li&gt;
+    &lt;li&gt;Iris Murdoch&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>Quick, off the top of your head: 👴</p>
+
+<ul>
+<li>How would you select only the last list item? <code>li:last-child</code></li>
+<li>What if we added another item to the list. How would you select only the last <em>2</em> elements? <code>li:nth-last-child(-n+2)</code></li>
+<li>A final list element is added: there&rsquo;s now 6 li&rsquo;s and we want only the last 3. How do we do that? We need yet another selector: <code>li:nth-child(n+4)</code></li>
+</ul>
+
+<p>But actually, we could have used that last selector all along and it would have been more resistant to the changing structure of the list, considering our requirements: which were that we always wanted to miss the first 3 elements and select anything after them, regardless of how many other li&rsquo;s there were in the list.</p>
+
+<p>On the other hand 👋, what about if the list was changing length but you always wanted <em>just</em> the last 3 elements? You could have stuck with <code>nth-last-child(-n+3)</code>. See, depends on your requirements and how you phrase the question.</p>
+
+<h3 id="aside">Aside</h3>
+
+<p>People get snobby about using w3schools resources but I love the &ldquo;Try it yourself&rdquo; examples for playing around with selectors like this: they&rsquo;re easy to google for an example you want and simple to modify. Spend less time being critical and elitist and putting beginners off just so you sound like you know what you&rsquo;re talking about and more time writing code! 👃 <em>Fin.</em></p>
+
+<h3 id="p-s">🔞 P.S.</h3>
+
+<p><code>nth-child</code>, <code>nth-last-child</code> and other helpful advanced selectors <a href="http://caniuse.com/#search=nth-last-child">are not supported in IE8</a>.</p>
+
+<h3 id="read-more">Read more 📓</h3>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/4844456/is-it-possible-to-select-the-last-n-items-with-nth-child">http://stackoverflow.com/questions/4844456/is-it-possible-to-select-the-last-n-items-with-nth-child</a></li>
+<li><a href="https://css-tricks.com/useful-nth-child-recipies/">https://css-tricks.com/useful-nth-child-recipies/</a></li>
+<li><a href="http://www.w3schools.com/cssref/sel_nth-last-child.asp">http://www.w3schools.com/cssref/sel_nth-last-child.asp</a></li>
+</ul>
+
+                </div>
+                <div class="c-post__footer">
+                    
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/claireparkerpen">Send me a Tweet</a></div>
+                    
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/2016-04-16-selecting-the-last-n-elements-in-css.markdown">Edit this page on Github</a></div>
+                </div>
+            </div>
+        </main>
+        <footer class="c-footer">
+    <div class="c-footer__social-container">
+        <a class="c-footer__social-icon icon--github" href="https://github.com/claireparker/">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--codepen" href="https://codepen.io/claireparker/">
+            <i class="fab fa-codepen" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--instagram" href="https://instagram.com/claire_codes/">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--twitter" href="https://twitter.com/ClaireParkerPen/">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--linkedin" href="https://www.linkedin.com/in/claireparker2/">
+            <i class="fab fa-linkedin" aria-hidden="true" aria-hidden="true"></i>
+        </a>
+        <a class="c-footer__social-icon icon--magento" href="https://claireparker.github.io/magento-1-frontend-bits/">
+            <i class="fab fa-magento" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    <div>Powered by Hugo</div>
+    <div>
+        &lt;/>
+    </div>
+</footer>
+
+        <script src="http://example.org/js/prism.js"></script>
+    </body>

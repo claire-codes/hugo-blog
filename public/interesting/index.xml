@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interesting on Claire Parker-Jones Blog</title>
+    <link>http://example.org/interesting/</link>
+    <description>Recent content in Interesting on Claire Parker-Jones Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 14 Mar 2018 21:57:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/interesting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2018-03-14</title>
+      <link>http://example.org/interesting/2018-03-14-interests/</link>
+      <pubDate>Wed, 14 Mar 2018 21:57:58 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2018-03-14-interests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2018-03-07</title>
+      <link>http://example.org/interesting/2018-03-07-interests/</link>
+      <pubDate>Wed, 07 Mar 2018 22:17:05 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2018-03-07-interests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2018-02-20</title>
+      <link>http://example.org/interesting/2018-02-20-interests/</link>
+      <pubDate>Tue, 20 Feb 2018 22:26:33 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2018-02-20-interests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2017-12-04</title>
+      <link>http://example.org/interesting/2017-12-04-interests/</link>
+      <pubDate>Mon, 04 Dec 2017 22:08:03 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2017-12-04-interests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2017-11-28</title>
+      <link>http://example.org/interesting/2017-11-28-interests/</link>
+      <pubDate>Tue, 28 Nov 2017 22:19:59 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2017-11-28-interests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2017-11-20</title>
+      <link>http://example.org/interesting/2017-11-20-interests/</link>
+      <pubDate>Mon, 20 Nov 2017 22:41:57 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2017-11-20-interests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does this matter?</title>
+      <link>http://example.org/interesting/2017-07-01-interests/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2017-07-01-interests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Does this matter?</title>
+      <link>http://example.org/interesting/2017-04-09-interests/</link>
+      <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/interesting/2017-04-09-interests/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
