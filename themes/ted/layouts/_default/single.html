@@ -13,8 +13,8 @@
         <main role="main">
             <div class="o-main__wrapper c-post">
                 <h1 class="c-post__title">{{ .Title }}</h1>
-                <h3 class="post-date">{{ .Date.Format "2 January 2006 " }}</h3>
-                <div class="reading-time">{{ .ReadingTime }} minute read</div>
+                <h3 class="post-date"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{ .Date.Format "2 January 2006 " }}</h3>
+                <div class="reading-time"><i class="far fa-clock"></i>&nbsp;&nbsp;{{ .ReadingTime }} minute read</div>
                 {{ if .Params.categories }}
                     {{ partial "categories.html" . }}
                 {{ end }}
@@ -23,10 +23,9 @@
                 </div>
                 <div class="c-post__footer">
                     {{ with .Site.Params.TwitterID }}
-                    Comments? <a href="https://twitter.com/{{.}}">Send me a Tweet <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/{{.}}">Send me a Tweet</a></div>
                     {{ end }}
-                    <br />
-                    Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/{{ .File.LogicalName }}">Edit this page on Github <i class="fab fa-github" aria-hidden="true"></i></a>
+                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/{{ .File.LogicalName }}">Edit this page on Github</a></div>
                 </div>
             </div>
         </main>

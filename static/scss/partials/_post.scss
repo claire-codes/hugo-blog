@@ -15,3 +15,9 @@
 .c-post__category {
     color: $color-post-category;
 }
+
+.c-post__footer {
+    border-top: 5px solid $color-post-title-border;
+    margin-top: 40px;
+    padding-top: 20px;
+}
