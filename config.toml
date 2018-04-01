@@ -1,7 +1,8 @@
-baseURL = ""
+baseURL = "http://www.claireparker.co.uk"
 languageCode = "en-gb"
 title = "Claire Parker-Jones Blog"
 theme = "hugo-ted"
+author = "Claire Parker-Jones"
 
 [menu]
   [[menu.header]]
