@@ -61,4 +61,4 @@ So with that in mind ...
 
 ## Go forth and npm all the things
 
-![NPM ALL THE THINGS!](/assets/allthethings.jpg "NPM ALL THE THINGS!")
+![NPM ALL THE THINGS!](/images/allthethings.jpg "NPM ALL THE THINGS!")

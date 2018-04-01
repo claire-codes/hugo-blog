@@ -11,7 +11,7 @@ categories:
 
 📆 I was going to call this post "101 days of coding", but that would be misleading. I've been getting paid to write code as a web developer for over 2 years now, but over the past 3+ months I've been writing code in my spare time - after work, after chores, after slobbing in front of the TV - and then committing and pushing it to GitHub. The really weird and pointless thing about this is that I've done it every day since the 1st of January this year and now I have a pretty good streak, just look at my [GitHub scorecard](https://github.com/claireparker):
 
-![A 101 day streak on GitHub](/assets/101-streak.png "A 101 day streak on GitHub")
+![A 101 day streak on GitHub](/images/101-streak.png "A 101 day streak on GitHub")
 
 👏👏👏
 

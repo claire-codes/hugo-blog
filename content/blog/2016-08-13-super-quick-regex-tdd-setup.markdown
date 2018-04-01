@@ -87,7 +87,7 @@ Now run from the command line:
 
 And tada 🎉 you should see some working specs:
 
-![My First Specs](/assets/passingspecs.png)
+![My First Specs](/images/passingspecs.png)
 
 
 An explanation of how Mocha works is beyond the scope of this post, but a couple of notes: I prefer the "expect" style assertions rather than the BDD "assert" form as I think they are more readable. I'm using the `chai` matchers library to make our expectations even easier to read. Plus we're going to group lots of expectations within the `it` functions because life is too short to write a new one for each expectation, especially as this is just a quick example.
@@ -122,7 +122,7 @@ describe("My amazing regex", function() {
 
 Note that we'll add a variable to hold the regex but we won't fill it in correctly just yet, because first, we want failing specs! Run `npm test` again:
 
-![Passing Specs](/assets/failingspecs.png)
+![Passing Specs](/images/failingspecs.png)
 
 Well OK, the `shouldn't work` block is passing, as our regex is wrong and won't match any of them, which we expect. We use those assertions as our safety net - when we start to write our regex properly, if some of these match then we know the regex is wrong.
 
@@ -134,7 +134,7 @@ var myRegex = /^(?!en).*light(?!er)/;
 
 Each time you make a change to the regular expression, save and rerun the test command from the terminal. `npm test`:
 
-![Final Specs](/assets/passingspecs.png)
+![Final Specs](/images/passingspecs.png)
 
 And that's all there is to it.
 

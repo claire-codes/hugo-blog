@@ -15,7 +15,7 @@ I had been happy with the default theme in Atom for a while, but I realised I wa
 
 Here’s an image of how my tree view looked on my Mac, using Atom version 1.13.1 and the One Dark UI and Syntax themes.
 
-![Original tree view colours](/assets/originalTreeView.png)
+![Original tree view colours](/images/originalTreeView.png)
 
 From top to bottom, the image above shows examples of how untouched files, new folders, folders containing edited files and folders included in my .gitignore file appear. Notice how difficult it is to read the gitignored filenames. This is because the colour contrast between the background colour and text colour is low. Let’s improve that.
 
@@ -23,13 +23,13 @@ From top to bottom, the image above shows examples of how untouched files, new f
 
 Atom is built using Chromium, which means it comes with Dev Tools built in. Press the same keyboard command as you would in Chrome to open Dev Tools (Cmd + Alt + I on Mac). Using the Select element tool, inspect the tree view background and filenames and note which colours they use for display. You may need to dig around in the Computed Styles tab as the DOM in the Atom editor can be quite verbose.
 
-![Inspecting tree view styles](/assets/inspectingOriginalTreeView.png)
+![Inspecting tree view styles](/images/inspectingOriginalTreeView.png)
 
 Once you have both of those values, open a good colour contrast ratio calculator tool on the web. Try either Lea Verou’s [contrast ratio](http://leaverou.github.io/contrast-ratio/) or the excellent [WebAIM Color Contrast Checker](http://webaim.org/resources/contrastchecker/). Calculate the colour contrast ratio for the two colours you found earlier.
 
 Note: You may need to convert the rgba colour to hex format. For example the tree view titles returned a value of rgba(157, 165, 180, 0.6) for me. I like to use [HSL color Picker](http://hslpicker.com/) which provides the colour in different formats and a snazzy slider tool that I can use to choose new colours!
 
-![WebAIM site colour contrast ratio results](/assets/WebAimExample.png)
+![WebAIM site colour contrast ratio results](/images/WebAimExample.png)
 
 The image above shows the contrast ratio for the gitignored text against the tree view background. The ratio of 6.21:1 is just shy of the 7:1 ratio required for AAA level accessibility. The explains why I found the text difficult to read. I played around with the colours on the WebAIM page and lightened the text to a nice shade of `#d1d5dc`, which increased the ratio to 10.45:1.
 
@@ -68,7 +68,7 @@ My selectors look something like this:
 
 And my resulting colours in the tree view look like this:
 
-![Final tree view colours](/assets/finalTreeView.png)
+![Final tree view colours](/images/finalTreeView.png)
 
 Why stop there though? How about making that green for new files pop a little more? Or change the tab name titles? Or even comments in files, which are pretty much unreadable for me in this theme unless I squint!
 

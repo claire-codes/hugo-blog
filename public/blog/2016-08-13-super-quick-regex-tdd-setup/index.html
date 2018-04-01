@@ -143,7 +143,7 @@ describe(&quot;My amazing regex&quot;, function() {
 
 <p>And tada 🎉 you should see some working specs:</p>
 
-<p><img src="/assets/passingspecs.png" alt="My First Specs" /></p>
+<p><img src="/images/passingspecs.png" alt="My First Specs" /></p>
 
 <p>An explanation of how Mocha works is beyond the scope of this post, but a couple of notes: I prefer the &ldquo;expect&rdquo; style assertions rather than the BDD &ldquo;assert&rdquo; form as I think they are more readable. I&rsquo;m using the <code>chai</code> matchers library to make our expectations even easier to read. Plus we&rsquo;re going to group lots of expectations within the <code>it</code> functions because life is too short to write a new one for each expectation, especially as this is just a quick example.</p>
 
@@ -176,7 +176,7 @@ describe(&quot;My amazing regex&quot;, function() {
 
 <p>Note that we&rsquo;ll add a variable to hold the regex but we won&rsquo;t fill it in correctly just yet, because first, we want failing specs! Run <code>npm test</code> again:</p>
 
-<p><img src="/assets/failingspecs.png" alt="Passing Specs" /></p>
+<p><img src="/images/failingspecs.png" alt="Passing Specs" /></p>
 
 <p>Well OK, the <code>shouldn't work</code> block is passing, as our regex is wrong and won&rsquo;t match any of them, which we expect. We use those assertions as our safety net - when we start to write our regex properly, if some of these match then we know the regex is wrong.</p>
 
@@ -187,7 +187,7 @@ describe(&quot;My amazing regex&quot;, function() {
 
 <p>Each time you make a change to the regular expression, save and rerun the test command from the terminal. <code>npm test</code>:</p>
 
-<p><img src="/assets/passingspecs.png" alt="Final Specs" /></p>
+<p><img src="/images/passingspecs.png" alt="Final Specs" /></p>
 
 <p>And that&rsquo;s all there is to it.</p>
 

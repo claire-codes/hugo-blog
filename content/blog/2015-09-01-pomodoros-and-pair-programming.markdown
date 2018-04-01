@@ -18,7 +18,7 @@ categories:
    </ul>
 </div>
 
-![A pair of Pomodoros](/assets/two_pomodoros.jpg "A pair of Pomodoros")
+![A pair of Pomodoros](/images/two_pomodoros.jpg "A pair of Pomodoros")
 
 I currently work in a team where we pair program most of the time, and I've found that applying the principles of the Pomodoro Technique to when pairing - focus for a bit then a short break - has helped me work more effectively.
 

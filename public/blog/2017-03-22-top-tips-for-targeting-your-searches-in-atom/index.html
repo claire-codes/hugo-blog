@@ -81,7 +81,7 @@
 
 <p>Every piece of functionality in Atom is provided by a package, and the search panel is no different. When you press <kbd>Cmd + Shift + F</kbd> on a Mac or <kbd>Ctrl + Shift + F</kbd> on Windows the search panel appears, courtesy of the <a href="https://atom.io/packages/find-and-replace">find-and-replace package</a>. Your search term goes in the first box, and any of the glob patterns in the following tips are placed in the third &ldquo;File/directory pattern&rdquo; box.</p>
 
-<p><img src="/assets/find-and-replace-panel.png" alt="The find and replace package panel" /></p>
+<p><img src="/images/find-and-replace-panel.png" alt="The find and replace package panel" /></p>
 
 <p>A glob pattern is a filename that includes wildcard characters. The addition of the wildcard means that the pattern could match more than one path, so <code>foo*.js</code> could match the files <code>foobar.js</code>, <code>foo.js</code> and <code>foobaz.js</code>. A glob pattern may remind you of a regular expression, but doesn&rsquo;t behave in quite the same way and aren&rsquo;t as powerful - for example the wildcard <code>*</code> is equivalent to the regex <code>.*</code>.</p>
 
@@ -89,19 +89,19 @@
 
 <p>Open the Core Settings menu and make sure the <strong>Exclude VCS Ignored Paths</strong> option is selected. Now every file and directory in your <code>.gitignore</code> file will be excluded from your search. Typically you would add the <code>node_modules/</code> directory in the <code>.gitignore</code> file so that they aren’t committed to your repo, which can provide a big win in terms of search speed for JavaScript based projects</p>
 
-<p><img src="/assets/VCS-setting.png" alt="Exclude VCS Ignored Paths setting" /></p>
+<p><img src="/images/VCS-setting.png" alt="Exclude VCS Ignored Paths setting" /></p>
 
 <h2 id="2-search-in-a-specific-directory">2. Search in a specific directory</h2>
 
 <p>Do you only want to search for the string &ldquo;cheezeburger&rdquo; in the <code>kittehs/</code> directory? Then enter this <code>kittehs/</code> file path in the Find and Replace panel before hitting return to narrow the search scope to this folder.</p>
 
-<p><img src="/assets/only-dir.png" alt="Search only in this directory example" /></p>
+<p><img src="/images/only-dir.png" alt="Search only in this directory example" /></p>
 
 <h2 id="3-search-in-multiple-specific-directories">3. Search in multiple specific directories</h2>
 
 <p>Do you only want to search in either the <code>kittehs/</code> folder or the <code>doge/</code> folder? Then separate their file paths with a comma to search just within these directories.</p>
 
-<p><img src="/assets/multi-dir.png" alt="Search in multiple directories example" /></p>
+<p><img src="/images/multi-dir.png" alt="Search in multiple directories example" /></p>
 
 <h2 id="4-exclude-specific-directories-from-search">4. Exclude specific directories from search</h2>
 
@@ -111,13 +111,13 @@
 
 <p>For example, look everywhere but the <code>node_modules/</code> directory by just typing <code>!node_modules/</code> and running the search.</p>
 
-<p><img src="/assets/not-dir.png" alt="Exclude a directory example" /></p>
+<p><img src="/images/not-dir.png" alt="Exclude a directory example" /></p>
 
 <h2 id="5-include-and-exclude-specific-directories">5. Include and exclude specific directories</h2>
 
 <p>You can combine the previous two techniques by separating your various include and exclude glob patterns with a comma. This is useful if you want to search within a directory but exclude a subdirectory of it, e.g. <code>javascript/, !javascript/tests/</code>.</p>
 
-<p><img src="/assets/all-the-dir.png" alt="Combining including and excluding patterns example" /></p>
+<p><img src="/images/all-the-dir.png" alt="Combining including and excluding patterns example" /></p>
 
 <h2 id="6-search-for-file-types-within-directories">6. Search for file types within directories</h2>
 
@@ -125,7 +125,7 @@
 
 <p>But what if we want to search for our term in JavaScript files but only within the <code>web/</code> directory? If we were to type <code>web/*.js</code>, this will only search for JavaScript files directly in the <code>web/</code> folder, and not in any of <code>web/</code>&rsquo;s subdirectories (if it has any). To include all subdirectories in the search, use the globstar pattern instead: <code>web/**/*.js</code></p>
 
-<p><img src="/assets/glob.png" alt="File types with glob pattern example" /></p>
+<p><img src="/images/glob.png" alt="File types with glob pattern example" /></p>
 
 <h2 id="bonus-tip">🌟 Bonus tip</h2>
 
