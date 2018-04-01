@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-gb"
 title = "Claire Parker-Jones Blog"
-theme = "Ted"
+theme = "hugo-ted"
 
 [menu]
   [[menu.header]]
