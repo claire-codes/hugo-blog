@@ -3,6 +3,7 @@ languageCode = "en-gb"
 title = "Claire Parker-Jones Blog"
 theme = "hugo-ted"
 author = "Claire Parker-Jones"
+googleAnalytics = "UA-67279079-1"
 
 [menu]
   [[menu.header]]
@@ -25,4 +26,3 @@ author = "Claire Parker-Jones"
   LinkedInID = "your_linkedin"
   InstagramID = "claire_codes"
   Name = "Claire Parker-Jones"
-  GoogleAnalytics = "your_google_analytics_id"
