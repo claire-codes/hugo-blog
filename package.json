@@ -1,8 +1,10 @@
 {
   "name": "hugo-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal blog built with Hugo",
   "main": "index.js",
+  "repository": "https://github.com/claireparker/hugo-blog",
+  "bugs": "https://github.com/claireparker/hugo-blog/issues",
   "scripts": {
     "build-task:scss-compile": "node-sass-chokidar --source-map true static/scss/ -o static/css",
     "build-task:autoprefixer": "postcss static/css/*.css --use autoprefixer -d static/css",
@@ -15,10 +17,10 @@
   "author": "Claire Parker <claire.parker87@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass-chokidar": "^1.1.0",
     "sass-lint": "^1.12.1"
   },
   "dependencies": {
+    "node-sass-chokidar": "^1.1.0",
     "autoprefixer": "^8.1.0",
     "chokidar-cli": "^1.2.0",
     "npm-run-all": "^4.1.2",
