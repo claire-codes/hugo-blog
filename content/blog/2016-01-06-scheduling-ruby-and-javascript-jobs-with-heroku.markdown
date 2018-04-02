@@ -4,9 +4,9 @@ title: "Scheduling Ruby and JavaScript jobs with Heroku"
 date: 2016-01-06 21:37:32 +0000
 comments: true
 categories:
-- ruby
-- javascript
 - heroku
+- javascript
+- ruby
 ---
 Need to do a job regularly in your app? If it's on Heroku then there's a free add-on that can run the job for you. It's imaginatively called Heroku Scheduler. Here's how I set up Ruby and JavaScript jobs ready to be scheduled.
 

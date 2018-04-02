@@ -4,9 +4,9 @@ title: "How to Deploy an AngularJS App on Heroku"
 date: 2015-09-30 00:00:00 +0100
 comments: true
 categories:
-- javascript
 - angularjs
 - heroku
+- javascript
 ---
 
 ## Or getting an EAN app running on Heroku
@@ -22,14 +22,14 @@ Let's say you've got your Angular app and the project structure looks a bit like
 ```bash
 root
 │   README.md
-│   index.html   
+│   index.html
 │
 └───js
 │   │   controllers.js
 │   │   services.js
 │   |   angular.js
 │   └── myAmazingAngularApp.js
-│   
+│
 └───css
     │   styles.css
 ```

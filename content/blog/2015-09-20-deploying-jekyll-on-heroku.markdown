@@ -4,8 +4,8 @@ title: "Deploying Jekyll on Heroku"
 date: 2015-09-20 00:00:00 +0100
 comments: true
 categories:
-- ruby
 - heroku
+- ruby
 ---
 
 # How I deployed my Jekyll blog to Heroku step-by-step

@@ -7,8 +7,8 @@ comments: true
 published: true
 categories:
 - css
-- sass
 - html
+- sass
 ---
 
 Sometimes when I’m reviewing code, I advise a colleague not to use IDs for CSS styles, and inevitably get asked why. Like standing in queues, making a cup of tea or applying a full face of makeup in the dark at 6am, avoiding IDs in CSS is something I do without thinking. It takes me a minute before I can explain to other people why I do it. So with that in mind, here’s a list of reasons I avoid using IDs in my stylesheets, and prefer classes instead.
