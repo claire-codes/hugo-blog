@@ -1,11 +1,11 @@
 ---
 title: "Making a sticky sidebar with two lines of CSS"
 date: 2018-04-02T16:19:53+01:00
-summary:
+summary: Create an element that follows your scroll down the page, no JavaScript required!
 categories:
 - css
-- sass
 - html
+- sass
 ---
 
 Have you ever been on a website where an element “sticks” to the screen and follows you as you scroll down the page? This is what I call a sticky sidebar, and I’ve spent many hours battling with legacy code trying to debug one. In the past, developers used JavaScript to build this feature, by recalcuating the position of the sidebar on the browser's scroll event. This was complicated to maintain and also costly for performance.
