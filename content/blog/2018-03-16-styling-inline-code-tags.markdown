@@ -74,4 +74,4 @@ pre code {
 
 Or instead of applying the style to a tag, target a class instead, like `.code`. However, if you’re using Markdown to generate your HTML, you'll need to start writing `<code class=“code”>` instead of using the backticks shortcut, which may become tedious.
 
-Anyway, it’s always fun to overthink styles. [Here's a codepen demonstrating this style interactively](https://codepen.io/claireparker/pen/NyyNxw).
+Anyway, it’s always fun to overthink styles. [Here's a CodePen demonstrating this style interactively](https://codepen.io/claireparker/pen/NyyNxw).

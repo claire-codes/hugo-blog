@@ -8,7 +8,7 @@ categories:
 - sass
 ---
 
-Have you ever been on a website where an element “sticks” to the screen and follows you as you scroll down the page? This is what I call a sticky sidebar, and I’ve spent many hours battling with legacy code trying to debug one. In the past, developers used JavaScript to build this feature, by recalcuating the position of the sidebar on the browser's scroll event. This was complicated to maintain and also costly for performance.
+Have you ever been on a website where an element “sticks” to the screen and follows you as you scroll down the page? This is what I call a sticky sidebar, and I’ve spent many hours battling with legacy code trying to debug one. In the past, developers used JavaScript to build this feature, by recalculating the position of the sidebar on the browser's scroll event. This was complicated to maintain and also costly for performance.
 
 Recently I was delighted to discover that all major desktop browsers (Chrome, Firefox, Edge and Safari) now support the CSS property `position: sticky`. (Aside from a bug in Chrome with some table elements.) You can check this on [caniuse.com](https://caniuse.com/#search=sticky). Edge was the final browser to ship support in October 2017 in version 16. This means that we can build a sticky sidebar using just two lines of CSS, with no JavaScript required! Let me show you how.
 
@@ -79,7 +79,7 @@ But the sidebar isn’t sticky yet! When you scroll down the page, the sidebar d
 
 The `position: sticky` property tells the element to stick to the screen, ([MDN can explain this better than me](https://developer.mozilla.org/en-US/docs/Web/CSS/position)), and the `top` value tells the element where to sit relative to the screen as it scrolls. We could change this to `top: 5%` to leave a gap, or for example `left: 0`, depending on the direction of the scroll.
 
-Here is one I made earlier on codepen:
+Here is one I made earlier on CodePen:
 
 <p data-height="350" data-theme-id="0" data-slug-hash="bvWKdr" data-default-tab="result" data-user="claireparker" data-embed-version="2" data-pen-title="Sticky Sidebar" class="codepen">See the Pen <a href="https://codepen.io/claireparker/pen/bvWKdr/">Sticky Sidebar</a> by Claire (<a href="https://codepen.io/claireparker">@claireparker</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
