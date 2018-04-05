@@ -1,7 +1,19 @@
 .c-404__emoji {
     margin: 30px auto 0;
     font-size: 30px;
-    max-width: 300px;
+    max-width: 400px;
+
+    @media (max-width: $mobile-breakpoint) {
+        font-size: 25px;
+    }
+}
+
+.c-404__emoji--angry {
+    text-align: left;
+}
+
+.c-404__emoji--calm {
+    text-align: right;
 }
 
 .c-404__text {
