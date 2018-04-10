@@ -22,6 +22,7 @@ googleAnalytics = "UA-67279079-1"
 [params]
   GithubID = "claireparker"
   TwitterID = "claireparkerpen"
+  GithubRepoID = "hugo-blog"
   CodepenID = "your_codepen"
   LinkedInID = "your_linkedin"
   InstagramID = "claire_codes"

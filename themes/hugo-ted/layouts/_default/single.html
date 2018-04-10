@@ -25,7 +25,7 @@
                     {{ with .Site.Params.TwitterID }}
                     <div><i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Comments? <a href="https://twitter.com/{{.}}">Send me a Tweet</a></div>
                     {{ end }}
-                    <div><i class="fab fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Typos? <a href="https://github.com/claireparker/hugo-blog/blob/master/content/blog/{{ .File.LogicalName }}">Edit this page on Github</a></div>
+                    {{ partial "editOnGit.html" . }}
                 </div>
             </div>
         </main>
