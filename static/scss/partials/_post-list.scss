@@ -15,6 +15,7 @@
     border-bottom: 5px solid $color-post-list-title-border;
     padding-bottom: 5px;
     transition: all 0.5s ease;
+    line-height: normal;
 
     @media (max-width: $mobile-breakpoint) {
         font-size: 30px;

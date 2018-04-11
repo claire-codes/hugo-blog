@@ -8,6 +8,8 @@
 .o-main__wrapper {
     max-width: 42rem;
     margin: 0 auto;
+    font-size: 18px;
+    line-height: 30px;
 
     @media (max-width: $mobile-breakpoint) {
         padding: 0 1rem;
