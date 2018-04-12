@@ -9,6 +9,10 @@
     margin-bottom: 20px;
     padding: 20px;
     box-shadow: 5px 5px $color-middle-shadow, 10px 10px $color-back-shadow;
+
+    @media (max-width: $mobile-breakpoint) {
+        padding: 10px;
+    }
 }
 
 .c-interesting__date {
