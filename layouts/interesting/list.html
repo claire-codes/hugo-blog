@@ -19,6 +19,7 @@
 				{{ range .Data.Pages }}
 					<li class="c-interesting__item">
 						<h2 class="c-interesting__date">{{ .Date.Format "2 January 2006" }}</h2>
+						<div>{{.Content}}</div>
 						<ul class="c-interesting__entry-list">
 							{{ range .Params.interests }}
 							<li class="c-interesting__entry"><div>{{ . | markdownify }}</div></li>
