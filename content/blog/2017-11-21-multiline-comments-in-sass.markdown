@@ -10,7 +10,7 @@ categories:
 - sass
 ---
 
-_Note_: These rules are specifically for [sass-lint](https://github.com/sasstools/sass-lint), because that's my linter of choice. However, equivalent rules will (probably) exist for other linters such as styelint or csslint. (provide links)
+_Note_: These rules are specifically for [sass-lint](https://github.com/sasstools/sass-lint), because that's my linter of choice. However, equivalent rules will (probably) exist for other linters such as styelint or csslint.
 
 If you lint your Sass code using an automated tool like sass-lint, you might have encountered the rule: `no-css-comments`. Depending on the severity level in your linter config, this will trigger an error or a warning when it encounters comments like this `/* I am a CSS style comment */`. The first time I saw this rule, I was confused - why shouldn't I be using comments like this:
 
