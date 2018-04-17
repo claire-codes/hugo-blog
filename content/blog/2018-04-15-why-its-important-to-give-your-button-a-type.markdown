@@ -13,15 +13,15 @@ How do you create a button element with HTML? I often see them written like this
 <button>Press me</button>
 ```
 
-This code is valid HTML and passes the [W3C markup validation service](https://validator.w3.org/). However, I believe that the `type` attribute should always be included on a button. If this attribute is missing, it can introduce potentially confusing behaviour - and there's enough of that already in web development!
+This code is valid HTML and passes the [W3C markup validation service](https://validator.w3.org/). However, I believe that the `type` attribute should always be included on a button. If this attribute is missing, it can introduce potentially confusing behaviour - and there's enough of that to deal with already in web development!
 
 **Note**: I use the `<button>` tag instead of the input tag, e.g. `<input type=“button” />` when building buttons in HTML. I recommend this because the button tag and is semantically correct for this purpose and it can be easier to style than an `input` tag.
 
 ## Type attribute values
 
-HTML tags use key-value pairs, or attributes, to modify their functionality. For example, a commonly used attribute is the class attribute, like on this div element: `<div class="foobar"></div>`. Different tags have different sets of valid attributes.
+HTML tags use key-value pairs, or attributes, to modify their functionality. For example, a commonly used attribute is the class attribute, like on this div element: `<div class="foobar"></div>`. Each HTML element has its own set of valid attributes.
 
-Buttons have an optional type attribute, which is used to define the purpose of the button. [The type attribute can take three values](https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html):
+Buttons allow an optional attribute called "type", which is used to define the purpose of the button. [The type attribute can take three values](https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html):
 
 1. submit
 2. button
@@ -57,11 +57,11 @@ When nested within a form, this button resets form controls to their initial val
 <button>Press me</button>
 ```
 
-After reading the previous definitions, how do you think a button with no type attribute will behave? It wasn't what I expected ... **When the type attribute is missing, the button behaves as a _submit_ button**. (That's in bold because it's the major point I want you to learn and takeaway from this post!) This can cause problematic behaviour (i.e. bugs!) in your code if you aren't expecting it.
+After reading the previous definitions, how do you think a button with no type attribute will behave? **When the type attribute is missing, the button behaves as a _submit_ button**. (That's in bold because it's the major point I want you to learn and takeaway from this post!) This certainly wasn't what I expected! I assumed that a button with no specific type would do nothing when clicked. This can cause problematic behaviour (i.e. bugs!) in your code if you aren't expecting it (like me!).
 
 ## Button types in action
 
-The following gif shows a simple form (original Codepen below). When the form is submitted, the background colour of the page is changed using JavaScript, by listening to the `onsubmit` event. Each of the button types mentioned previously are included within the form, and are labelled to show their type value. Let’s see what happens when each one is clicked:
+The following gif shows a simple form (original Codepen below). When the form is submitted, the background colour of the page is changed using JavaScript, by listening to the `onsubmit` event. Each of the button types mentioned previously are included within the form, and are labelled to show their type value. Notice what happens when each one is clicked:
 
 ![Different values of type attribute](/images/missing-type.gif "Different values of type attribute")
 
@@ -69,29 +69,27 @@ The following gif shows a simple form (original Codepen below). When the form is
 
 - The button-type button does nothing, as expected.
 
-- The reset button does nothing, as there aren't any form inputs to reset in this example.
+- The reset button does nothing, as there aren't any form inputs to reset in this example. This is also expected.
 
-- The button with no explicit type value submits the form and changes the background color!
+- The button with no explicit type value submits the form and changes the background color. We expect this after discussing it above, but it still doesn't feel intuitive compared to other the other button types.
 
 Try experimenting yourself with the CodePen here:
 
-<p data-height="400" data-theme-id="0" data-slug-hash="JpzwLv" data-default-tab="result" data-user="claireparker" data-embed-version="2" data-pen-title="Missing button type" class="codepen">See the Pen <a href="https://codepen.io/claireparker/pen/JpzwLv/">Missing button type</a> by Claire (<a href="https://codepen.io/claireparker">@claireparker</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="450" data-theme-id="0" data-slug-hash="JpzwLv" data-default-tab="result" data-user="claireparker" data-embed-version="2" data-pen-title="Missing button type" class="codepen">See the Pen <a href="https://codepen.io/claireparker/pen/JpzwLv/">Missing button type</a> by Claire (<a href="https://codepen.io/claireparker">@claireparker</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Why should you always declare a type attribute?
 
 ### 1) Clear definition of what the button does
 
-When a button doesn't have a type attribute, its usage is unclear. It may be obvious to you when writing the code that the button submits the form. But part of being a good software developer is to write code that is easy to maintain and understand for others. By adding the type attribute, future developers and even Future You can easily work out the purpose of the button.
+When a button doesn't have a type attribute, its usage is unclear. It may be obvious to you when writing the code that the button submits the form. But part of being a good software developer is to write code that is easy to maintain and understand for others. By adding the type attribute, future developers and even Future You can quickly and easily work out the purpose of the button.
 
 ### 2) Avoid bugs
 
-"Why is that form submitting when I click this unrelated button?" Follow this advice and you and anyone who works with your code will never have to solve that bug again:
+"Why is that form submitting when I click this unrelated button?" Follow this advice and you and anyone who works with your code will never have this bug again:
 
 > For any button that doesn't submit or reset form data, add a type attribute.
 
-If everyone who wrote HTML understood that buttons act as submit buttons by default, then this advice wouldn't be necessary. Unfortunately not everyone does so in the meantime, declare a button type!
-
-Oh and also stop styling links to look like buttons - you know you shouldn't be 😉
+If everyone who wrote HTML understood that buttons act as submit buttons by default, then this advice wouldn't be necessary. Unfortunately not everyone does, so in the meantime, please declare a button type 🙂
 
 Inspired by [wtfhtmlcss](http://wtfhtmlcss.com/#buttons-type).
