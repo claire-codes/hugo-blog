@@ -17,6 +17,10 @@ code {
     white-space: nowrap;
 }
 
+pre code {
+    padding: 0;
+}
+
 a {
     color: $color-link;
 
