@@ -44,11 +44,13 @@ $color-strawberry: red;
 // }
 ```
 
+(No I'm not working on a website for a greengrocers, the fruit theme is just for example purposes! 🍏🍓🍋)
+
 At first glance, it looks OK.
 
 But this code is pretty repetitive. The structure of each selector is the same, except for one word in the name and the colour value.
 
-This pattern doesn't scale efficiently. What if I want to add a `blueberry-button` and a `grape-button`? I would write more near-enough identical selectors. What if I want to apply the colour to the font instead of the background instead? I'd have to change the CSS property on multiple lines. This is inefficient!
+Also, this pattern doesn't scale efficiently. What if I want to add a `blueberry-button` and a `grape-button`? I would need to write more nearly identical selectors. What if I want to apply the colour to the font instead of the background instead? I'd have to change the CSS property on multiple lines. This is inefficient!
 
 How could we rewrite this code to be dryer? That is, to follow the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) of _don't repeat yourself_? Like this:
 
@@ -84,13 +86,13 @@ $fruit-map: (
 
 A [Sass map](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps) is a collection of key-value pairs, much like an object in JavaScript. In this example, `$fruit-map` is a map. The fruit name is the key, and the colour is the value.
 
-We then use the [Sass each directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive) to iterate over each pair. We assign the key and value to variables, which we can use to construct our selector using [variable interpolation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#interpolation_) (i.e. this syntax `#{$foobar}`).
+We can use the [Sass each directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive) to iterate over each pair. We assign the key and value to variables, which we can use to construct our selector using [variable interpolation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#interpolation_) (i.e. this syntax `#{$foobar}`).
 
 This code scales well. If we want to generate a new selector, we only need to add a new key-value pair to the map, e.g. "blueberry: blue". If we want to assign the colour to the font instead of the background, we only need to change the CSS property on one line instead of many. Great!
 
 ## Multiple values
 
-But wait, we can take this further! Now each of the fruit-themed buttons has a different border style. How can we adapt our map to contain multiple values for each key? Try this:
+But wait, we can take this further! Now each of the fruit-themed buttons also has a different border style. How can we adapt our map to contain multiple values for each key? Try this:
 
 ```sass
 $fruitier-map: (
@@ -127,10 +129,10 @@ $fruitier-map: (
 // }
 ```
 
-- Convert the value for each key to a map.
+- Convert the value for each key to a map. Add the colour and the new border value to the map.
 - Access each map element using the [nth function](http://sass-lang.com/documentation/Sass/Script/Functions.html#nth-instance_method) and assign them to variables.
-- Use these variables to create our dynamic CSS selector with interpolation.
+- Use these variables to create our dynamic CSS selector with interpolation, as before.
 
 The result is Sass that is easy to extend and maintain and also dry.
 
-You may not use Sass functions and directives every day, but when you do the comprehensive [Sass documentation](http://sass-lang.com/documentation/) will have you covered.
+You may not use Sass functions and directives every day, but they are definitely another useful tool to have in your kit. 
