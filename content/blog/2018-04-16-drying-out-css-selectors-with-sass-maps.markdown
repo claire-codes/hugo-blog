@@ -1,7 +1,7 @@
 ---
-title: "Drying Out CSS Selectors With Sass Maps"
+title: "Drying Out CSS Selectors with Sass Maps"
 date: 2018-04-16T22:31:21+01:00
-summary: How to reduce repetition in CSS with advanced Sass features
+summary: How to reduce repetition in CSS by using some advanced Sass features
 categories:
 - css
 - sass
