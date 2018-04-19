@@ -6,7 +6,7 @@
   "repository": "https://github.com/claireparker/hugo-blog",
   "bugs": "https://github.com/claireparker/hugo-blog/issues",
   "scripts": {
-    "build-task:scss-compile": "node-sass-chokidar --source-map true static/scss/ -o static/css",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true static/scss/ -o static/css --output-style compressed",
     "build-task:autoprefixer": "postcss static/css/*.css --use autoprefixer -d static/css",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'static/scss/**/*.scss' -c 'npm run sass:build'",
