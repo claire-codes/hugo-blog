@@ -105,3 +105,11 @@
         color: $color-footer-icon-background-start;
     }
 }
+
+.icon--rss {
+    background-image: linear-gradient(
+        to right,
+        $color-footer-icon-background-start 50%,
+        $color-rss 50%
+    );
+}

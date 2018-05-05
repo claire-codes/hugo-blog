@@ -13,4 +13,8 @@
 
 <meta name="theme-color" content="#4527a0">
 
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
 {{ template "_internal/google_analytics_async.html" . }}
