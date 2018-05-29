@@ -14,6 +14,10 @@
 				<div>
 					{{.Content}}
 				</div>
+				<div class="c-post-list__count">
+					<i class="fas fa-calculator"></i>&nbsp;
+					{{ $postCount := len .Data.Pages }} {{ $postCount }} blog posts
+				</div>
 				<ul class="c-post-list">
 				{{ range .Data.Pages }}
 					<li class="c-post-list__item">
