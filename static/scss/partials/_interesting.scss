@@ -37,3 +37,13 @@
         margin-bottom: 5px;
     }
 }
+
+.c-post {
+    .c-interesting__entry {
+        &:not(:last-child) {
+            border-bottom: 3px dashed lighten($color-header-text, 30%);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}
