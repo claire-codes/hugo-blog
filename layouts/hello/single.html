@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+    <head>
+        <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+
+        {{ partial "head.html" . }}
+    </head>
+
+    <body>
+        <main>
+            <div class="o-main__wrapper c-post">
+                <h1 class="c-post__title">{{ .Title }}</h1>
+                <div class="post-content">
+                    {{ .Content }}
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
