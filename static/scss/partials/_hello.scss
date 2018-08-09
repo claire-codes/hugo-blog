@@ -1,0 +1,12 @@
+.c-linktree__link {
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  background-color: $main-accent;
+  box-shadow: 4px 4px $color-middle-shadow, 8px 8px $color-back-shadow;
+  color: white;
+  text-decoration: none;
+}
