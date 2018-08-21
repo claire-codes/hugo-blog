@@ -3,7 +3,9 @@ title = "Hello! 👋"
 type = "hello"
 +++
 
-Here's a bunch of links all about me:
+Here's a bunch of relevant links about me or that I've shared on Instagram lately:
+
+<a href="https://css-animations.io/" class="c-linktree__link c-linktree__link--highlighted">CSS Animations course</a>
 
 <a href="https://codepen.io/claireparker/" class="c-linktree__link">My CodePen account</a>
 
