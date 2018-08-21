@@ -19,3 +19,7 @@
         transition: none;
     }
 }
+
+.c-linktree__link--highlighted {
+    background-image: linear-gradient(to left, lighten(#4527a0, 20%), lighten(#00e676, 20%));
+}
