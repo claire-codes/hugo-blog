@@ -6,7 +6,7 @@ categories:
 - javascript
 ---
 
-Template literals ([or the feature formerly known as template strings in older versions of the spec](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)) are one of my favourite features of ES6. By quoting strings with backticks instead of quotes, we can now interpolate variables and create multiline strings. For example:
+Template literals ([or the feature formerly known as template strings in older versions of the spec](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)) are one of my favourite features of ES6. By quoting with backticks instead of quotes, we can create strings that span multiple lines and interpolate variables. For example:
 
 ```js
 const thing = "World";
@@ -16,43 +16,46 @@ ${thing}`;
 // World"
 ```
 
-(Anything preceded by `//` in the code examples indicates the return value of the expression.)
+(Note, anything preceded by `//` in the code examples indicates what's printed to a browser's developer tools console after typing the code in and hitting enter.)
 
-Variable interpolation occurs when you wrap a value in `${}`. The value could be a variable, function or even a type like a number or string. The expression is evaluated and the return value is used in the template literal. For a variable, this means the value of the variable is substituted. For a function, it gets executed and the result  is used.
+Variable interpolation occurs when you wrap a value in `${}`. The value could be a variable, function or even a basic type like a number or string. The expression is evaluated and used in the template literal.
 
-I recently experienced some confusion around interpolation. When  the return value of the expression is an array, why are the array's square brackets removed in the result?
+I recently experienced some confusion with the interpolation feature that I'll clear up in this post. When  the return value of the expression is an array, why are the array's square brackets removed in the result, as shown in the following code?
 
 ```js
 const numberArray = [1, 2, 3];
 `${numberArray}`;
 // "1,2,3"
+
 const gimmeArray = () => [];
 `What array? ${gimmeArray()}`
-"What array? "
+// "What array? "
 ```
 
-This is easier to understand if you consider interpolation as "string substitution", as it's referred to in this [Google post](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings). The array is being converted to a string before being substituted back into the template literal. This is also what happens when you call the `toString()` method on an array:
+This is perhaps easier to understand if you consider interpolation as "string substitution", as it's referred to in [this useful post](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings). The array is being converted to a string before being substituted back into the template literal. This is also what happens when you call the `toString()` method on an array:
 
 ```js
 [1,2,3].toString();
 // "1,2,3"
+
 [].toString();
 // ""
 ```
 
-Note that this only happens to arrays between the dollar and curly brackets. If you type bracket characters directly in the template literal, then they stay as they are.
+Note that this only happens to arrays between the dollar and curly brackets. If you type bracket characters directly in the template literal, they are interpreted as a string, and stay the same:
 
 ```js
 `[3,2,1]`
 // "[3,2,1]"
 ```
 
-OK, so what if I really really want the square brackets in my resulting string? (The problem that inspired this whole blog post: I wanted to write a dynamic GraphQL query that took an array as a field argument).
+OK, but what if I really really want the square brackets in my resulting string? (The problem that inspired this whole blog post: I wanted to write a dynamic GraphQL query that took an array as a field argument).
 
 Surround the variable interpolation value with square brackets and problem solved:
 
 ```js
-`[${[7,8,9]}]`
+const resultArray = [7,8,9];
+`[${resultArray}]`
 // "[7,8,9]"
 ```
 
