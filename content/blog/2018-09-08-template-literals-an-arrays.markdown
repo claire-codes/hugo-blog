@@ -16,9 +16,9 @@ ${thing}`;
 // World"
 ```
 
-(Note, anything preceded by `//` in the code examples indicates what's printed to a browser's developer tools console after typing the code in and hitting enter.)
+(Note, anything preceded by `//` in the code examples is what gets printed to a browser console after executing the code.)
 
-Variable interpolation occurs when you wrap a value in `${}`. The value could be a variable, function or even a basic type like a number or string. The expression is evaluated and used in the template literal.
+Variable interpolation occurs when you wrap a value in `${}`. The value could be a variable, function or even a basic type like a number or string. The expression is evaluated and embedded in the template literal.
 
 I recently experienced some confusion with the interpolation feature that I'll clear up in this post. When  the return value of the expression is an array, why are the array's square brackets removed in the result, as shown in the following code?
 
@@ -51,7 +51,7 @@ Note that this only happens to arrays between the dollar and curly brackets. If 
 
 OK, but what if I really really want the square brackets in my resulting string? (The problem that inspired this whole blog post: I wanted to write a dynamic GraphQL query that took an array as a field argument).
 
-Surround the variable interpolation value with square brackets and problem solved:
+Surround the variable interpolation syntax with square brackets and problem solved:
 
 ```js
 const resultArray = [7,8,9];
