@@ -19,3 +19,7 @@ Run `npm run dev` in one terminal tab and `hugo server` in another. The npm task
 I use the [Ted](https://github.com/claireparker/hugo-ted) theme. I built the theme from scratch instead of overwriting an existing one. It's not in a state where it can be used yet because I need to move certain files out of the main blog and into the theme, but it's on the To-Do list.
 
 The name comes from my beautiful ~~son~~ dog, Ted.
+
+## Archetypes
+
+Two templates for front matter (i.e. archtypes) exist: `blog` and `interesting`. To use them, create a new file like: `hugo new --kind interesting interesting/2018-10-02.md`. I'm sure there's a better way but I can't get it to work without using `--kind`.
