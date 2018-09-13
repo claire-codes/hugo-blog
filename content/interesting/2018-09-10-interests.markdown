@@ -1,5 +1,5 @@
 ---
-title: "2018 09 10 Interests"
+title: "2018-09-10"
 date: 2018-09-10T19:17:39+01:00
 interests:
 - ✏️ I _finally_ wrote a blog post about [how arrays are interpreted in template literals](blog/2018-09-08-template-literals-an-arrays/) in JavaScript.
