@@ -6,15 +6,13 @@ categories:
 - javascript
 ---
 
-# My Prettier cheatsheet
-
 _At the time of writing, Prettier is on version 1.14.2._
 
 This post is my own personal cheatsheet for Prettier. It contains a brief overview of Prettier and how to set it up on a project. It's not an exhaustive tutorial, just some suggested quickstart methods and my preferred config.
 
 The reason for this post is that I don't set new apps up from scratch very often, and when I do I end up spending too much time trying to remember my preferred settings.
 
-### What is Prettier?
+## What is Prettier?
 
 The [docs](https://prettier.io/docs/en/index.html) give a good explanation:
 
@@ -26,7 +24,7 @@ Prettier is very useful if adopted consistently across a team because it can sto
 
 Prettier is different from ESLint and other linting tools, because it only focusses on style, rather than code-quality. Examples of code-quality issues are avoiding unused variables, reassigning variables in a function, using magic numbers, or [many others](https://eslint.org/docs/rules/).
 
-### How to add Prettier to a project
+## How to add Prettier to a project
 
 Install Prettier and add it to your dev dependencies:
 
@@ -44,7 +42,7 @@ Write a script in the `package.json` file:
 
 This can now be run using `npm run prettier`. Your code will be formatted with Prettier's [default rules](https://prettier.io/docs/en/options.html). **Note:** The glob pattern must be quoted and may need amending to fit your project structure.
 
-### How to customise Prettier's rules
+## How to customise Prettier's rules
 
 Below are some customisations that I like to make to the default settings of Prettier, written as a JSON object:
 
