@@ -11,10 +11,11 @@
         <main>
             <div class="o-main__wrapper c-post">
                 <h1 class="c-post__title">Hello 👋</h1>
+
                 <div class="post-content">
                     <p><a href="https://www.clairecodes.com/">Welcome to my website!</a> Here's a bunch of relevant links about me or that I've shared on Instagram lately:</p>
 
-                    <a href="https://www.clairecodes.com/blog/2018-09-08-template-literals-an-arrays/" class="c-linktree__link c-linktree__link--highlighted">My latest blog post</a>
+                    <a href="{{ range first 1 (where .Site.RegularPages 'Section' 'blog') }}{{ .Permalink }}{{ end }}" class="c-linktree__link c-linktree__link--highlighted">My latest blog post</a>
 
                     <a href="https://codepen.io/claireparker/" class="c-linktree__link">My CodePen account</a>
 
