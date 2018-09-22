@@ -7,15 +7,15 @@ categories:
 - testing
 ---
 
-_Note_: this article discusses snapshot testing with Jest, but other test libraries exist with similar snapshotting features.
+_Note: this article discusses snapshot testing with Jest, but other test libraries also offer snapshotting features._
 
 Snapshot tests are ubiquitous in testing React components. But have you ever considered using them elsewhere? This post explores using snapshots to test functions that return lots of text.
 
 ## What do snapshots do?
 
-When you run a snapshot test against a React component, it  generates a 'snapshot' of the rendered output in a test file. On the next test run, a new snapshot is generated and compared against the old version. If they match, the test passes. When the versions don't match, the test will fail. This indicates something has changed in the component's code. For an expected change, replace the snapshot file with the new version. For an unexpected change, fix the problem that caused it until the snapshots match again.
+When you run a snapshot test against a React component, it generates a “snapshot” of the rendered output in a test file. The next time the test is run, a new snapshot is generated and compared against the old one. If the versions match, the test passes. When the versions don't match, the test will fail. This indicates something has changed in the component's code. For an expected change, replace the snapshot file with the new version. If the change is unexpected, then congratulations, you’ve found a bug! Fix it and make the test pass again.
 
-(This test from the Jest docs site is a great example)[https://jestjs.io/docs/en/snapshot-testing]):
+[This test from the Jest docs site is a good example of the syntax](https://jestjs.io/docs/en/snapshot-testing):
 
 ```js
 import React from 'react';
@@ -30,7 +30,7 @@ it('renders correctly', () => {
 });
 ```
 
-Snapshot file:
+And the accompanying snapshot file will look like:
 
 ```js
 exports[`renders correctly 1`] = `
@@ -47,7 +47,7 @@ exports[`renders correctly 1`] = `
 
 ## When snapshots can help
 
-Snapshot tests generate test data in a special `.js.snap` file. This file is stored in a `__snapshot__` folder, within the same directory as the test. The file is pretty-printed in a human-readable format to make it easy to review. Generating and storing large amounts of test data like this is a useful feature to have. Consider how to test:
+Snapshot tests generate test data in a special `.js.snap` file. This file is stored in a `__snapshot__` folder, within the same directory as the test. The file is pretty-printed in a human-readable format to make it easy to review. Generating and storing large amounts of test data like this is really useful for React components, but we can also reap these benefits in other places. Consider how you would test:
 
 - a logging function that outputs long messages
 - a function that returns a template literal containing many lines, (e.g. a GraphQL query)
@@ -58,7 +58,8 @@ For example:
 
 ```js
 test('old method', () => {
-    expect(functionToTest().replace(/\s/g, '')).toContain('imagine,a,long{string}thatbecomes,difficult,to;read');
+    expect(functionToTest().replace(/\s/g, ''))
+        .toContain('imagine,a,long{string}that(becomes),difficult,to;read');
 });
 
 
@@ -71,7 +72,7 @@ Cool! 😎
 
 ## Caveats: use snapshots with care
 
-[Kent Dodds covers some of the problems with snapshot testing in this post](https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca). Some points to keep in mind when deciding whether to use a snapshot:
+However, snapshots won’t solve all your problems. Some points to keep in mind when deciding whether to use a snapshot:
 
 - Snapshot tests are not designed for test driven development (TDD). They test whether the output of a function has changed, not as a guide for ideal output.
 - Commit snapshot files to source control. But inspect them thoroughly on first commit, because this version will represent the source of truth.
@@ -79,6 +80,8 @@ Cool! 😎
    - the snapshot file is very large
    - the snapshot file is changing too often
    - many snapshot files change every time they run tests
-- Developers will start to update the snapshot files just to get the tests to pass without checking what or why they've changed. The tests then become useless!
+- Developers will start to update the snapshot files with the new changes, just to get the tests to pass without checking what or why they've changed. The tests then become useless!
 
-Snapshot tests don't replace unit tests, but can be useful and time-saving if used selectively.
+[Kent Dodds covers more of the issues with snapshot testing in this great post](https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca).
+
+Snapshot tests don’t replace your existing tests, but can be useful and time-saving if used selectively.
