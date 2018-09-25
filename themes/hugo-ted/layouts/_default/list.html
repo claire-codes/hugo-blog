@@ -11,9 +11,7 @@
 		{{ partial "header.html" . }}
 		<main>
 			<div class="o-main__wrapper">
-				<div>
-					{{.Content}}
-				</div>
+				<div>{{.Content}}</div>
 				<div class="c-post-list__count">
 					<i class="fas fa-calculator"></i>&nbsp;
 					{{ $postCount := len .Data.Pages }} {{ $postCount }} blog posts
@@ -23,14 +21,11 @@
 					<li class="c-post-list__item">
 						<div>
 							<a class="c-post-list__link" href="{{ .Permalink }}"><h2 class="c-post-list__title">{{ .Title }}</h2></a>
-							<h3 class="post-date">{{ .Date.Format "2 January 2006" }}</h3>
+							<h3 class="c-post-list__date">{{ .Date.Format "2 January 2006" }}</h3>
 						</div>
 						{{ if .Params.categories }}
 							{{ partial "categories.html" . }}
 						{{ end }}
-						<div class="post-summary">
-							<p>{{ .Params.summary }}</p>
-						</div>
 					</li>
 				{{ end }}
 				</ul>
