@@ -1,48 +1,46 @@
 .c-post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .c-post-list__link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .c-post-list__title {
-  color: $color-post-list-title;
-  font-size: 36px;
-  margin: 0;
-  border-bottom: 5px solid $color-post-list-title-border;
-  padding-bottom: 5px;
-  transition: all 0.5s ease;
-  line-height: 40px;
+    color: $color-post-list-title;
+    font-size: 36px;
+    margin: 0;
+    border-bottom: 5px solid $color-post-list-title-border;
+    padding-bottom: 5px;
+    transition: all 0.5s ease;
+    line-height: 40px;
+    @media (max-width: $mobile-breakpoint) {
+        font-size: 30px;
+        line-height: 1.3;
+    }
 
-  @media (max-width: $mobile-breakpoint) {
-    font-size: 30px;
-    line-height: 1.3;
-  }
-
-  &:hover {
-    color: $color-post-list-title-border;
-    border-bottom-color: $color-post-list-title;
-    text-shadow: 3px 3px $color-post-hover-shadow;
-    box-shadow: 0 5px $color-post-hover-shadow;
-  }
+    &:hover {
+        color: $color-post-list-title-border;
+        border-bottom-color: $color-post-list-title;
+        text-shadow: 3px 3px $color-post-hover-shadow;
+        box-shadow: 0 5px $color-post-hover-shadow;
+    }
 }
 
 .c-post-list__item {
-  margin-bottom: 40px;
-
-  @media (max-width: $mobile-breakpoint) {
     margin-bottom: 40px;
-  }
+    @media (max-width: $mobile-breakpoint) {
+        margin-bottom: 40px;
+    }
 }
 
 .c-post-list__count {
-  font-weight: bold;
-  margin-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .c-post-list__date {
-  margin: 10px 0 5px;
+    margin: 10px 0 5px;
 }
