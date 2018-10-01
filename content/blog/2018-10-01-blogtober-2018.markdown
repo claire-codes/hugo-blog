@@ -1,0 +1,23 @@
+---
+title: "Blogtober 2018"
+date: 2018-10-01T23:18:49+02:00
+summary: "Blogtober table of contents and introduction."
+categories:
+- blogtober
+- longread
+---
+
+Blogtober is a challenge that people with too much time on their hands undertake, where they pledge to write one blog post a day for all 31 days of October. It is a Thing: I googled it and found other people doing it. I want to do it this year because:
+
+- I have an ever-expending list of 20+ post ideas that I never get round to writing
+- I take too long to write a post, agonising over my words. I want to be able to get content out quicker and I imagine this challenge will help me practice this.
+- Practice makes perfect and I want to get better at writing blog posts.
+
+My posts will cover the same subjects that they have over the last few months: explaining code snippets or tricks in CSS, JavaScript and other tools I use daily as a frontend web developer. I might start doing more opinion-based posts too.
+
+## Blogtober 2018 posts
+
+- _1st October_ Introduction post (this one!)
+
+
+Let's see if I can keep it up!
