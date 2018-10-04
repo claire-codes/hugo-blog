@@ -15,11 +15,11 @@
                 <div class="post-content">
                     <p><a href="https://www.clairecodes.com/">Welcome to my website!</a> Here's a bunch of relevant links about me or that I've shared on Instagram lately:</p>
 
-                    <a href='{{ range first 1 (where .Site.RegularPages "Section" "blog") }}{{ .Permalink }}{{ end }}' class="c-linktree__link c-linktree__link--highlighted">My latest blog post</a>
+                    <a href="/blog/2018-10-01-blogtober-2018/" class="c-linktree__link c-linktree__link--highlighted">Blogtober posts</a>
+
+                    <a href='{{ range first 1 (where .Site.RegularPages "Section" "blog") }}{{ .Permalink }}{{ end }}' class="c-linktree__link">My latest blog post</a>
 
                     <a href="https://codepen.io/claireparker/" class="c-linktree__link">My CodePen account</a>
-
-                    <a href="https://dev.to/claireparker" class="c-linktree__link">My blog posts on Dev.to</a>
 
                     <a href="/about" class="c-linktree__link">About Me</a>
 
