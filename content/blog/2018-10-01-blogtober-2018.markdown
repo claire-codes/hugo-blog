@@ -24,6 +24,7 @@ My posts will cover the same subjects that they have over the last few months: e
 ## Blogtober 2018 posts
 
 - **1st October**: Introduction post (this one!)
+- **2nd October**: [Simple vs clever code style](/blog/2018-10-02-simple-vs-clever-code-style)
 
 
 Let's see if I can keep it up!
