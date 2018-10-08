@@ -26,9 +26,10 @@ My posts will cover the same subjects that they have over the last few months: e
 - **1st October**: Introduction post (this one!)
 - **2nd October**: [Simple vs clever code style](/blog/2018-10-02-simple-vs-clever-code-style)
 - **3rd October**: [Using email newsletters to stay up-to-date with web development](/blog/2018-10-03-using-email-newsletters-to-stay-up-to-date-with-web-development/)
-- **4th October**: Coming soon!
+- **4th October**: [Displaying Column Card Counts in Trello](/blog/2018-10-04-displaying-column-card-counts-in-trello/)
 - **5th October**: Coming soon!
 - **6th October**: Coming soon!
 - **7th October**: [Blogging on your birthday](/blog/2018-10-07-blogging-on-your-birthday/)
+- **8th October**: Coming soon!
 
 Let's see if I can keep it up!
