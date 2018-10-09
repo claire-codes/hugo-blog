@@ -7,13 +7,13 @@ categories:
 - longread
 ---
 
-I'm currently enjoying using Trello to manage daily tasks and jobs. [Trello](https://trello.com/) is a free web application for project management. A project is represented by a board, which contains columns (e.g. "To-do", "Doing", "Done") and cards representing tasks, that can be moved between columns. It can be used to organise pretty much anything. I'm using a board for managing blog post ideas and finding it very helpful. But I’m missing one feature: I’d like to know how many cards are in each list.
+My current favourite tool for managing daily tasks and jobs is Trello. [Trello](https://trello.com/) is a free web application for project management. You can use a Trello board to organise pretty much anything. I have a board for managing blog post ideas and finding it very helpful. But I’m missing one feature: I’d like to see the total number of cards in each list displayed at the top of each column.
 
-This is how my board looks with no numbers:
+This is how the board looks initially, with no totals:
 
 ![Trello board, columns and lists with no count](/images/trello-no-count.png)
 
-I started looking at how I could do this and fell into my usual rabbit-hole. Here are some different methods I discovered for adding a card count at the top of each column.
+So I started investigating how I could add this information in myself. Here are some of the different methods I discovered for displaying the column card total.
 
 ## Use the card filter
 
@@ -25,13 +25,13 @@ Click `Show Menu` > `Filter Cards`, then type `*` as the search term. This searc
 
 ## Be a hacker
 
-The card count information we've displayed previously is already on the page, it’s just hidden until the filter is activated. After a little bit of investigation in the Dev Tools console, I discovered that Trello has the jQuery library loaded on the page with the `$` dollar syntax, and helpfully uses human-friendly classnames. This means we can type one line of code into the browser's console and hit return to show the count:
+It turns out that the card totals are already on the page, but hidden by CSS until the filter is applied. By writing some JavaScript, we should be able to make them appear. Trello uses human-friendly classnames and jQuery. By selecting the correct class, we can use the jQuery `show` function to display the hidden totals:
 
 ```js
 $('.js-num-cards').show()
 ```
 
-We could also use vanilla JavaScript to achieve this. I've tried something a little different though, and removed the classname that is applying the `display: none` CSS:
+We could also use vanilla JavaScript to achieve the same thing. A different approach is to remove the classname that is applying the `display: none` CSS. This is how to do that with plain JavaScript:
 
 ```js
 document.querySelectorAll('.js-num-cards').forEach(function(list) {
@@ -43,14 +43,14 @@ document.querySelectorAll('.js-num-cards').forEach(function(list) {
 
 ## Make a bookmarklet
 
-It’s a little tedious having to open the Dev Tools to execute this. We could make a bookmarklet instead to execute this code for us!
+It’s a little tedious having to open the Dev Tools to run this code each time. Instead we could use a bookmarklet to execute the code at the click of a button.
 
-To learn more about bookmarklets, [this page is a useful place to start](https://gist.github.com/caseywatts/c0cec1f89ccdb8b469b1). Very simply, we:
+To learn more about bookmarklets, [this page is a useful place to start](https://gist.github.com/caseywatts/c0cec1f89ccdb8b469b1). My high-level overview goes like this:
 
 - create a bookmark as usual in the browser
 - instead of a URL, begin with `javascript:` so the browser knows it's about to execute some code
-- wrap the code in an IIFE block so it's immediately invoked
-- put the code you want to run in the IIFE block and save the bookmark
+- use an [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) block to immediately invoke the code
+- wrap the code snippet from above in the IIFE block and save the bookmark
 
 When you click the bookmark from your bookmarks bar, the code is executed in the context of the open page. So to use the vanilla JavaScript example from above, we would use the following as the code:
 
@@ -64,14 +64,14 @@ The card count will update if you move cards between columns. However, if you re
 
 ## Taking it further with browser extensions
 
-Isn’t clicking the bookmarklet every time you navigate to the page annoying? We could create a browser extension to run this code every time we’re on a "trello.com" webpage. Extensions are browser specific so you’ll need to develop for one at a time. I leave this as an exercise to the interested reader to complete 🙃
+Isn’t clicking the bookmarklet every time you navigate to the page annoying? We could create a browser extension to run this code automatically every time we’re on a "trello.com" webpage. Extensions are browser specific so you’ll need to create one per broswer. I leave this as an exercise to the interested reader to complete 🙃
 
 What do you know! There’s already a Chrome extension that does this! (Go to the Chrome store and search for "Trello card counter" to see the many results.) But where’s the fun in using someone else’s code when you can do it yourself?
 
 ## Conclusion
 
-Bookmarklets are incredibly useful and in my opinion underappreciated.
+Users can manipulate webpages to behave differently to how their authors intended. Bookmarklets are a useful and under-appreciated way to do that.
 
-Webpages can be manipulated by users to behave in ways not originally intended by their authors. This short exploration shows how to tweak web experiences to suit personal preferences with a some web development knowledge, or google-foo.
+This short exploration shows that the experience original experience of a webpage can be customised, using a some googling and web development knowledge.
 
 _Note_: This has been tested in Chrome 69 only.
