@@ -9,7 +9,7 @@ categories:
 
 Scroll down for a list of all my posts this month.
 
-## What is Blogotber?
+## What is Blogtober?
 
 Blogtober is a challenge where you pledge to write one blog post a day for each of they thirty-one days of October. I guess it was designed by someone with too much time on their hands.
 
@@ -23,7 +23,7 @@ My posts will cover the same subjects that they have over the last few months: e
 
 ## Blogtober 2018 posts
 
-- **1st October**: Introduction post (this one!)
+- **1st October**: Kick-off post (this one!)
 - **2nd October**: [Simple vs clever code style](/blog/2018-10-02-simple-vs-clever-code-style)
 - **3rd October**: [Using email newsletters to stay up-to-date with web development](/blog/2018-10-03-using-email-newsletters-to-stay-up-to-date-with-web-development/)
 - **4th October**: [Displaying Column Card Counts in Trello](/blog/2018-10-04-displaying-column-card-counts-in-trello/)
@@ -32,5 +32,6 @@ My posts will cover the same subjects that they have over the last few months: e
 - **7th October**: [Blogging on your birthday](/blog/2018-10-07-blogging-on-your-birthday/)
 - **8th October**: Coming soon!
 - **9th October**: Coming soon!
+- **10th October**: Coming soon!
 
 Let's see if I can keep it up!

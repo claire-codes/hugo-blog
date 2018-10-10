@@ -4,7 +4,7 @@ date: 2018-10-04T22:32:00+01:00
 summary: Exploring different methods to display a the total number of cards in a Trello board list
 categories:
 - blogtober
-- longread
+- javacript
 ---
 
 My current favourite tool for managing daily tasks and jobs is Trello. [Trello](https://trello.com/) is a free web application for project management. You can use a Trello board to organise pretty much anything. I have a board for managing blog post ideas and finding it very helpful. But I’m missing one feature: I’d like to see the total number of cards in each list displayed at the top of each column.
