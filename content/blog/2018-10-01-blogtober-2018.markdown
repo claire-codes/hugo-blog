@@ -28,10 +28,11 @@ My posts will cover the same subjects that they have over the last few months: e
 - **3rd October**: [Using email newsletters to stay up-to-date with web development](/blog/2018-10-03-using-email-newsletters-to-stay-up-to-date-with-web-development/)
 - **4th October**: [Displaying Column Card Counts in Trello](/blog/2018-10-04-displaying-column-card-counts-in-trello/)
 - **5th October**: [Current Development Learning Goals](/blog/2018-10-05-current-development-learning-goals/)
-- **6th October**: [CSS Polka Dot Background](/blog/2018-10-06-css-polka-dot-background/)
+- **6th October**: Coming soon!
 - **7th October**: [Blogging on your birthday](/blog/2018-10-07-blogging-on-your-birthday/)
 - **8th October**: Coming soon!
 - **9th October**: Coming soon!
-- **10th October**: Coming soon!
+- **10th October**: [CSS Polka Dot Background](/blog/2018-10-06-css-polka-dot-background/)
+- **11th October**: [Emoji Silhouettes](/blog/2018-10-11-emoji-silhouettes/)
 
 Let's see if I can keep it up!
