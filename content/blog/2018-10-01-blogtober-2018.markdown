@@ -34,5 +34,6 @@ My posts will cover the same subjects that they have over the last few months: e
 - **9th October**: Coming soon!
 - **10th October**: [CSS Polka Dot Background](/blog/2018-10-06-css-polka-dot-background/)
 - **11th October**: [Emoji Silhouettes](/blog/2018-10-11-emoji-silhouettes/)
+- **12th October**: [What a green GitHub graph doesn't show](blog/2018-10-12-what-a-green-github-graph-doesnt-show/)
 
 Let's see if I can keep it up!
