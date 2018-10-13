@@ -32,7 +32,7 @@ My posts will cover the same subjects that they have over the last few months: e
 - **7th October**: [Blogging on your birthday](/blog/2018-10-07-blogging-on-your-birthday/)
 - **8th October**: Coming soon!
 - **9th October**: Coming soon!
-- **10th October**: [CSS Polka Dot Background](/blog/2018-10-06-css-polka-dot-background/)
+- **10th October**: [CSS Polka Dot Background](/blog/2018-10-10-css-polka-dot-background/)
 - **11th October**: [Emoji Silhouettes](/blog/2018-10-11-emoji-silhouettes/)
 - **12th October**: [What a green GitHub graph doesn't show](blog/2018-10-12-what-a-green-github-graph-doesnt-show/)
 
