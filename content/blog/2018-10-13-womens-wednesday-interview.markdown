@@ -1,7 +1,7 @@
 ---
 title: "Women's Wednesday Interview"
 date: 2018-10-13T22:45:57+01:00
-summary:
+summary: My answers to a series of questions I was asked on an Instagram story by a fellow dev.
 categories:
 - blogtober
 - longread
@@ -15,7 +15,7 @@ Daniela (who runs the account [coding.misslild](https://www.instagram.com/coding
 
 ## 1. Please introduce yourself
 
-I'm Claire (@claire_codes) and I'm a frontend developer from Manchester 🇬🇧. I write CSS and JavaScript (currently lots of React). I've been getting paid to program for nearly five years now, having worked with other languages like Ruby and Java, and also Magento.
+I'm Claire ([claire_codes](https://www.instagram.com/claire_codes/)) and I'm a frontend developer from Manchester 🇬🇧. I write CSS and JavaScript (currently lots of React). I've been getting paid to program for nearly five years now, having worked with other languages like Ruby and Java, and also Magento.
 
 ## 2. How did you get into tech?
 
