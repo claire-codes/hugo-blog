@@ -36,5 +36,6 @@ My posts will cover the same subjects that they have over the last few months: e
 - **11th October**: [Emoji Silhouettes](/blog/2018-10-11-emoji-silhouettes/)
 - **12th October**: [What a green GitHub graph doesn't show](blog/2018-10-12-what-a-green-github-graph-doesnt-show/)
 - **13th October**: [Women's Wednesday Interview](blog/2018-10-13-womens-wednesday-interview/)
+- **14th October**: [Why I Like Blogging as a Developer](/blog/2018-10-14-why-i-like-blogging-as-a-developer/)
 
 Let's see if I can keep it up!
