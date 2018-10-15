@@ -7,7 +7,7 @@ categories:
 - longread
 ---
 
-_Note_: my original idea for this blog post to write it on my actual birthday (which was yesterday, 6th October), but it turned out I didn't get chance. But I _did_ think about what I'd write in this blog post, which counts right?
+_Note_: my original intention for this blog post was to write it on my actual birthday (which was yesterday, 6th October), but it turned out I didn’t get chance. But I did think about what I was going to write, so I the thought was there.
 
 ## A Birthday Haiku
 

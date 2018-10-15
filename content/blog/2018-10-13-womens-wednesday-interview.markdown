@@ -9,9 +9,7 @@ categories:
 
 I'm an active member of Instagram though my coding-themed account [claire_codes](https://www.instagram.com/claire_codes/). There's a lot more developers posting on Instagram than you think - it's a very positive, supportive community and I have a lot of fun interacting with people and finding new ways to communicate with them.
 
-Daniela (who runs the account [coding.misslild](https://www.instagram.com/coding.misslild/)) runs a feature in her Instagram stories every Wednesday where she interviews a female developer and posts their answers. She asked me to answer her questions a few weeks ago and posted them. I was pretty happy with my answers, so thought it would be good to immortalise them here on my blog, although they're also available in Daniela's [story highlights](https://www.instagram.com/coding.misslild/) too.
-
-
+Daniela (who runs the account [coding.misslild](https://www.instagram.com/coding.misslild/))) runs a feature in her Instagram stories every Wednesday she calls “Women’s Wednesday”. She asks a female developer a series of questions and posts their answers. She interviewed me over email a few weeks ago and featured me in her Instagram Stories. I’m immortalising my responses here on my blog, although they’re also available in Daniela’s [story highlights](https://www.instagram.com/coding.misslild/) too.
 
 ## 1. Please introduce yourself
 

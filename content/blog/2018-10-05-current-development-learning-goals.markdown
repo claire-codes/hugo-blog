@@ -9,7 +9,7 @@ categories:
 
 I'm coming up to my five-year anniversary of working professionally as a web developer this November. I am still enchanted by the challenge of writing software, particularly as I've moved solely into frontend web development.
 
-One of the things I love about being a developer is that there are always new things to learn, and that it's part of your job as a good software engineer to keep learning them. With that in mind, I want to list the technologies that I'm currently really interested in and want to improve my skills with in the coming months.
+One of the things I love about being a developer is that there are always new things to learn, and that it's part of your job as a good software engineer to keep learning them. With that in mind, I want to reflect on the technologies that I’m currently really interested in, and list some tangible ways I hope to improve my skills in them over coming months.
 
 ## SVGs
 
@@ -35,7 +35,7 @@ Google offer free training courses so I reckon this is the best place to start. 
 
 ### Goal
 
-Now for something completely different. I first learnt to code using Java and used it 90% of the time in my first development job. Soon my head was turned by JavaScript and CSS and I moved in frontend development. I don't miss strongly-typed languages, or want to move away from JavaScript, but I would really like a deeper appreciation of how the backend of an application works. I considered which language to help me do this and decided Go - mostly because it's new and has a friendly community, has a cute logo, and came highly recommended by a friend.
+Now for something completely different. I first learnt to code using Java and used it 90% of the time in my first development job. Soon my head was turned by JavaScript and CSS and I moved in frontend development. I don't miss strongly-typed languages, or want to move away from JavaScript, but I would really like a deeper appreciation of how the backend of an application works. I considered which language to help me do this and decided Go - mostly because it's new and has a friendly community, has a cute logo, and came highly recommended by my friend [Will](https://twitter.com/whg_codes).
 
 Because I haven't written anything remotely backend for over two years, this is a real culture shock for me, and puts me right back as a beginner. This is great! I get to stretch my brain, and check my developer ego. It's easy to think you know everything when you've been solving similar problems for a couple of jobs.
 
@@ -47,14 +47,14 @@ I started with the official Go tutorial in Spring but didn't spend much time wit
 
 ### Goal
 
-I want to be as familiar with Grid as I am with Flexbox. I've made some simple designs, but I'm not familiar with the syntax yet. This is mainly because I haven't used it in my day job, and the best way to change this is for me to learn more about it's applications so I can recognise where to use it.
+I want to be as familiar with Grid as I am with Flexbox. I've made some simple designs, but I'm not familiar with the syntax yet. This is mainly because I haven't used it in my day job, and the best way to change this is for me to learn more about its applications so I can recognise where to use it.
 
 ### How I'll achieve it
 
-Work through Wes Bos's free Grid course and read lots of Rachel Andrews and Jen Simmon's materials on Grid.
+Work through Wes Bos's free Grid course and read lots of Rachel Andrews' and Jen Simmons' materials on Grid.
 
 ## Conclusion
 
-I've tried to make my goals tangible, but there's a lot to cover here. It's good to aim high though and if nothing else, this is an interesting snapshot of where my interests as a developer currently lie.
+I've tried to make my goals focussed and achievable, but there's a lot to cover here. It's good to aim high though and if nothing else, this is an interesting snapshot of where my interests as a developer currently lie.
 
 Publishing this will hopefully keep me accountable, and I can revisit these goals in New Year 2019 and see how I've got on.
