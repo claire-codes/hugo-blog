@@ -7,20 +7,6 @@ categories:
 - longread
 ---
 
-Scroll down for a list of all my posts this month.
-
-## What is Blogtober?
-
-Blogtober is a challenge where you pledge to write one blog post a day for each of they thirty-one days of October. I guess it was designed by someone with too much time on their hands.
-
-I want to do it this year because:
-
-- I have an ever-expanding list of 20+ post ideas that I never get round to writing
-- I take too long to write a post, agonising over my words. I want to be able to get content out quicker and I imagine this challenge will help me improve at this.
-- Practice makes perfect and I want to get better at writing blog posts.
-
-My posts will cover the same subjects that they have over the last few months: explaining code snippets or tricks in CSS, JavaScript and other tools I use daily as a frontend web developer. I might start doing more opinion-based posts too.
-
 ## Blogtober 2018 posts
 
 - **1st October**: Kick-off post (this one!)
@@ -37,5 +23,17 @@ My posts will cover the same subjects that they have over the last few months: e
 - **12th October**: [What a green GitHub graph doesn't show](blog/2018-10-12-what-a-green-github-graph-doesnt-show/)
 - **13th October**: [Women's Wednesday Interview](blog/2018-10-13-womens-wednesday-interview/)
 - **14th October**: [Why I Like Blogging as a Developer](/blog/2018-10-14-why-i-like-blogging-as-a-developer/)
+
+## What is Blogtober?
+
+Blogtober is a challenge where you pledge to write one blog post a day for each of they thirty-one days of October. I guess it was designed by someone with too much time on their hands.
+
+I want to do it this year because:
+
+- I have an ever-expanding list of 20+ post ideas that I never get round to writing
+- I take too long to write a post, agonising over my words. I want to be able to get content out quicker and I imagine this challenge will help me improve at this.
+- Practice makes perfect and I want to get better at writing blog posts.
+
+My posts will cover the same subjects that they have over the last few months: explaining code snippets or tricks in CSS, JavaScript and other tools I use daily as a frontend web developer. I might start doing more opinion-based posts too.
 
 Let's see if I can keep it up!
