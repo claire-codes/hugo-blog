@@ -24,7 +24,7 @@ categories:
 - **13th October**: [Women's Wednesday Interview](blog/2018-10-13-womens-wednesday-interview/)
 - **14th October**: [Why I Like Blogging as a Developer](/blog/2018-10-14-why-i-like-blogging-as-a-developer/)
 - **15th October**: [Making the Alt Key Work in iTerm2](/blog/2018-10-15-making-the-alt-key-work-in-iterm2/)
-- **16th October**: Coming soon!
+- **16th October**: [Jumping around the command line](/blog/2018-10-16-jumping-around-the-command-line/)
 - **17th October**: Coming soon!
 - **18th October**: Coming soon!
 - **19th October**: [Sass or SCSS?](/blog/2018-10-19-sass-or-scss/)
