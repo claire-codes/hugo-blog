@@ -29,7 +29,9 @@ categories:
 - **18th October**: Coming soon!
 - **19th October**: [Sass or SCSS?](/blog/2018-10-19-sass-or-scss/)
 - **20th October**: [Takeaways from Lean In](/blog/2018-10-20-takeaways-from-lean-in/)
-- **19th October**: [Is that really Pair Programming?](2018-10-21-is-that-really-pair-programming/)
+- **21st October**: [Is that really Pair Programming?](2018-10-21-is-that-really-pair-programming/)
+- **22nd October**: Coming soon!
+- **23rd October**: [Welcoming Language](/blog/2018-10-23-welcoming-language/)
 
 ## What is Blogtober?
 
