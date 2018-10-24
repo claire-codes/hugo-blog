@@ -32,6 +32,7 @@ categories:
 - **21st October**: [Is that really Pair Programming?](2018-10-21-is-that-really-pair-programming/)
 - **22nd October**: Coming soon!
 - **23rd October**: [Welcoming Language](/blog/2018-10-23-welcoming-language/)
+- **23rd October**: [Missing Emoji](/blog/2018-10-24-missing-emoji/)
 
 ## What is Blogtober?
 

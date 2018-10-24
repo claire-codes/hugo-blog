@@ -5,6 +5,7 @@ summary: Explaining how to fill in an emoji with colour in CSS.
 categories:
 - blogtober
 - css
+- emoji
 ---
 
 To change the colour of text with CSS, we can simply use the `colour` CSS property. However, this doesn’t work on emoji characters. But by using the background-clip property, it's possible to fill the whole emoji shape with a colour, or gradient. This enables us to create text effects like this:
