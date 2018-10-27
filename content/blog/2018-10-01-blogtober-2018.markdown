@@ -34,6 +34,7 @@ categories:
 - **23rd October**: [Welcoming Language](/blog/2018-10-23-welcoming-language/)
 - **24th October**: [Missing Emoji](/blog/2018-10-24-missing-emoji/)
 - **25th October**: [Drawing a Shield with One Div](/blog/2018-10-25-drawing-a-shield-with-one-div/)
+- **26th October**: [The Coverage is a Lie](/blog/2018-10-26-the-coverage-is-a-lie)
 
 ## What is Blogtober?
 
