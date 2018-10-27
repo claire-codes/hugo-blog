@@ -30,7 +30,7 @@ categories:
 - **19th October**: [Sass or SCSS?](/blog/2018-10-19-sass-or-scss/)
 - **20th October**: [Takeaways from Lean In](/blog/2018-10-20-takeaways-from-lean-in/)
 - **21st October**: [Is that really Pair Programming?](2018-10-21-is-that-really-pair-programming/)
-- **22nd October**: Coming soon!
+- **22nd October**: [When Not to go for a Job Interview (UK Software Developer Edition)](/blog/2018-10-22-when-not-to-go-for-an-interview/)
 - **23rd October**: [Welcoming Language](/blog/2018-10-23-welcoming-language/)
 - **24th October**: [Missing Emoji](/blog/2018-10-24-missing-emoji/)
 - **25th October**: [Drawing a Shield with One Div](/blog/2018-10-25-drawing-a-shield-with-one-div/)
