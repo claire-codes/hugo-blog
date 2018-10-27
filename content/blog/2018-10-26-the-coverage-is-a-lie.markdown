@@ -38,3 +38,5 @@ Depending on your code coverage library, if you don't write tests for a particul
 ### So should I use a code coverage tool?
 
 Yes, they can be very useful in seeing which areas of the codebase aren't covered by tests and so where you need to improve your tests. They give a good indication in how many tests are in the codebase. However, they don't measure how good the tests are. I'm not sure if there is a library that can do that at the moment, and this is up to the individual developer to do this. Code coverage can't make you write code that considers edge cases and bad input: this is something you have to do yourself!
+
+Don't forget that the tests covered by test coverage are often unit tests. Unit tests are necessary in a healthy codebase, but not the only form of tests. Do you have automated integration tests? Manual tests? Browser compatability tests (for your web app)? Unit tests and code coverage are only facet of testing and shouldn't be relied on as the only indicator of how well tested your codebase is.
