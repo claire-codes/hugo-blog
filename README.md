@@ -8,7 +8,9 @@ A random emoji is prefixed to every commit message I write as a pre-commit hook.
 
 ## Developing
 
-`hugo server` locally. Push changes and Netlify takes care of the rest.
+Install hugo with `brew install hugo`. Install node packages with `npm i`.
+
+Run `hugo server` locally and go to `http://localhost:1313/`. Push changes and Netlify takes care of the rest.
 
 ## Sass
 
