@@ -1,5 +1,5 @@
 ---
-title: "Interests 8th January 2018"
+title: "Interests 8th January 2019"
 date: 2019-01-08T14:01:08Z
 interests:
   - "[Top 12 Things That Destroy Developer Productivity, Hackernoon](https://hackernoon.com/top-12-things-that-destroy-developer-productivity-2ddf0abc190?mkt_tok=eyJpIjoiWW1FMll6TXhPRFkzWW1JeiIsInQiOiJtb2hOTGFWcmtMbW9rVkF2dkVEc3I3NTF0XC9MQzVjTVdUaklKRUpsdTNwNkw4SDBWWFZTOVdIZ2NUT1dkb1wvbVNwRGVCNGZUWEJtYllPdlcwZ0hEelcrZTgrd3grZyt5dnNWM1Z4YU8yN3BSU1VhN3RPNGdaaU1CYm1FTURUY2JVIn0%3D)  - Number 8 on this list really resonated with me because of the project I'm working on at work right now. If the features you build aren't being used (no users) then this really kills motivation."
