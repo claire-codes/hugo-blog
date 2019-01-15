@@ -9,7 +9,7 @@ categories:
 
 ## TL;DR
 
-This is what we'll be creating:
+This post explains how to produce this design using CSS:
 
 <style>
 .polka-space-one {
@@ -24,7 +24,7 @@ This is what we'll be creating:
 
 <div class="polka-space-one"></div>
 
-This effect is achieved using only one CSS class. The properties needed look like this:
+It can be created with only a single HTML tag and these background-related CSS properties:
 
 ```css
 body {
@@ -36,7 +36,7 @@ body {
 }
 ```
 
-The rest of this post breaks down the CSS and explains how it works. Or you can play with the code in [the CodePen example](https://codepen.io/claireparker/pen/oMmPPZ):
+Below is an explanation of how this works, or you can experiment with the code directly in [this CodePen example](https://codepen.io/claireparker/pen/oMmPPZ):
 
 <p data-height="265" data-theme-id="0" data-slug-hash="oMmPPZ" data-default-tab="css,result" data-user="claireparker" data-pen-title="CSS Polka dot background" class="codepen">See the Pen <a href="https://codepen.io/claireparker/pen/oMmPPZ/">CSS Polka dot background</a> by Claire (<a href="https://codepen.io/claireparker">@claireparker</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -46,9 +46,11 @@ The rest of this post breaks down the CSS and explains how it works. Or you can 
 
 Let’s begin by displaying a single circle.
 
-We use a radial-gradient as a background-image to create a circle pattern. Supply the gradient with two colors that each have identical color-stop values. The color-stops create the sharp border between the two colors, instead of a faded gradient effect. A color-stop can be a percentage between 0% and 100%, where 0 is the centre of the gradient and 100% is the edge.
+Use a radial-gradient as a background-image to create a circle pattern. Supply the gradient with two colors that each have identical color-stop values. The color-stops create the sharp border between the two colors, instead of a faded gradient effect. A color-stop can be a percentage between 0% and 100%, where 0 is the centre of the gradient and 100% is the edge.
 
 Give the container element equal height and width to make the circle display nicely. If the element isn’t a square then the circle will appear warped.
+
+At this stage, the CSS will look like this:
 
 ```css
 body {
@@ -78,7 +80,7 @@ Position the circle image in the top left of the background with the `background
 
 Give the image a set size of 100px by 100px with the `background-size` property.
 
-Set the height and width of the body container larger than the background-size so that we can see the repeating effect of our image.
+Set the height and width of the body container larger than the background-size so that we can see the repeating effect of our image. The CSS will now look like this:
 
 ```css
 body {
@@ -104,9 +106,11 @@ Result:
 
 <div class="polka-space-three"></div>
 
-Why is the image repeating? We haven't set anything explicitly in the CSS to do this.
+At this point you might ask, why is the image repeating? We haven't set any properties explicitly in the CSS to do this.
 
-There's another background-related property called `background-repeat`, which has an initial value of `repeat`. This is applied by the browser automatically without us having to do it. This makes the background-image repeat along both the x and y axes. If we were to change this to `no-repeat`, then we would only see one circle again. Since the containing element is now larger than the 100px by 100px background-image, we can see the circle repeat.
+There's another background-related property called `background-repeat`. The default value for this property set by the browser is `repeat`, which makes the background-image automatically repeat along both the x and y axes without us having to set it.  Since the containing element (the body tag) is now larger than the 100px by 100px circle background-image, the circle is duplicated in the remaining space.
+
+If we wanted the circles to stop repeating, we could change the value to `background-repeat: no-repeat`.
 
 ### Step 3 - add a diagonal row
 
@@ -114,7 +118,7 @@ We add a second radial gradient to the `background-image` property by separating
 
 We change the second color of each gradient to `transparent`, and set the `background-color` of the element explicitly. This is in order to see the new row of dots - otherwise it would be hidden behind the first one.
 
-Now we have two gradients, we can give them each different `background-position` values, again separated by commas. By giving the new row values that are half of the background size (50px), we create the diagonal spacing effect.
+Now we have two gradients, we can give them each different `background-position` values, again separated by commas. By giving the new row values that are half of the background size (50px), we create the diagonal spacing effect. The final CSS will look like this:
 
 ```css
 body {
@@ -143,11 +147,11 @@ Final result:
 
 <div class="polka-space-four"></div>
 
-And there you have it, a polka dot effect created in CSS. You could change the size of the circles, the colors, or even add another row at a different position to create more complex effects.
+Voilà, polka dots in CSS. You could change the size of the circles, the colors, or even add another row at a different position to create more complex effects.
 
 ### A note on `background` and shorthand
 
-The `background` CSS property is shorthand for multiple `background-` prefixed properties. You mayb have used other CSS shorthands, such as font, margin or border. In this example, I've used individual properties such as `background-image` and `background-color` instead of the shorthand. This is because:
+The `background` CSS property is shorthand for multiple `background-` prefixed properties. You may have used other CSS shorthands, such as font, margin or border. In this example, I've used individual properties such as `background-image` and `background-color` instead of the shorthand. This is because:
 
 - it's easier to see what's happening in the individual properties instead of trying to work out what each value means in `background`
 - when using shorthand, it's easy to accidentally overwrite other properties and cause bugs, since you don't explicitly declare properties (for this reason I always use `background-color` instead of `background`)
