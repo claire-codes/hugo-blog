@@ -44,4 +44,4 @@ There is good support for the paste event in modern browsers. These events are p
 
 Now you know how to change the expected behaviour of the paste event in your webpage, the question is whether you should. The answers to this [StackOverflow question about the paste event] (https://stackoverflow.com/questions/1226574/disable-pasting-text-into-html-form/1226721) discourage developers from tampering with default browser behaviour. The posters argue against changing expected browser behaviour because it will confuse users. Additionally, if the user decides to copy and paste data into a form field at the risk of it containing typos, then we should allow them to do this.
 
-Each website is different, so there is no definitive answer. It's a good idea to consider questions like this when building your site in order to provide the a great user experience.
+Each website is different, so there is no definitive answer. It's a good idea to consider questions like this when building your site in order to provide the best experience for your users.
