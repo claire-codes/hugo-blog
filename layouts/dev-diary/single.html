@@ -11,14 +11,16 @@
         {{ partial "header.html" . }}
         <main>
             <div class="o-main__wrapper c-post">
-                <h1 class="c-post__title">{{ .Date.Format "Monday, 2 January 2006" }}</h1>
+                <h1 class="c-post__title">Dev Diary: {{ .Date.Format "Monday, 2 January 2006" }}</h1>
                 <div class="post-content">
-                    <ul class="c-interesting__entry-list">
+                    <p>{{.Content}}</p>
+                    <ul class="c-dev-diary__entry-list">
                         {{ range .Params.interests }}
-                        <li class="c-interesting__entry"><div>{{ . | markdownify }}</div></li>
+                        <li class="c-dev-diary__entry"><div>{{ . | markdownify }}</div></li>
                         {{ end }}
                     </ul>
                 </div>
+                <p>✍️ <a href="/dev-diary">View all my Dev Diary posts here.</a></p>
             </div>
         </main>
         {{ partial "footer.html" . }}

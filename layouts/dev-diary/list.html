@@ -15,14 +15,14 @@
 					<h1>{{ .Title }}</h1>
 					{{.Content}}
 				</div>
-				<ul class="c-interesting__list">
+				<ul class="c-dev-diary__list">
 				{{ range .Data.Pages }}
-					<li class="c-interesting__item">
-						<h2 class="c-interesting__date">{{ .Date.Format "Monday, 2 January 2006" }}</h2>
+					<li class="c-dev-diary__item">
+						<h2 class="c-dev-diary__date">{{ .Date.Format "Monday, 2 January 2006" }}</h2>
 						<div>{{.Content}}</div>
-						<ul class="c-interesting__entry-list">
+						<ul class="c-dev-diary__entry-list">
 							{{ range .Params.interests }}
-							<li class="c-interesting__entry"><div>{{ . | markdownify }}</div></li>
+							<li class="c-dev-diary__entry"><div>{{ . | markdownify }}</div></li>
 							{{ end }}
 						</ul>
 					</li>
