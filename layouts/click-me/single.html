@@ -17,13 +17,13 @@
 
                     {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-linktree__link c-linktree__link--highlighted">My latest blog post: <br> "{{ .Title }}"</a>{{ end }}
                     
-                    <a href="/blog/" class="c-linktree__link">All my blog posts</a>
-
-                    <a href="https://codepen.io/claireparker/" class="c-linktree__link">CodePen account</a>
-
+                    <a href="/dev-diary" class="c-linktree__link">Dev Diary entries</a>
+                    
                     <a href="/about" class="c-linktree__link">About Me</a>
-
-                    <a href="/dev-diary" class="c-linktree__link">What I've been working on lately</a>
+                    
+                    <a href="/blog/" class="c-linktree__link">All my blog posts</a>
+                    
+                    <a href="https://codepen.io/claireparker/" class="c-linktree__link">CodePen account</a>
                 </div>
             </div>
         </main>
