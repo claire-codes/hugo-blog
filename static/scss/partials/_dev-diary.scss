@@ -1,10 +1,10 @@
-.c-interesting__list {
+.c-dev-diary__list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.c-interesting__item {
+.c-dev-diary__item {
     border: 5px solid $color-header-text;
     margin-bottom: 20px;
     padding: 20px;
@@ -15,19 +15,19 @@
     }
 }
 
-.c-interesting__date {
+.c-dev-diary__date {
     margin-bottom: 15px;
     margin-top: 0;
     display: inline-block;
     border-bottom: 3px dashed lighten($color-header-text, 30%);
 }
 
-.c-interesting__entry-list {
+.c-dev-diary__entry-list {
     list-style: disc;
     padding-left: 20px;
 }
 
-.c-interesting__entry {
+.c-dev-diary__entry {
     // This is to stop dead long links mucking the width up on small screens
     div {
         overflow: hidden;
@@ -39,7 +39,7 @@
 }
 
 .c-post {
-    .c-interesting__entry {
+    .c-dev-diary__entry {
         &:not(:last-child) {
             border-bottom: 3px dashed lighten($color-header-text, 30%);
             padding-bottom: 15px;
