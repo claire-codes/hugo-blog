@@ -4,12 +4,14 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 52px;
+    min-height: 52px;
     background-color: $main-accent;
     box-shadow: 4px 4px $color-middle-shadow, 8px 8px $color-back-shadow;
     color: white;
     text-decoration: none;
     margin-bottom: 15px;
+    padding: 20px 0;
+    box-sizing: border-box;
 
     // unset other hover styles
     &:hover,
@@ -23,4 +25,6 @@
 
 .c-linktree__link--highlighted {
     background-image: linear-gradient(to left, lighten(#4527a0, 20%), lighten(#00e676, 20%));
+    color: #333;
+    font-weight: 700;
 }

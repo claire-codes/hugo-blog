@@ -13,11 +13,11 @@
                 <h1 class="c-post__title">Hello 👋</h1>
 
                 <div class="post-content">
-                    <p><a href="https://www.clairecodes.com/">Welcome to my website!</a> Here's a bunch of relevant links about me or that I've shared on Instagram lately:</p>
+                    <p><a href="https://www.clairecodes.com/">Welcome to my website clairecodes.com!</a> Here's a bunch of relevant links:</p>
 
-                    <a href="/blog/" class="c-linktree__link c-linktree__link--highlighted">All my blog posts</a>
-
-                    <a href='{{ range first 1 (where .Site.RegularPages "Section" "blog") }}{{ .Permalink }}{{ end }}' class="c-linktree__link">Latest blog post</a>
+                    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-linktree__link c-linktree__link--highlighted">My latest blog post: <br> "{{ .Title }}"</a>{{ end }}
+                    
+                    <a href="/blog/" class="c-linktree__link">All my blog posts</a>
 
                     <a href="https://codepen.io/claireparker/" class="c-linktree__link">CodePen account</a>
 
