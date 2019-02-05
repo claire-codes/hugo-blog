@@ -22,6 +22,10 @@ I use the [Ted](https://github.com/claireparker/hugo-ted) theme. I built the the
 
 The name comes from my beautiful ~~son~~ dog, Ted.
 
-## Archetypes
+## Archetypes - not working
 
 Two templates for front matter (i.e. archtypes) exist: `blog` and `interesting`. To use them, create a new file like: `hugo new --kind interesting interesting/2018-10-02.md`. I'm sure there's a better way but I can't get it to work without using `--kind`.
+
+## Dev Diary
+
+I post this once a week. To generate a new one, type `hugo new dev-diary/2019-02-05-dev-diary.markdown` at the command line, replacing the date in the title. The YAML should be `title`, `date` and `interests` (this field name is a hangover from when the page used to be called "Interesting" and it still sounds best to me). `interests` is a list (bullets are hyphens). Content of the post is posted at the top, followed by the `interests` list.
