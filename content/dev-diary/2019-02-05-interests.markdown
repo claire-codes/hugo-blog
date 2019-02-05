@@ -1,5 +1,5 @@
 ---
-title: "Interests 5th Febrauary 2019"
+title: "Dev Diary Entry, 5th February 2019"
 date: 2019-02-05T13:17:20Z
 interests:
 - "I got a lot of comments on my last blog post about [how to prevent pasting into input fields](https://dev.to/claireparker/how-to-prevent-pasting-into-input-fields-nn). Users don't like this feature!"
