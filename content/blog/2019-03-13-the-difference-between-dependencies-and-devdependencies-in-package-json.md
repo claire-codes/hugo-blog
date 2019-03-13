@@ -1,5 +1,5 @@
 ---
-title: "The Difference Between dependencies and devDependencies in a JavaScript project"
+title: "The difference between dependencies and devDependencies in a JavaScript project"
 date: 2019-03-13T10:08:30Z
 summary: "Explaining where to install a package in your project's package.json file: dependencies or devDependencies."
 categories:
@@ -51,8 +51,6 @@ npm i -D jest
 When you run `npm install` in the root of a project with a package.json file, **all packages** in both dependencies and devDependencies are installed. This is because you're working with the source code, so are probably developing this app and therefore need the code in every package. However, if you only want to install the packages listed under the dependencies key, then use the `—-production` flag, like `npm install --production`.
 
 In conclusion, when deciding where a package should sit in the package.json file, ask yourself whether the package is required for the app to work in the final, production-ready version. If it's not, add it to the devDependencies object, otherwise, it belongs in dependencies.
-
-Do you have any other examples? Let me know!
 
 For more information, see the [official npm documentation page for the npm install command](https://docs.npmjs.com/cli/install).
 
