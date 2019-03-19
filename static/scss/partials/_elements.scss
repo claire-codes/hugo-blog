@@ -1,40 +1,60 @@
 body {
-    color: $color-body-font;
-    font-family: $body-font-family;
-    padding: 0;
-    margin: 0;
+  color: $color-body-font;
+  font-family: $body-font-family;
+  padding: 0;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $header-font-family;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
 }
 
 code {
-    background-color: $color-code-background;
-    color: $color-code-color;
-    border-radius: 0.3em;
-    padding: 2px 5px 5px;
-    white-space: nowrap;
+  background-color: $color-code-background;
+  color: $color-code-color;
+  border-radius: 0.3em;
+  padding: 2px 5px 5px;
+  white-space: nowrap;
 }
 
 pre code {
-    padding: 0;
+  padding: 0;
 }
 
 a {
-    color: $color-link;
+  color: $color-link;
 
-    &:hover {
-        background-color: $color-link-hover-background;
-        border-top: 1px solid $color-link-hover-border;
-        border-bottom: 1px solid $color-link-hover-border;
-        transition: background-color 0.25s linear;
-        border-radius: 0.3em;
-    }
+  &:hover {
+    background-color: $color-link-hover-background;
+    border-top: 1px solid $color-link-hover-border;
+    border-bottom: 1px solid $color-link-hover-border;
+    transition: background-color 0.25s linear;
+    border-radius: 0.3em;
+  }
 }
 
 blockquote {
-    border-left: 5px solid $color-blockquote;
-    padding-left: 20px;
-    margin-left: 20px;
+  border-left: 5px solid $color-blockquote;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  th {
+    border: 1px solid #dbdbdb;
+    padding: 5px 1vw;
+    background: #ebebec;
+    text-align: left;
+  }
+  td {
+    border: 1px solid #dbdbdb;
+    padding: 5px 1vw;
+    box-sizing: border-box;
+  }
 }
