@@ -22,9 +22,11 @@ I use the [Ted](https://github.com/claireparker/hugo-ted) theme. I built the the
 
 The name comes from my beautiful ~~son~~ dog, Ted.
 
-## Archetypes - not working
+## Archetypes
 
-Two templates for front matter (i.e. archtypes) exist: `blog` and `interesting`. To use them, create a new file like: `hugo new --kind interesting interesting/2018-10-02.md`. I'm sure there's a better way but I can't get it to work without using `--kind`.
+Two templates for front matter (a.k.a. archetypes) exist: `blog` and `dev-diary`. To use them, create a new file like: `hugo new dev-diary/2018-10-02.md` or `hugo new blog/post.md`.
+
+Ensure the file suffix matches the one used in the archetype, i.e. my archetypes are `.md` files, so if I did `hugo new blog/post.markdown` the archetype wouldn't be used.
 
 ## Dev Diary
 
