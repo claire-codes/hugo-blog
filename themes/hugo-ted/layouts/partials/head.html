@@ -3,7 +3,8 @@
 
 {{ .Hugo.Generator }}
 
-<link rel="stylesheet" href="{{ "css/styles.css" | absURL }}">
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
