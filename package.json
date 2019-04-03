@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "autoprefixer": "^8.1.0",
-    "chokidar-cli": "^1.2.0",
     "postcss-cli": "^5.0.0"
   }
 }
