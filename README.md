@@ -14,7 +14,7 @@ Run `hugo server` locally and go to `http://localhost:1313/`. Push changes and N
 
 ## Sass
 
-Run `npm run dev` in one terminal tab and `hugo server` in another. The npm tasks will automatically recompile the Sass, and the Hugo task will pick up on the CSS and reload the page.
+Using Hugo pipes (see code in head.html partial) means we don't need to install JavaScript packages to compile Sass. However, as of version 0.54.0 and with deploying on Netlify, I still need to commit the `resources/` folder with all the compiled stuff in it.
 
 ## Theme
 
