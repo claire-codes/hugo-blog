@@ -6,11 +6,7 @@
   "repository": "https://github.com/claireparker/hugo-blog",
   "bugs": "https://github.com/claireparker/hugo-blog/issues",
   "scripts": {
-    "build-task:scss-compile": "node-sass-chokidar --source-map true static/scss/ -o static/css --output-style compressed",
     "build-task:autoprefixer": "postcss static/css/*.css --use autoprefixer -d static/css",
-    "sass:build": "npm-run-all -p build-task:*",
-    "sass:watch": "chokidar 'static/scss/**/*.scss' -c 'npm run sass:build'",
-    "dev": "npm-run-all -p sass:*",
     "sass-lint": "./node_modules/.bin/sass-lint  -v -q"
   },
   "keywords": [],
@@ -20,10 +16,8 @@
     "sass-lint": "^1.12.1"
   },
   "dependencies": {
-    "node-sass-chokidar": "^1.1.0",
     "autoprefixer": "^8.1.0",
     "chokidar-cli": "^1.2.0",
-    "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0"
   }
 }
