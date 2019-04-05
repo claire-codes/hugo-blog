@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "post.css",
+	"sources": [
+		"../../scss/partials/post.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
