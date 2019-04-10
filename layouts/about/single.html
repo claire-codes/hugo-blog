@@ -3,7 +3,8 @@
 
     <head>
         <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
-
+        <meta name="description" content="{{ if .Params.description }}{{ .description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+        
         {{ partial "head.html" . }}
     </head>
 
