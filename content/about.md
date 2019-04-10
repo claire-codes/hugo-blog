@@ -1,7 +1,7 @@
-+++
-title = "About Me"
-type = "about"
-+++
+---
+title: "About Me"
+type: "about"
+---
 
 I love reading other people's bios but hate writing my own. Here is a picture and a list:
 
