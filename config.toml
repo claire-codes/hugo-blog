@@ -4,6 +4,7 @@ title = "Claire Codes"
 theme = "hugo-ted"
 author = "Claire Parker-Jones"
 googleAnalytics = "UA-67279079-1"
+enableRobotsTXT = true
 
 [menu]
   [[menu.header]]
