@@ -12,9 +12,11 @@ CodePens are a great way to interactively demonstrate a code concept in a blog p
 
 Copy the url of your CodePen and add it to a Liquid tag like this:
 
+<!-- {% raw %} -->
 ```js
 {% codepen https://codepen.io/claireparker/pen/oMmPPZ %}
 ```
+<!-- {% endraw %} -->
 
 Paste the Liquid tag directly into the page. Do not surround it with any other Markdown code formatting tags like the triple or single backticks.
 
