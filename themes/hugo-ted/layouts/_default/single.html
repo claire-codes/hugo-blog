@@ -3,7 +3,8 @@
 
     <head>
         <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
-
+        <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+        
         {{ partial "head.html" . }}
         <link rel="stylesheet" href="{{ "/css/prism.css" | absURL }}"/>
     </head>
