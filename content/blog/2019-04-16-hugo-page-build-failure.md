@@ -12,12 +12,14 @@ Unable to build page. Please try again later.
 
 This wasn't helpful at all!
 
-It took me quite a bit of targetted Googling and this issue on the Jekyll repo https://github.com/jekyll/jekyll/issues/6217#issuecomment-363785632 to work out the solution to this one but eventually got it:
+It took me quite a bit of targeted Googling and this issue on the Jekyll repo https://github.com/jekyll/jekyll/issues/6217#issuecomment-363785632 to work out the solution to this one but eventually got it:
 
 ```js
-{% assign favorite_food = 'apples' %}
+{% baby shark doo doo doo %}
 ```
 
 This is some serious code-ception to write as a post!
 
-My current blog setup is:
+I'm not 100% sure what caused this but this is my best guess.
+
+My blog is built using Hugo and deployed using Netlify. It has nothing to do with Jekyll. However, I have it setup as a GitHub Pages site that I redirect to a different domain. I'm assuming the GitHub pages stuff in the background notices the Liquid tag and thinks I'm doing something with Jekyll and gets in a mess because it's just a random tag.
