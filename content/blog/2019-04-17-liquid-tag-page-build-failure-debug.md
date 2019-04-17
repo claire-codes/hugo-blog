@@ -24,7 +24,7 @@ Everytime I pushed to Git and GitHub I received a page build error that looked l
 
 This wasn't helpful at all!
 
-If the tag contains a valid Liquid tag then there is no error. If I put complete rubbish in the example tag, like `{% baby shark doo doo doo %}`, then I receive a more useful error of:
+If the tag contains a valid Liquid tag then there is no error. If I put complete rubbish in the example tag, like <!-- {% raw %} -->`{% baby shark doo doo doo %}`<!-- {% endraw %} -->, then I receive a more useful error of:
 
 > The tag `baby` on line 25 in `content/blog/filename.md` is not a recognized Liquid tag. For more information, see https://help.github.com/en/articles/page-build-failed-unknown-tag-error.
 
