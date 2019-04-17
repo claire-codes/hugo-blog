@@ -32,17 +32,15 @@ Don't get me wrong - the site still builds OK and I can deploy to Netlify no pro
 
 I knew the tag was the issue but didn't know how to escape it, or particularly why this was causing a problem since I don't use Jekyll to build my site! It took me quite a bit of targeted Googling but eventually this issue on the Jekyll repo https://github.com/jekyll/jekyll/issues/6217#issuecomment-363785632 resolved my problem. I needed to wrap the Markdown code fences and the Liquid tag within the "raw" Liquid tags. That way the Liquid tag parser ignored my example tag. The final code I used in y blog post file looked like:
 
-<!-- {% raw %} -->
 ````js
 <!-- {% raw %} -->
 ```js
-{% codepen https://codepen.io/claireparker/pen/oMmPPZ %}
+{% assign favorite_food = 'apples' %}
 ```
 <!-- {% endraw %} -->
 ````
-<!-- {% endraw %} -->
 
-(The Markdown to write this post is some serious code-ception by the way!)
+I am using valid Liquid tag content in the code example above because the Markdown I need to use to write this is such a complex pile of code-inception that it's easier to just use Liquid tag content that won't confuse the compiler!
 
 I'm not 100% sure what caused this but this is my best guess.
 
