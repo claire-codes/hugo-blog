@@ -6,7 +6,6 @@
   "repository": "https://github.com/claireparker/hugo-blog",
   "bugs": "https://github.com/claireparker/hugo-blog/issues",
   "scripts": {
-    "build-task:autoprefixer": "postcss static/css/*.css --use autoprefixer -d static/css",
     "sass-lint": "./node_modules/.bin/sass-lint  -v -q"
   },
   "keywords": [],
