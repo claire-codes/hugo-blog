@@ -32,16 +32,16 @@ Therefore, a rule that only uses the universal selector, like `* { color: red }`
 
 **Misconception 2: the universal selector performs badly compared to other selectors.** ✅ I was right about this one.
 
-When talking about CSS selector performance, Steve Souder's work is often quoted, particularly his book [Even Faster Websites](http://shop.oreilly.com/product/9780596522315.do) and popular [blog post about CSS selector performance](http://www.stevesouders.com/blog/2009/03/10/performance-impact-of-css-selectors/) both from 2009. He has a handy [CSS test creator](http://stevesouders.com/efws/css-selectors/csscreate.php) on his website for measuring the performance of CSS selectors. The universal selector is clearly one of the worst, alongside attribute selectors (like `[href="#"]`) and pseudo-classes and pseudo-elements (like `:hover`). IDs and classes are the best for speedy performance. (CSS Wizardry summarises the findings in a list in a post about [efficient CSS selectors from 2011](https://csswizardry.com/2011/09/writing-efficient-css-selectors/).)
+When talking about CSS selector performance, Steve Souder's work is often quoted, particularly his book [Even Faster Websites](http://shop.oreilly.com/product/9780596522315.do) and popular [blog post about CSS selector performance](http://www.stevesouders.com/blog/2009/03/10/performance-impact-of-css-selectors/) both from 2009. He has a handy [CSS test creator](http://stevesouders.com/efws/css-selectors/csscreate.php) on his website for measuring the performance of CSS selectors. The universal selector is one of the worst performers, alongside attribute selectors (like `[href="#"]`) and pseudo-classes and pseudo-elements (like `:hover`). IDs and classes are the best for speedy performance. (Harry Roberts summarises the results in a list in this post about [efficient CSS selectors from 2011](https://csswizardry.com/2011/09/writing-efficient-css-selectors/).)
 
 _However_, these results are for when you use a single selector alone, and not in combination with any others. You can still write  inefficient CSS selectors without `*`. Using lots of child or descendent selectors is one way to achieve this, e.g. `div > ul li > a { color: red; }
 `
 
 ## CSS selectors are read from right to left by the browser ⬅
 
-**Misconception 3: browsers process CSS selectors from left to right, in the same way that we would read them.** ❌ I was wrong about this which surprised me!
+**Misconception 3: browsers process CSS selectors from left to right, in the same order that I would read them.** ❌ I was wrong about this which surprised me!
 
-One of these rules is faster for performance than the other:
+One of these rules runs faster than the other:
 
 ```css
 /* A */
@@ -69,7 +69,7 @@ div a [type="text"] .foo #bar {
 }
 ```
 
-Not because of performance (although this will be inefficient) but because it implies that your DOM is structured badly, and Css written like this will be hard to maintain and override. Instead, write selectors that match on ideally one class.
+Not because of performance (although this will be inefficient) but because it implies that your DOM is structured badly, and CSS written like this will be hard to maintain and override. Instead, write selectors that match on ideally one class.
 
 ## Would I use `*`?
 
@@ -89,8 +89,8 @@ The universal selector can also be useful to select all children of an element, 
 }
 ```
 
-Now I understand how it works more, I wouldn't be afraid to use `*`, especially considered page performance. In a world of weighty hero image PNGs, bloated JavaScript bundles and sluggish API calls, there are more strategic parts of a website to optimise for bigger performance gains.
+Now I understand how it works more, I wouldn't be afraid to use `*`, particularly just for page performance concerns. In a world of weighty hero image PNGs, bloated JavaScript bundles and sluggish API calls, there are more strategic parts of a website to optimise for bigger performance gains.
 
-Instead I would evaluate any uses of the universal selector in terms of whether the CSS is written cleanly, or whether the page structure could be refactored to make it easier to target elements.
+Instead, if I did need to use the universal selector, I would evaluate the reason: could this CSS be written in a clearer more maintainable way? Or could the page structure could be refactored to make it easier to target the required elements?
 
 Do you use the universal selector often or do you avoid it?
