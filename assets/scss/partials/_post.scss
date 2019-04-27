@@ -1,9 +1,10 @@
 .c-post {
     img {
-        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
     }
 }
-
 .c-post__title {
     border-bottom: 5px solid $color-post-title-border;
     line-height: initial;
