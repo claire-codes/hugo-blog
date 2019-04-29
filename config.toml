@@ -21,11 +21,11 @@ enableRobotsTXT = true
     url = "/dev-diary"
 
 [params]
-  GithubID = "claireparker"
+  GitHubID = "claireparker"
   TwitterID = "claireparkerpen"
-  GithubRepoID = "hugo-blog"
-  CodepenID = "your_codepen"
-  LinkedInID = "your_linkedin"
+  GitHubRepoID = "hugo-blog"
+  CodePenID = "clairecodes"
+  LinkedInID = "claireparker2"
   InstagramID = "claire_codes"
   Name = "Claire Parker-Jones"
   Description = "The personal website, blog and dev diary of clairecodes"
