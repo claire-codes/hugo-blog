@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 type: "about"
+description: "All about clairecodes"
 ---
 
 I love reading other people's bios but hate writing my own. Here is a picture and a list:
