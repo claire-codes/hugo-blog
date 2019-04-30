@@ -3,6 +3,7 @@
 
     <head>
         <title> Hello &middot; {{ .Site.Title }} </title>
+        <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
 
         {{ partial "head.html" . }}
     </head>
