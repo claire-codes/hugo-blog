@@ -14,7 +14,7 @@
                 <h1 class="c-post__title">Hello 👋</h1>
 
                 <div class="post-content">
-                    <p><a href="https://www.clairecodes.com/">Welcome to my website clairecodes.com!</a> Here's a bunch of relevant links:</p>
+                    <p><a href="/">Welcome to my website clairecodes.com!</a> Here's a bunch of relevant links:</p>
 
                     {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-linktree__link c-linktree__link--highlighted">My latest blog post: <br> "{{ .Title }}"</a>{{ end }}
                     
