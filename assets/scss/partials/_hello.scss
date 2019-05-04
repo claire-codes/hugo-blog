@@ -25,6 +25,7 @@
 
 .c-linktree__link--highlighted {
     background-image: linear-gradient(to left, lighten(#4527a0, 20%), lighten(#00e676, 20%));
-    color: #333;
+    color: $color-middle-shadow;
+    text-shadow: 2px 2px 2px #333;
     font-weight: 700;
 }

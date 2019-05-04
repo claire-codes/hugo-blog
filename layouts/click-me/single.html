@@ -3,7 +3,6 @@
 
     <head>
         <title> Hello &middot; {{ .Site.Title }} </title>
-        <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
 
         {{ partial "head.html" . }}
     </head>
@@ -14,17 +13,17 @@
                 <h1 class="c-post__title">Hello 👋</h1>
 
                 <div class="post-content">
-                    <p><a href="/">Welcome to my website clairecodes.com!</a> Here's a bunch of relevant links:</p>
+                    <p>Welcome to <a href="https://www.clairecodes.com/">clairecodes.com!</a> Click one of the links below to explore:</p>
 
-                    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-linktree__link c-linktree__link--highlighted">My latest blog post: <br> "{{ .Title }}"</a>{{ end }}
+                    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-linktree__link c-linktree__link--highlighted">Latest blog post:<br>"{{ .Title }}"</a>{{ end }}
                     
-                    <a href="/dev-diary" class="c-linktree__link">Dev Diary entries</a>
+                    {{ range first 1 (where .Site.RegularPages "Section" "dev-diary") }}<a href='{{ .Permalink }}' class="c-linktree__link">Latest Dev Diary entry: {{ .Date.Format "2 January 2006" }}</a>{{ end }}
                     
                     <a href="/about" class="c-linktree__link">About Me</a>
                     
                     <a href="/blog/" class="c-linktree__link">All my blog posts</a>
                     
-                    <a href="https://codepen.io/claireparker/" class="c-linktree__link">CodePen account</a>
+                    <a href="https://codepen.io/claireparker/" class="c-linktree__link">CodePen account&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </main>
