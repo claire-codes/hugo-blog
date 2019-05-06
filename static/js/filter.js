@@ -1,8 +1,16 @@
 (function() {
-  let uniqueCategories = [];
+  let allCategories = [];
   document.querySelectorAll("[data-category]").forEach(element => {
-    uniqueCategories.push(element.dataset.category);
+    allCategories.push(element.dataset.category);
   });
-  const allCategories = [...new Set(uniqueCategories)];
-  console.log('boom', allCategories);
+  const uniqueCategories = [...new Set(allCategories)];
+
+  const filterContainer =  document.querySelector('.js-filter-container');
+  let tmpNode;
+  uniqueCategories.forEach(category => {
+      tmpNode = document.createElement('div');
+      tmpNode.innerHTML = category;
+      tmpNode.className = 'c-filter__button js-filter-button';
+      filterContainer.appendChild(tmpNode);
+  })
 })();
