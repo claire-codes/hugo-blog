@@ -13,7 +13,7 @@
                 <h1 class="c-post__title">Hello 👋</h1>
 
                 <div class="post-content">
-                    <p>Welcome to <a href="https://www.clairecodes.com/">clairecodes.com!</a> Click one of the links below to explore:</p>
+                    <p>Welcome to <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}!</a> Click one of the links below to explore:</p>
 
                     {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-linktree__link c-linktree__link--highlighted">Latest blog post:<br>"{{ .Title }}"</a>{{ end }}
                     

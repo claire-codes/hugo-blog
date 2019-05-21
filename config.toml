@@ -1,6 +1,6 @@
 baseURL = "https://www.clairecodes.com"
 languageCode = "en-gb"
-title = "Claire Codes"
+title = "clairecodes"
 theme = "hugo-ted"
 author = "Claire Parker-Jones"
 googleAnalytics = "UA-67279079-1"
