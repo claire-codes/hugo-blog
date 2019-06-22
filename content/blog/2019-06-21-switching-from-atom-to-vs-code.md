@@ -14,9 +14,9 @@ I started a new job in 2016 and needed to install a code editor to my new laptop
 
 I enjoyed Atom. It was open-source, which made me feel virtuous, developed by a company that I admire (GitHub), and I loved being able to customise it (even though I only ever used a slight variation of the default colour theme!). I added my own code snippets, [changed the colour contrast to make things easier to read](/blog/2017-03-07-improving-colour-contrast-ratios-in-atom/), had a collection of favourite packages, and even developed some packages of my own for it (even releasing one: [rainbow tree](https://atom.io/packages/rainbow-tree)).
 
-However, I began working on Magento 2 projects, which contained _a lot_ of files (mostly backend PHP) and this meant that Atom's performance started to struggle on my MacBook. My laptop often sounded like it was about to take off as the fans were always on, and it was prone to freezing and crashing when I tried to navigate the folder directory.
+However, I began working on Magento 2 projects, which contained _a lot_ of files (mostly backend PHP) and this meant that Atom's performance started to suffer on my MacBook. My laptop often sounded like it was about to take off, because the fans were always on while I was coding, and it was prone to freezing and crashing when I tried to navigate the folder directory.
 
-Around this time, I heard more and more positive reactions from colleagues and other developers on my Twitter feed about VS Code. Some colleagues were persuasive about the features of VS Code, others just unhelpfully rolled their eyes and scoffed "you're still using Atom?".
+Around this time, I heard more and more positive reactions from colleagues and developers on my Twitter feed about VS Code. Most people were persuasive about the features of VS Code, while others just unhelpfully rolled their eyes and scoffed "you're still using Atom?" (try not to be this person!).
 
 I couldn't pinpoint exactly what made me stop using Atom and begin using VS Code exclusively. By this time, I had changed companies and escaped the large Magento 2 projects, and was working on a (much smaller) pure React app. Perhaps it was because it was New Year, a time I like to spend introducing new habits and ways of working. Additionally, there's always a little bit of peer-pressure to keep up-to-date with the shiniest tools, and I felt I was falling behind by not giving VS Code a fair try.
 
@@ -30,13 +30,13 @@ I was apprehensive about:
 4. the performance: would it actually be better than Atom?
 5. getting used to a new search interface: I really liked Atom's fullscreen search
 
-The first package I installed was [Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings), which I still haven't managed to wean myself off yet! That solved my problem with losing Atom's keyboard shortcuts. The second package on my install list was [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark). Second issue solved! VS Code provides code snippets just like Atom, it was simply a case of setting them up.
+The first package I installed was [Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings), which I still haven't managed to wean myself off yet! That solved my problem with losing Atom's keyboard shortcuts. The second package on my install list was [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark): second issue solved. VS Code provides code snippets just like Atom, it was simply a case of setting them up.
 
-Finding VS Code equivalents for my beloved Atom packages was trial and error. Some are easy to replace, like ESLint. Other's don't have a direct equivalent and required a little more research. I use [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) as my replacement for Atom's [sync-settings](https://atom.io/packages/sync-settings).
+Finding VS Code equivalents for my beloved Atom packages was trial and error. Some are easy to replace, like ESLint. Others don't have a direct equivalent and required a little more research. I use [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) as my replacement for Atom's [sync-settings](https://atom.io/packages/sync-settings).
 
 I have never had any problems with performance while using VS Code, not even when navigating the depths of a very large `node_modules` folder. This is both on my new personal 2018 Macbook and a much slower one from 2013 I use at work. Neither have I experienced any unresponsiveness or crashing like I did with Atom, although admittedly I've not worked on a Magento 2 project since the switch.
 
-Other issues, like getting used to the search interface, could only be resolved by investing time into getting used to VS Code. VS Code displays the search results in the left-hand column, which I initially struggled to navigate, but after a few weeks I got used to it. I bet there's other ways to configure it or packages that would change the appearance, but I have never spent time looking for them.
+Other issues, like getting used to the different search interface, could only be resolved by spending time using VS Code. VS Code displays the search results in the left-hand column, compared to Atom which dedicated a whole pane in the editor window. I found the reduced space difficult to use at first, but after a few weeks I got used to it. (I bet there's other ways to configure it or packages that would change the appearance, but I have never spent time looking for them.)
 
 Below, Atom's search interface and VS Code's.
 
@@ -46,14 +46,14 @@ Below, Atom's search interface and VS Code's.
 
 ## An unexpected benefit
 
-An added benefit I discovered with my new choice of editor was that most of my team use VS Code. This meant that when they found a new package or setting that improved their workflow, they would share it with the rest of the team, which could then improve my developer experience too. It also made pair programming easier as my partner would already be largely familiar with my environment.
+An added benefit I discovered with my new choice of editor was that most of my team use VS Code. This meant that when they found a new package or setting that improved their workflow, they would share it with the rest of the team, which could then improve my developer experience too. It also made pair programming easier as me and my partner would already be largely familiar with each other's environment.
 
-In my experience (a small group of frontend web developers in the UK), most frontend developers use VS Code nowadays. Occassionally I'll meet someone who still uses Sublime 3, or is a Vim/Tmux expert, but I very rarely meet someone using Atom.
+In my experience (a small group of frontend web developers in the UK), most frontend devs use VS Code nowadays. Occassionally I'll meet someone who still uses Sublime 3, or is a Vim or Tmux expert, but I very rarely meet someone using Atom.
 
 ## Will I stick with VS Code?
 
-I will definitely continue using VS Code as my main code editor. Even after six month, I still don't feel that I've invested enough time customising my setup and have more work to do. I'd love to create a package for it too and compare the experience with Atom's.
+I will definitely continue using VS Code as my main code editor. Even after six months, I still don't feel that I've invested enough time customising my setup and have more work to do. I'd also love to create a package for VS Code and compare the experience with Atom's.
 
-Learning a new tool is tedious but there are benefits to knowing how to use one of the most popular code editors. I'm not advocating to enforce a single code editor on a team, but there are definite advantages to having a common setup amongst developers working together.
+Learning a new tool is tedious but I found benefits to knowing how to use one of the most popular code editors on the market. I'm not advocating that software teams enforce the use of a particular code editor, but there are definite advantages to having a common setup amongst developers working together.
 
 If I ever feel that I'm missing Atom, I would use it for personal projects and continue to use VS Code for work.
