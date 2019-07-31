@@ -48,7 +48,7 @@ Below, Atom's search interface and VS Code's.
 
 An added benefit I discovered with my new choice of editor was that most of my team use VS Code. This meant that when they found a new package or setting that improved their workflow, they would share it with the rest of the team, which could then improve my developer experience too. It also made pair programming easier as me and my partner would already be largely familiar with each other's environment.
 
-In my experience (a small group of frontend web developers in the UK), most frontend devs use VS Code nowadays. Occassionally I'll meet someone who still uses Sublime 3, or is a Vim or Tmux expert, but I very rarely meet someone using Atom.
+In my experience (a small group of frontend web developers in the UK), most frontend devs use VS Code nowadays. Occasionally I'll meet someone who still uses Sublime 3, or is a Vim or Tmux expert, but I very rarely meet someone using Atom.
 
 ## Will I stick with VS Code?
 
