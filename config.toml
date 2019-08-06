@@ -21,7 +21,7 @@ enableRobotsTXT = true
     url = "/dev-diary"
 
 [params]
-  GitHubID = "claireparker"
+  GitHubID = "claire-codes"
   TwitterID = "claireparkerpen"
   GitHubRepoID = "hugo-blog"
   CodePenID = "clairecodes"
