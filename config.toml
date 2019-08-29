@@ -29,3 +29,4 @@ enableRobotsTXT = true
   InstagramID = "claire_codes"
   Name = "Claire Parker-Jones"
   Description = "The personal website, blog and dev diary of clairecodes"
+  EmailAddress = "claire@clairecodes.com"

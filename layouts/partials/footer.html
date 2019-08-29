@@ -28,12 +28,13 @@
             <span class="u-visually-hidden">Subscribe to the RSS feed</span>
             <i class="fas fa-rss" aria-hidden="true"></i>
         </a>
-        <a class="c-footer__social-icon icon--envelope" href="mailto:claire@clairecodes.com?subject=Hi%20clairecodes">
+        <a class="c-footer__social-icon icon--envelope" href={{ print "mailto:" .Site.Params.EmailAddress "?subject=Hi%20clairecodes" }}>
             <span class="u-visually-hidden">Send me an email</span>
             <i class="far fa-envelope" aria-hidden="true"></i>
         </a>
     </div>
-    <div>Hand-made by <a href="/about">Claire Parker-Jones</a></div>
+    
+    <div>Hand-made by <a href="/about">{{ .Site.Params.Name }}</a></div>
     <div>Powered by Hugo</div>
     <div>
         </>
