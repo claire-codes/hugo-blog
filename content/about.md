@@ -1,19 +1,16 @@
 ---
-title: "About Me"
+title: "About"
 type: "about"
 description: "All about clairecodes"
 ---
 
-I love reading other people's bios but hate writing my own. Here is a picture and a list:
+Hello there, I'm Claire, a frontend/front end/front-end web develope. I like writing about code just as much as I like writing code.
 
-* I'm a frontend web developer
-* I work in sunny Manchester 🇬🇧
-* I love CSS, JavaScript, writing tests and typing things really really fast on the command line like a proper hacker
-* I am the "person who likes emoji" in the office
-* I have a beautiful dog son who I love talking about and showing photos of
-* I think lists are pretty cool too
+I've been publishing blog posts on this site since 2015. I write about JavaScript, CSS, HTML, code editors, the command line, emoji and all sorts of other web development related topics.
 
-This is my corner of the internet where I write about tech stuff I've learnt so I can remember how I did it later, because I have a memory like a sieve.
+You can find even more of my thoughts on coding at <a href="https://instagram.com/claire_codes">my Instagram account claire_codes</a>, sitting underneath photos of my laptop and my dog. (Yes, Instagram has coding community. It's much more civilised than tech Twitter.)
+
+You can <a href="https://instagram.com/claire_codes">follow me on Instagram</a>, <a href="/index.xml" type="application/rss+xml" target="\_blank">subscribe to the RSS feed of this site</a> or <a href="mailto:claire@clairecodes.com?subject=Hi%20clairecodes">send me an email</a> to say hi 😊
 
 <div class="c-about__image-container">
     <img class="c-about__image" src="/images/claire_codes.jpg" alt="Claire" />
