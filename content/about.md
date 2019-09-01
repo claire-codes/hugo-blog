@@ -4,7 +4,7 @@ type: "about"
 description: "All about clairecodes"
 ---
 
-Hello there, I'm Claire, a frontend/front end/front-end web develope. I like writing about code just as much as I like writing code.
+Hello there, I'm Claire, a frontend/front end/front-end web developer. I like writing about code just as much as I like writing code.
 
 I've been publishing blog posts on this site since 2015. I write about JavaScript, CSS, HTML, code editors, the command line, emoji and all sorts of other web development related topics.
 
