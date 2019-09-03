@@ -1,0 +1,20 @@
+.c-view-all--off {
+    .c-post-list__item:nth-child(n+11) {
+        display: none;
+    }
+}
+
+.c-view-all__button {
+    height: 40px;
+    min-width: 100px;
+    font-size: 18px;
+    background-color: $color-view-all-button;
+    color: $color-view-all-button-text;
+    border: none;
+}
+
+.c-view-all__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
