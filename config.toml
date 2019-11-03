@@ -19,6 +19,10 @@ enableRobotsTXT = true
     name = "Dev Diary"
     weight = 1
     url = "/dev-diary"
+  [[menu.header]]
+    name = "Work History"
+    weight = 1
+    url = "/work-history"
 
 [params]
   GitHubID = "claire-codes"
