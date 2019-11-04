@@ -17,13 +17,14 @@ $size-stroke-width: 2px;
 }
 
 .c-header__container {
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
 .c-header__title {
   color: $color-header-text;
   font-family: $header-font-family;
+  font-weight: 800;
   font-size: 50px;
   letter-spacing: 2px;
   margin: 0;
@@ -67,6 +68,7 @@ $size-stroke-width: 2px;
 
   @media (max-width: $mobile-breakpoint) {
     font-size: 16px;
+    padding: 0;
   }
 
   &:hover,
