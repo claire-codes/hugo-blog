@@ -15,17 +15,17 @@
                 <div class="post-content">
                     <p>Welcome to <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}!</a> Click one of the links below to explore:</p>
 
-                    <a href='/' class="c-linktree__link c-linktree__link--highlighted">I am looking for work</a>
+                    <a href='/' class="c-click-me__link c-click-me__link--highlighted">I am looking for work</a>
 
-                    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-linktree__link">Latest blog post:<br>"{{ .Title }}"</a>{{ end }}
+                    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-click-me__link">Latest blog post:<br>"{{ .Title }}"</a>{{ end }}
                     
-                    {{ range first 1 (where .Site.RegularPages "Section" "dev-diary") }}<a href='{{ .Permalink }}' class="c-linktree__link">Latest Dev Diary entry: {{ .Date.Format "2 January 2006" }}</a>{{ end }}
+                    {{ range first 1 (where .Site.RegularPages "Section" "dev-diary") }}<a href='{{ .Permalink }}' class="c-click-me__link">Latest Dev Diary entry: {{ .Date.Format "2 January 2006" }}</a>{{ end }}
                     
-                    <a href="/about" class="c-linktree__link">About Me</a>
+                    <a href="/about" class="c-click-me__link">About Me</a>
                     
-                    <a href="/blog/" class="c-linktree__link">All my blog posts</a>
+                    <a href="/blog/" class="c-click-me__link">All my blog posts</a>
                     
-                    <a href="https://codepen.io/claireparker/" class="c-linktree__link">CodePen account&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://codepen.io/clairecodes/" class="c-click-me__link">CodePen account&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </main>
