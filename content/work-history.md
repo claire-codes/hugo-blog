@@ -4,7 +4,9 @@ type: "work-history"
 description: "CV, resume and work history of Claire Parker-Jones, frontend developer"
 ---
 
-This page isn't quite ready - please bear with me! Find my list of past jobs on <a href={{ print "https://www.linkedin.com/in/" .Site.Params.LinkedInID }}>LinkedIn</a>.
+My CV is accessible in this [Google doc](https://docs.google.com/document/d/1IgWZihyOSX69DprhSShQFAWjeGE1JWLGz97jlpx5nh4/edit?usp=sharing).
+
+Find my list of past jobs on <a href={{ print "https://www.linkedin.com/in/" .Site.Params.LinkedInID }}>LinkedIn</a>.
 
 <div>
     <h2>Main Skills</h2>
