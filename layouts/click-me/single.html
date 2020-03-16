@@ -15,9 +15,7 @@
                 <div class="post-content">
                     <p>Welcome to <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}!</a> Click one of the links below to explore:</p>
 
-                    <a href='/' class="c-click-me__link c-click-me__link--highlighted">I am looking for work</a>
-
-                    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-click-me__link">Latest blog post:<br>"{{ .Title }}"</a>{{ end }}
+                    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-click-me__link c-click-me__link--highlighted">Latest blog post:<br>"{{ .Title }}"</a>{{ end }}
                     
                     {{ range first 1 (where .Site.RegularPages "Section" "dev-diary") }}<a href='{{ .Permalink }}' class="c-click-me__link">Latest Dev Diary entry: {{ .Date.Format "2 January 2006" }}</a>{{ end }}
                     
