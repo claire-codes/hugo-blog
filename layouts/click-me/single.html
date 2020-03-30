@@ -12,7 +12,7 @@
             <div class="o-main__wrapper c-post">
                 <h1 class="c-post__title">Hello 👋</h1>
 
-                <div class="post-content">
+                <div>
                     <p>Welcome to <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}!</a> Click one of the links below to explore:</p>
 
                     {{ range first 1 (where .Site.RegularPages "Section" "blog") }}<a href='{{ .Permalink }}' class="c-click-me__link c-click-me__link--highlighted">Latest blog post:<br>"{{ .Title }}"</a>{{ end }}

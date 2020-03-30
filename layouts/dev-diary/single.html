@@ -13,7 +13,7 @@
         <main>
             <div class="o-main__wrapper c-post">
                 <h1 class="c-post__title">Dev Diary: {{ .Date.Format "Monday, 2 January 2006" }}</h1>
-                <div class="post-content">
+                <div>
                     <p>{{.Content}}</p>
                     <ul class="c-dev-diary__entry-list">
                         {{ range .Params.interests }}
