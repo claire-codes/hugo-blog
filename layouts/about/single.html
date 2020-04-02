@@ -11,13 +11,13 @@
     <body>
         {{ partial "header.html" . }}
         <main>
-            <div class="o-main__wrapper c-post">
+            <article class="o-main__wrapper c-post">
                 <h1 class="c-post__title">{{ .Title }}</h1>
 
                 <div>
                     {{ .Content }}
                 </div>
-            </div>
+            </article>
         </main>
         {{ partial "footer.html" . }}
     </body>

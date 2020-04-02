@@ -11,7 +11,7 @@
     <body>
         {{ partial "header.html" . }}
         <main>
-            <div class="o-main__wrapper c-post">
+            <article class="o-main__wrapper c-post">
                 <h1 class="c-post__title">Dev Diary: {{ .Date.Format "Monday, 2 January 2006" }}</h1>
                 <div>
                     <p>{{.Content}}</p>
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
                 <p>✍️ <a href="/dev-diary">View all my Dev Diary posts here.</a></p>
-            </div>
+            </article>
         </main>
         {{ partial "footer.html" . }}
     </body>
