@@ -30,3 +30,26 @@
     clip-path: inset(50%);
     margin: -1px;
 }
+
+.c-skip-link {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    display: block;
+
+    &:focus {
+        clip: auto;
+        height: auto;
+        overflow: visible;
+        width: auto;
+        background-color: $color-link-hover-background;
+        outline: $color-link-hover-background;
+        color: $color-body-font;
+        position: static;
+        padding: 10px;
+        text-align: center;
+    }
+}
