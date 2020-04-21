@@ -9,8 +9,10 @@
 	</head>
 
 	<body>
+        {{ partial "skip-link.html" . }}
 		{{ partial "header.html" . }}
-		<main>
+
+		<main id="main">
 			<div class="o-main__wrapper">
 				<div>
 					<h1>{{ .Title }}</h1>
