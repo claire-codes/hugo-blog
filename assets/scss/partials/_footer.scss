@@ -15,6 +15,10 @@
 
 .c-footer__link {
   color: #fff;
+
+  &:hover {
+    color: $color-body-font;
+  }
 }
 
 .c-footer__social-container {
