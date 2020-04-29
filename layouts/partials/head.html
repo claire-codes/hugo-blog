@@ -12,7 +12,7 @@
 {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }} 
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://kit.fontawesome.com/e53c9df655.js" crossorigin="anonymous"></script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon/favicon-32x32.png" | absURL }}">
 <link rel="icon" type="image/png" sizes="96x96" href="{{ "favicon/favicon-96x96.png" | absURL }}">
