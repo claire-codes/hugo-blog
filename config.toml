@@ -30,3 +30,4 @@ enableRobotsTXT = true
   Name = "Claire Parker-Jones"
   Description = "The personal website, blog and dev diary of clairecodes"
   EmailAddress = "claire@clairecodes.com"
+  DevToId =  "clairecodes"

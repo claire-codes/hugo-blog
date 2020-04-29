@@ -129,3 +129,11 @@
     $color-envelope 50%
   );
 }
+
+.icon--dev {
+  background-image: linear-gradient(
+    to right,
+    $color-footer-icon-background-start 50%,
+    $color-dev 50%
+  );
+}
