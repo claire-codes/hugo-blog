@@ -37,6 +37,17 @@ a {
     transition: background-color 0.25s linear;
     border-radius: 0.1em;
   }
+
+  &:focus {
+    outline-color: $color-link;
+  }
+}
+
+header,
+footer {
+  a:focus {
+    outline-color: $color-link-hover-background;
+  }
 }
 
 blockquote {
