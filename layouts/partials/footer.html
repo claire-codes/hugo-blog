@@ -1,54 +1,52 @@
 <footer class="c-footer">
 	<div class="c-footer__social-container">
-		<div class="grid-col">
-			<h2>Find me elsewhere on the web</h2>
-				<a class="link" href={{ print "https://github.com/" .Site.Params.GitHubID }}>
-					<span class="c-footer__social-icon icon--github"><i class="fab fa-github" aria-hidden="true"></i></span>
-                    <span>View my GitHub profile</span>
-				</a>
-				<a class="link" href={{ print "https://codepen.io/" .Site.Params.CodePenID }}>
-					<span class="c-footer__social-icon icon--codepen"><i class="fab fa-codepen" aria-hidden="true"></i></span>
-                    <span>View my CodePen profile</span>
-				</a>
-				<a class="link" href={{ print "https://instagram.com/" .Site.Params.InstagramID }}>
-					<span class="c-footer__social-icon icon--instagram"><i class="fab fa-instagram" aria-hidden="true"></i></span>
-                    <span>View my Instagram profile</span>
-				</a>
-				<a class="link" href={{ print "https://twitter.com/" .Site.Params.TwitterID }}>
-					<span class="c-footer__social-icon icon--twitter"><i class="fab fa-twitter" aria-hidden="true"></i></span>
-                    <span>View my Twitter profile</span>
-				</a>
-				<a class="link" href={{ print "https://www.linkedin.com/in/" .Site.Params.LinkedInID }}>
-					<span class="c-footer__social-icon icon--linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i></span>
-                    <span>View my LinkedIn profile</span>
-				</a>
-				<a class="link" href={{ print "https://dev.to/" .Site.Params.DevToId }}>
-					<span class="c-footer__social-icon icon--dev"><i class="fab fa-dev" aria-hidden="true"></i></span>
-                    <span>View my articles on the Dev website</span>
-				</a>
-		</div>
-		<div class="grid-col">
+		<div>
 			<h2>Stay in touch</h2>
 			<!-- <a class="c-footer__social-icon icon--magento" href="https://claire-codes.github.io/magento-1-frontend-bits/"><span>Read my blog about Magento 1</span><i class="fab fa-magento" aria-hidden="true"></i></a> -->
-            
-            <div><a class="link" href="{{ "index.xml" | absURL }}" type="application/rss+xml" target="_blank">
-                <span class="c-footer__social-icon icon--rss" ><i class="fas fa-rss" aria-hidden="true"></i></span>
-                <span>Subscribe to the RSS feed</span>
-            </a></div>
-                <a class="link" href={{ print "mailto:" .Site.Params.EmailAddress "?subject=Hi%20clairecodes" }}>
-                    <span class="c-footer__social-icon icon--envelope"><i class="far fa-envelope" aria-hidden="true"></i></span>
-                    <span>Send me an email</span>
-                </a>
-		</div>
-	</div>
-	<div class="centre">
-		<div>Hand-made by 
-			<a class="c-footer__link" href="/about">{{ .Site.Params.Name }}</a>
-		</div>
-		<div>Powered by 
-			<a class="c-footer__link" href="https://gohugo.io/">Hugo</a>
+            <a class="c-footer__social-link" href="{{ " index.xml " | absURL }}" type="application/rss+xml" target="_blank">
+                <span class="c-footer__social-icon icon--rss"><i class="fas fa-rss" aria-hidden="true"></i></span>
+                <span>Subscribe to my RSS feed</span>
+            </a>
+			<a class="c-footer__social-link" href={{ print "mailto:" .Site.Params.EmailAddress "?subject=Hi%20clairecodes" }}>
+                <span class="c-footer__social-icon icon--envelope"><i class="far fa-envelope" aria-hidden="true"></i></span>
+				<span>Send me an email</span>
+			</a>
 		</div>
 		<div>
-		</>
+			<h2>Connect with me</h2>
+			<div class="c-footer__connect-grid">
+                <a class="c-footer__social-link" href={{ print "https://github.com/" .Site.Params.GitHubID }}>
+                    <span class="c-footer__social-icon icon--github"><i class="fab fa-github" aria-hidden="true"></i></span>
+					<span>GitHub</span>
+				</a>
+                <a class="c-footer__social-link" href={{ print "https://codepen.io/" .Site.Params.CodePenID }}>
+                    <span class="c-footer__social-icon icon--codepen"><i class="fab fa-codepen" aria-hidden="true"></i></span>
+					<span>CodePen</span>
+				</a>
+                <a class="c-footer__social-link" href={{ print "https://instagram.com/" .Site.Params.InstagramID }}>
+                    <span class="c-footer__social-icon icon--instagram"><i class="fab fa-instagram" aria-hidden="true"></i></span>
+					<span>Instagram</span>
+				</a>
+                <a class="c-footer__social-link" href={{ print "https://twitter.com/" .Site.Params.TwitterID }}>
+                    <span class="c-footer__social-icon icon--twitter"><i class="fab fa-twitter" aria-hidden="true"></i></span>
+					<span>Twitter</span>
+				</a>
+                <a class="c-footer__social-link" href={{ print "https://www.linkedin.com/in/" .Site.Params.LinkedInID }}>
+                    <span class="c-footer__social-icon icon--linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i></span>
+					<span>LinkedIn</span>
+				</a>
+                <a class="c-footer__social-link" href={{ print "https://dev.to/" .Site.Params.DevToId }}>
+                    <span class="c-footer__social-icon icon--dev"><i class="fab fa-dev" aria-hidden="true"></i></span>
+					<span>dev.to</span>
+				</a>
+			</div>
+		</div>
 	</div>
-</div></footer>
+	<div class="c-footer__about">
+		<div>Hand-made by <a class="c-footer__link" href="/about">{{ .Site.Params.Name }}</a></div>
+		<div>Powered by <a class="c-footer__link" href="https://gohugo.io/">Hugo</a></div>
+		<div>
+			</>
+		</div>
+	</div>
+</footer>
