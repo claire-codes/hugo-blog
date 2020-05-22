@@ -57,7 +57,7 @@ $size-stroke-width: 2px;
   font-size: 50px;
   letter-spacing: 2px;
   margin: 0;
-  text-shadow: 3px 0 #403b3b;
+  text-shadow: 3px 0 $color-header-text-shadow;
   width: 49%;
   display: inline-block;
   line-height: 1.3;
@@ -94,7 +94,7 @@ $size-stroke-width: 2px;
   font-size: 20px;
   color: white;
   padding: 5px 10px;
-  text-shadow: 1px 0 #403b3b;
+  text-shadow: 1px 0 $color-header-text-shadow;
 
   @media (max-width: $mobile-breakpoint) {
     font-size: 16px;
