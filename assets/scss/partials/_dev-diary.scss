@@ -40,7 +40,7 @@
 }
 
 .c-dev-diary__item {
-  border: 5px solid $color-header-text;
+  border: 5px solid $color-dev-diary-border;
   margin-bottom: 20px;
   padding: 20px;
   box-shadow: 5px 5px $color-middle-shadow, 10px 10px $color-back-shadow;
@@ -54,7 +54,7 @@
   margin-bottom: 15px;
   margin-top: 0;
   display: inline-block;
-  border-bottom: 3px dashed lighten($color-header-text, 30%);
+  border-bottom: 3px dashed lighten($color-dev-diary-border, 30%);
 }
 
 .c-dev-diary__entry-list {
@@ -76,7 +76,7 @@
 .c-post {
   .c-dev-diary__entry {
     &:not(:last-child) {
-      border-bottom: 3px dashed lighten($color-header-text, 30%);
+      border-bottom: 3px dashed lighten($color-dev-diary-border, 30%);
       padding-bottom: 15px;
       margin-bottom: 15px;
     }
