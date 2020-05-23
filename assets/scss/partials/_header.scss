@@ -1,5 +1,3 @@
-$size-stroke-width: 2px;
-
 .c-header {
   background-color: $color-head-foot-bg;
   background-image: linear-gradient(
@@ -48,29 +46,43 @@ $size-stroke-width: 2px;
 .c-header__container {
   max-width: 60rem;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $tablet-breakpoint) {
+    grid-template-rows: auto 50px;
+  }
 }
 
 .c-header__title {
-  color: white;
+  color: $color-header-text;
   font-family: $header-font-family;
   font-weight: 800;
   font-size: 50px;
   letter-spacing: 2px;
   margin: 0;
   text-shadow: 3px 0 $color-header-text-shadow;
-  width: 49%;
-  display: inline-block;
-  line-height: 1.3;
+  grid-column: span 1;
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
+    font-size: 40px;
+    grid-column: 1 / span 2;
+  }
 
   @media (max-width: $mobile-breakpoint) {
-    width: 100%;
     font-size: 30px;
   }
 }
 
 .c-header__links-container {
-  @media (min-width: $mobile-breakpoint + 1) {
-    float: right;
+  grid-column: span 1;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $tablet-breakpoint) {
+    grid-column: 1 / span 2;
+    align-items: flex-end;
   }
 }
 
@@ -79,6 +91,8 @@ $size-stroke-width: 2px;
   justify-content: space-between;
   list-style: none;
   padding: 0;
+  flex-grow: 1;
+  margin: 0;
 }
 
 .c-header__nav-item {
@@ -92,7 +106,7 @@ $size-stroke-width: 2px;
 .c-header__link {
   text-decoration: none;
   font-size: 20px;
-  color: white;
+  color: $color-header-text;
   padding: 5px 10px;
   text-shadow: 1px 0 $color-header-text-shadow;
 
