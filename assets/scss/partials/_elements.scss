@@ -29,6 +29,7 @@ pre code {
 
 a {
   color: $color-link;
+  @include word-wrap;
 
   &:hover {
     background-color: $color-link-hover-background;
