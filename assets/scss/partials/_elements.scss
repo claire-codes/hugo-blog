@@ -1,3 +1,15 @@
+// Smooth scrolling
+html {
+	scroll-behavior: smooth;
+}
+
+// No smooth scrolling for users who want reduced motion
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 body {
   color: $color-body-font;
   font-family: $body-font-family;
@@ -59,6 +71,7 @@ blockquote {
 
 table {
   border-collapse: collapse;
+
   th {
     border: 1px solid #dbdbdb;
     padding: 5px 1vw;
