@@ -12,11 +12,11 @@ _Note_: These are written for a Mac - swap out the Cmd button for your OS-specif
 
 ## Jump to the end of a line
 
-<kbd><kbd>Cmd</kbd> + <kbd>e</kbd></kbd>
+<kbd>Cmd</kbd> + <kbd>e</kbd>
 
 ## Jump to the beginning of a line
 
-<kbd><kbd>Cmd</kbd> + <kbd>a</kbd></kbd>
+<kbd>Cmd</kbd> + <kbd>a</kbd>
 
 This gif illustrates these two keyboard shortcuts in action:
 
@@ -24,7 +24,7 @@ This gif illustrates these two keyboard shortcuts in action:
 
 ## Skip over a word
 
-<kbd><kbd>Alt</kbd> + <kbd>&rarr;</kbd></kbd> or <kbd><kbd>Alt</kbd> + <kbd>&larr;</kbd></kbd>
+<kbd>Alt</kbd> + <kbd>&rarr;</kbd> or <kbd>Alt</kbd> + <kbd>&larr;</kbd>
 
 If you're using iTerm2, you may need to configure the "alt" key to work as expected. Check out my blog post about [enabling the alt key in iTerm2](/blog/2018-10-15-making-the-alt-key-work-in-iterm2/) for how to do that.
 
@@ -36,4 +36,4 @@ This gif shows using the alt key to move the cursor over whole words:
 
 Bonus tip: how to clear the contents from the viewport of the terminal window.
 
-<kbd><kbd>Cmd</kbd>+<kbd>l</kbd></kbd> or just type `clear` and press enter.
+<kbd>Cmd</kbd> + <kbd>l</kbd> or just type `clear` and press enter.
