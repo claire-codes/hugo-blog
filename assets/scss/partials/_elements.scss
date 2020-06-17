@@ -1,13 +1,13 @@
 // Smooth scrolling
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 // No smooth scrolling for users who want reduced motion
 @media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -78,9 +78,20 @@ table {
     background: #ebebec;
     text-align: left;
   }
+  
   td {
     border: 1px solid #dbdbdb;
     padding: 5px 1vw;
     box-sizing: border-box;
   }
+}
+
+kbd {
+  border: 0.1em solid #aaa;
+  border-radius: 15%;
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  background: linear-gradient(180deg, #fff 75%, #ddd);
+  color: $color-body-font;
+  font-weight: 700;
 }
