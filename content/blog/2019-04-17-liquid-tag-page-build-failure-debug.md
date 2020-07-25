@@ -18,7 +18,7 @@ In a [previous blog post](/blog/2019-01-15-how-to-embed-codepens-in-blog-posts/)
 ````
 <!-- {% endraw %} -->
 
-Everytime I pushed to Git and GitHub I received a page build error that looked like this:
+Every time I pushed to Git and GitHub I received a page build error that looked like this:
 
 > Unable to build page. Please try again later.
 
@@ -28,7 +28,7 @@ If the tag contains a valid Liquid tag then there is no error. If I put complete
 
 > The tag `baby` on line 25 in `content/blog/filename.md` is not a recognized Liquid tag. For more information, see https://help.github.com/en/articles/page-build-failed-unknown-tag-error.
 
-Don't get me wrong - the site still builds OK and I can deploy to Netlify no problem, but it was annoying to receive this email everytime I pushed to my blog repo and to see the small red crosses next to commits indicating CI failures.
+Don't get me wrong - the site still builds OK and I can deploy to Netlify no problem, but it was annoying to receive this email every time I pushed to my blog repo and to see the small red crosses next to commits indicating CI failures.
 
 I knew the tag was the issue but didn't know how to escape it, or particularly why this was causing a problem since I don't use Jekyll to build my site! It took me quite a bit of targeted Googling but eventually this issue on the Jekyll repo https://github.com/jekyll/jekyll/issues/6217#issuecomment-363785632 resolved my problem. I needed to wrap the Markdown code fences and the Liquid tag within the "raw" Liquid tags. That way the Liquid tag parser ignored my example tag. The final code I used in y blog post file looked like:
 

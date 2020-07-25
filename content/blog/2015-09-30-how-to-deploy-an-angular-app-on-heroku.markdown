@@ -13,7 +13,7 @@ categories:
 
 _EAN rather than [MEAN](http://mean.io/) because we'll be using Express, AngularJS and Node but not Mongo this time._
 
-When googling deploying an AngularJS app to Heroku, all the tutorials I looked at (i.e. the top 3 in the first page of results ...) assumed I'd cloned the [Angular seed app](https://github.com/angular/angular-seed) - which I hadn't and didn't want to. I had a dead simple one controller, one service AngularJS app (note: 1.x) that I'd started from scratch and wanted to host on Heroku. What did the the seed app provide that I didn't already have? TL;DR a package.json file.
+When googling deploying an AngularJS app to Heroku, all the tutorials I looked at (i.e. the top 3 in the first page of results ...) assumed I'd cloned the [Angular seed app](https://github.com/angular/angular-seed) - which I hadn't and didn't want to. I had a dead simple one controller, one service AngularJS app (note: 1.x) that I'd started from scratch and wanted to host on Heroku. What did the seed app provide that I didn't already have? TL;DR a package.json file.
 
 ### Let's begin
 

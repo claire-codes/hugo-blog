@@ -1,7 +1,7 @@
 ---
 title: "Welcoming Language"
 date: 2018-10-23T21:51:07+01:00
-summary: Leaving a postive call-to-action to encourage engagement.
+summary: Leaving a positive call-to-action to encourage engagement.
 categories:
 - blogtober
 - longread

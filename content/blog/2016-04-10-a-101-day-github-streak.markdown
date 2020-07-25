@@ -17,7 +17,7 @@ categories:
 
 ## ❓ Why??
 
-* _Because I am a sucker for [gamificiation](https://en.wikipedia.org/wiki/Gamification)_ - I 💛 seeing those little squares go green and watching that streak getting bigger and bigger each day. (you may have come across this before as a trick to build a habit called [Don't Break the Chain](http://lifehacker.com/281626/jerry-seinfelds-productivity-secret))
+* _Because I am a sucker for [gamification](https://en.wikipedia.org/wiki/Gamification)_ - I 💛 seeing those little squares go green and watching that streak getting bigger and bigger each day. (you may have come across this before as a trick to build a habit called [Don't Break the Chain](http://lifehacker.com/281626/jerry-seinfelds-productivity-secret))
 * _Because I genuinely enjoy coding_ - this isn't a chore or obligation for me and I still enjoy developing even after doing it all day at work.
 * _Because this is my time to learn new things_ - there's always something new to learn in web development (I'm a frontend developer) and it's important to keep on top of things. I don't get time to try out the latest thing at work because ... I'm at work, doing my job. It's a given that you have to swot up in your own time in web dev. Putting all my experiments on GitHub means they're available for future reference.
 

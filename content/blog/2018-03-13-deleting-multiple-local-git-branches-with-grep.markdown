@@ -30,7 +30,7 @@ $ git branch
   task/ticket-345
 ```
 
-You're currently on the master branch. Ticket-123 was completed weeks ago and the branches associated with it are stale. They should be deleted to keep our enviroment tidy. Using grep, we can select only those branches, since the names have a common pattern:
+You're currently on the master branch. Ticket-123 was completed weeks ago and the branches associated with it are stale. They should be deleted to keep our environment tidy. Using grep, we can select only those branches, since the names have a common pattern:
 
 ```bash
 $ git branch | grep ticket-123

@@ -23,7 +23,7 @@ Pairing takes time: both developers need to understand the task. They need time 
 
 Again, something that comes from project managers. Not every task is suited to pairing, and so making developers pair on a task just because there isn't enough work available for them to work individually isn't a good enough reason to enforce pair programming.
 
-If a developer has free time, why not find some techincal debt in the codebase to improve, or allow them to research or learn a new skill (one that's still relevant to their job mind you, I don't mean French).
+If a developer has free time, why not find some technical debt in the codebase to improve, or allow them to research or learn a new skill (one that's still relevant to their job mind you, I don't mean French).
 
 ## 3) There's a new-starter on the team, let's pair
 

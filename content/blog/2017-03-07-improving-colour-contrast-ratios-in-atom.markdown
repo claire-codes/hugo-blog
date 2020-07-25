@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Improving colour contrast ratios in Atom
-summary: How to make it a bit more usable. And yes, I spell colour with a "u"! 🇬🇧
+summary: How to make it a bit more usable. And yes, I spell colour with the letter "u"! 🇬🇧
 date: 2017-03-07 20:58:17
 comments: true
 published: true

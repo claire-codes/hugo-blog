@@ -54,7 +54,7 @@ Is there any code that _you_ could make into a package for easy reuse? Never wri
 Here's some package inspiration 🎁
 
 * How about using it to store code you find yourself writing time and time again? Like utility functions? Or custom test matchers?
-* The [todomvc examples](http://todomvc.com/) examples (well, [Backbone](https://github.com/tastejs/todomvc/tree/gh-pages/examples/backbone) is the only one I've looked at properly so far) use a module _just to store the CSS_. What reusable data could you store in a package?
+* The [todomvc examples](http://todomvc.com/) (well, [Backbone](https://github.com/tastejs/todomvc/tree/gh-pages/examples/backbone) is the only one I've looked at properly so far) use a module _just to store the CSS_. What reusable data could you store in a package?
 * When you think modular, think small, think tiny. [Sindre Sorhus](https://github.com/sindresorhus) is a prolific package author and advocates one-modules in [this Github comment](https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328)
 
 So with that in mind ...

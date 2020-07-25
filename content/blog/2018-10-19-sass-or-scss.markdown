@@ -13,7 +13,7 @@ In this post, I’ll define some of the common abbreviations associated with Sas
 
 ## CSS
 
-CSS stands for Cascading Style Sheets. Files which contain CSS styles and have the ".css" extension are called stylesheets. (Although you can also define styles inline or within `<style>` tags in a HTML document).
+CSS stands for Cascading Style Sheets. Files which contain CSS styles and have the ".css" extension are called stylesheets. (Although you can also define styles inline or within `<style>` tags in an HTML document).
 
 The [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) describes how the styles are applied when more than one rule matches an element. The cascade is the fundamental idea of CSS.
 

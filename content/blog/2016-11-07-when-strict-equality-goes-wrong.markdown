@@ -1,7 +1,7 @@
 ---
 layout: post
 title: When strict equality goes wrong
-summary: With great power comes great responsibilty, and null !== false.
+summary: With great power comes great responsibility, and null !== false.
 date: 2016-11-07 21:24:01
 comments: true
 published: true
