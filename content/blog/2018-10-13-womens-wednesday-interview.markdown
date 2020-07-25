@@ -38,7 +38,7 @@ That you have to know it all as a senior developer or when you've had X years of
 
 ## 7. Anything you would like to see improving?
 
-I would like companies to embrace remote working and flexible hours more. There are loads of effective ways to communicate with your team other than sitting together in a souless open-plan office for 8 hours a day.
+I would like companies to embrace remote working and flexible hours more. There are loads of effective ways to communicate with your team other than sitting together in a soulless open-plan office for 8 hours a day.
 
 ## 8. When life is hard, what's the best advice that helps you?
 
@@ -46,7 +46,7 @@ I would like companies to embrace remote working and flexible hours more. There 
 
 ## 9. What or who inspires you?
 
-I try to cultivate an inspiring group of people on my social media. On Twitter and Instagram you can choose exactly who to follow, so I make sure I have loads of positive, intelligent, awesome women in tech to inspire me everytime I scroll.
+I try to cultivate an inspiring group of people on my social media. On Twitter and Instagram you can choose exactly who to follow, so I make sure I have loads of positive, intelligent, awesome women in tech to inspire me every time I scroll.
 
 ## 10. If you could go back in time what would you change?
 

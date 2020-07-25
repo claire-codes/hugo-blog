@@ -34,7 +34,7 @@ Now I love the GitHub dashboard and its little green square. I once managed [a s
 
 [Image credit](https://github.com/gelstudios/gitfiti/blob/master/gitfiti-screenshot.png).
 
-A green GitHub contributions graph looks cool (at least in my opinion), and can help encourage you to build a daily coding habit. However, it isn't a reliable indicator of how capable or commited a developer is, or how much code they write. The job of a developer does not only involve writing code. There are many ways to learn and contribute as developer that the GitHub graph cannot capture, and therefore makes it a false representation of a developer's ability.
+A green GitHub contributions graph looks cool (at least in my opinion), and can help encourage you to build a daily coding habit. However, it isn't a reliable indicator of how capable or committed a developer is, or how much code they write. The job of a developer does not only involve writing code. There are many ways to learn and contribute as developer that the GitHub graph cannot capture, and therefore makes it a false representation of a developer's ability.
 
 That being said, images like this still make me happy:
 

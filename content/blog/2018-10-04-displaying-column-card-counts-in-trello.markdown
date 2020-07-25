@@ -4,7 +4,7 @@ date: 2018-10-04T22:32:00+01:00
 summary: Exploring different methods to display a the total number of cards in a Trello board list
 categories:
 - blogtober
-- javacript
+- javascript
 ---
 
 My current favourite tool for managing daily tasks and jobs is Trello. [Trello](https://trello.com/) is a free web application for project management. You can use a Trello board to organise pretty much anything. I have a board for managing blog post ideas and finding it very helpful. But I’m missing one feature: I’d like to see the total number of cards in each list displayed at the top of each column.
@@ -64,7 +64,7 @@ The card count will update if you move cards between columns. However, if you re
 
 ## Taking it further with browser extensions
 
-Isn’t clicking the bookmarklet every time you navigate to the page annoying? We could create a browser extension to run this code automatically every time we’re on a "trello.com" webpage. Extensions are browser specific so you’ll need to create one per broswer. I leave this as an exercise to the interested reader to complete 🙃
+Isn’t clicking the bookmarklet every time you navigate to the page annoying? We could create a browser extension to run this code automatically every time we’re on a "trello.com" webpage. Extensions are browser specific so you’ll need to create one per browser. I leave this as an exercise to the interested reader to complete 🙃
 
 What do you know! There’s already a Chrome extension that does this! (Go to the Chrome store and search for "Trello card counter" to see the many results.) But where’s the fun in using someone else’s code when you can do it yourself?
 

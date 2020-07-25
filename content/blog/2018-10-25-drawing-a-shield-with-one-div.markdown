@@ -41,7 +41,7 @@ First create a single div with a class name of 'shield' and set a height and wid
 
 ## Create the horizontal line of the cross
 
-Use a linear-gradient to create a horizontal line across the middle of the cross shape. At each intersection of the transparent colour and blue cross colour, use an identical percentage for the color-stop value. This creates a hard line between the colours instead of the fading gradient. I've defined the width of the line as 10% of the overall shield. By starting at 35%, I've postiioned the cross at a what I think is a pleasing distance partway down the shield instead of exactly halfway.
+Use a linear-gradient to create a horizontal line across the middle of the cross shape. At each intersection of the transparent colour and blue cross colour, use an identical percentage for the color-stop value. This creates a hard line between the colours instead of the fading gradient. I've defined the width of the line as 10% of the overall shield. By starting at 35%, I've positioned the cross at a what I think is a pleasing distance partway down the shield instead of exactly halfway.
 
 ```css
 :root {

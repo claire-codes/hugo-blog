@@ -9,7 +9,7 @@ categories:
 
 ## What is a meta description?
 
-A meta description is a summary of a webpage set in a HTML meta tag. It's often displayed by search engines in their results as the page description, so it can have an impact on the page's click-through rate. A relevant meta description can help improve your page's SEO.
+A meta description is a summary of a webpage set in an HTML meta tag. It's often displayed by search engines in their results as the page description, so it can have an impact on the page's click-through rate. A relevant meta description can help improve your page's SEO.
 
 `<meta>` tags are placed within the `<head>` tag of the document. Order of other meta tags doesn't matter. The syntax of the meta description for the [MDN page about meta tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) looks like this:
 
@@ -30,7 +30,7 @@ The image below shows how the meta description text appears in the Google result
 
 Each of your pages should already have a [title tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) within the head. This is likely to be custom per page, just like the meta description can be. This makes it a good location for the meta description tag. Within the layout for each page, add the meta description tag in the `<head>`.
 
-Perhaps you use a partial for some of the tags in your site's `<head>`: content that will be common across all pages, such as meta viewports, UTF-8 encoding, common stylesheets or Google Anayltics tags. Since a meta description is custom to the content of each page, it's unlikely that placing it in this partial will be good enough, since any value you set will be the same across every page. (However, if this is enough for your site, then go ahead!)
+Perhaps you use a partial for some of the tags in your site's `<head>`: content that will be common across all pages, such as meta viewports, UTF-8 encoding, common stylesheets or Google Analytics tags. Since a meta description is custom to the content of each page, it's unlikely that placing it in this partial will be good enough, since any value you set will be the same across every page. (However, if this is enough for your site, then go ahead!)
 
 ```html
 <head>
@@ -42,7 +42,7 @@ Perhaps you use a partial for some of the tags in your site's `<head>`: content 
 
 ### Content for a meta description
 
-A meta description should summarise the contents of a page. Since search engines change their alogrithms all the time, search for the latest advice and revisit your descriptions every now and again to check they still adhere to best practices.
+A meta description should summarise the contents of a page. Since search engines change their algorithms all the time, search for the latest advice and revisit your descriptions every now and again to check they still adhere to best practices.
 
 When you've decided what the description should be, there are different options for where to set it depending on the page type.
 

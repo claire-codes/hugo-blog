@@ -28,7 +28,7 @@ produces the following list:
 
 It's possible to reverse the order of the counters with only HTML - no CSS or JavaScript required!
 
-Add a HTML attribute called `reversed` to the `<ol>` tag.
+Add an HTML attribute called `reversed` to the `<ol>` tag.
 
 The same code as above, only now with the `reversed` attribute:
 

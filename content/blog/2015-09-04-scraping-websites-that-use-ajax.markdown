@@ -33,9 +33,9 @@ puts links.size
 
 I fired up Chrome dev tools and did a visual sanity check that the links existed as expected - they did. A simple jQuery `$('a')` from the console returned an array of 142 elements. What was going on? Why wasn't Nokogiri finding any `<a>` tags?
 
-I poked around in the page scripts and finally realised that all the links were loaded from an Ajax call to a JSON file, then inserted after the inital page load: I needed to allow chance for this JavaScript code to be executed _before_ starting to  scrape. Open-uri's `open` method was too quick for me and only returned the initial page structure.
+I poked around in the page scripts and finally realised that all the links were loaded from an Ajax call to a JSON file, then inserted after the initial page load: I needed to allow chance for this JavaScript code to be executed _before_ starting to  scrape. Open-uri's `open` method was too quick for me and only returned the initial page structure.
 
-Instead I needed to load up the web page using a web driver which would give the scripts time to do their thing. I ended up using Waitr WebDriver as in [this](http://stackoverflow.com/questions/13492449/watir-webdriver-phantomjs-and-ghostdriver) StackOverflow answer. For bonus points I used PhantomJS as it was tidier and less annoying than having Firefox pop up when I ran the script (yup even though it's an ad-hoc task I'll never run again!).
+Instead I needed to load up the web page using a web driver which would give the scripts time to do their thing. I ended up using Watir WebDriver as in [this](http://stackoverflow.com/questions/13492449/watir-webdriver-phantomjs-and-ghostdriver) StackOverflow answer. For bonus points I used PhantomJS as it was tidier and less annoying than having Firefox pop up when I ran the script (yup even though it's an ad-hoc task I'll never run again!).
 
 ```ruby
 require 'watir-webdriver'

@@ -13,7 +13,7 @@ But instead of telling you why you should start blogging, I’ve decided to list
 
 ## The history of clairecodes.com
 
-I started this blog in September 2015. It was first built using Octopress and deployed on Heroku. My first domain was `claireparkerpen.com`! I chose Octopress on the recommendation of a colleage at the time. I used to work with Ruby so it was a natural choice: geared towards beginners, themes built-in and written in Ruby.
+I started this blog in September 2015. It was first built using Octopress and deployed on Heroku. My first domain was `claireparkerpen.com`! I chose Octopress on the recommendation of a colleague at the time. I used to work with Ruby so it was a natural choice: geared towards beginners, themes built-in and written in Ruby.
 
 I soon felt ready to use a more advanced blogging platform. I moved to Jekyll and had a good experience with it. I would still recommend Jekyll today: it’s a very mature project, great documentation and strong community. You don’t need a lot of Ruby knowledge in order to create advanced features with it. I used an open-source theme as a starting point and customised it more and more over the two years I used Jekyll. I transferred my domain to the more mature `claireparker.co.uk` - a few months before getting married and changing my name to Claire Parker-Jones 🤦‍♀️, oh well! No one read my blog except me and a few recruiters.
 

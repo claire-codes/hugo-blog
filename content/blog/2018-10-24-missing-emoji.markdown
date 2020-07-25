@@ -29,7 +29,7 @@ The same thing happens for emoji. However, emoji are less well-supported than th
 - Consider whether you could use another visual representation to communicate your idea:
     - an emoticon :-)
     - an SVG icon
-    - a HTML entity like `&larr;` &larr;
+    - an HTML entity like `&larr;` &larr;
     - an image
 - Avoid using emoji in your content
 

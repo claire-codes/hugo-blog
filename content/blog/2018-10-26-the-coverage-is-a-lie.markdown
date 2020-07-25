@@ -15,7 +15,7 @@ This is something a colleague said today and made me laugh. He does have a point
 
 > Test coverage is a measure used to describe the degree to which the source code of a program is executed when a particular test suite runs. A program with high test coverage, measured as a percentage, has had more of its source code executed during testing, which suggests it has a lower chance of containing undetected software bugs compared to a program with low test coverage.
 
-_Note_: the phrases "code coverage" and "test coverage" are used interchangably.
+_Note_: the phrases "code coverage" and "test coverage" are used interchangeably.
 
 See that word "suggests" in the definition though? That's what I mean! There are several ways to game code coverage stats.
 
@@ -39,6 +39,6 @@ Depending on your code coverage library, if you don't write tests for a particul
 
 Yes, they can be useful in seeing which areas of the codebase aren't covered by tests, and therefore where you need to improve your tests. They give a good indication of how many tests are in the codebase. However, they don't measure how good or robust the tests are. I'm not sure if there is a library that can do that at the moment. Code coverage can't make you write code that considers edge cases and bad input: this is something you have to do yourself as a conscientious developer.
 
-Don't forget that the tests covered by test coverage are often unit tests. Unit tests are necessary in a healthy codebase, but are complemented by other type of tests. Do you have automated integration tests? Manual tests? Browser compatability tests (for your web app)? Unit tests and code coverage are only a facet of testing and shouldn't be relied on as the only indicator of how well tested your codebase is.
+Don't forget that the tests covered by test coverage are often unit tests. Unit tests are necessary in a healthy codebase, but are complemented by other type of tests. Do you have automated integration tests? Manual tests? Browser compatibility tests (for your web app)? Unit tests and code coverage are only a facet of testing and shouldn't be relied on as the only indicator of how well tested your codebase is.
 
 A code coverage report is a useful indicator in how healthy your test suite is, but should not be used as the only metric of how good your tests are.
