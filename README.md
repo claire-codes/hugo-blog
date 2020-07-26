@@ -28,6 +28,8 @@ Two templates for front matter (a.k.a. archetypes) exist: `blog` and `dev-diary`
 
 Ensure the file suffix matches the one used in the archetype, i.e. my archetypes are `.md` files, so if I did `hugo new blog/post.markdown` the archetype wouldn't be used.
 
+I group my posts by years in the codebase, in order to make navigating the code easier because there are so many of them by now. No extra code is needed to output them on the page. Just add the folder name when creating a post and it will end up in the right place, e.g. `hugo new blog/2020/post.md`.
+
 ## Dev Diary
 
 I post this once a week. To generate a new one, type `hugo new dev-diary/2019-02-05-dev-diary.markdown` at the command line, replacing the date in the title. The YAML should be `title`, `date` and `interests` (this field name is a hangover from when the page used to be called "Interesting" and it still sounds best to me). `interests` is a list (bullets are hyphens). Content of the post is posted at the top, followed by the `interests` list.
