@@ -5,7 +5,7 @@ interests:
 - "I converted *[this](/dev-diary/)* page from being named 'Interesting' to 'Dev Diary', because it's more descriptive. I've been meaning to do this for a while and it was satisfying to tick off the list."
 - "I published a [blog post listing all the Internet Points I earned in 2018](/blog/2019-02-05-achievements-unlocked-and-internet-points-earned-in-2018/) so I can keep track of them and make myself feel better on those days when I doubt my skills."
 - "[230 New Emoji Announced for 2019](https://blog.emojipedia.org/230-new-emojis-in-final-list-for-2019/) - we're getting waffles, sloths, otters and loads more in this year's Emoji 12 release! 🎉"
-- "[The Great Divide, CSS Tricks](https://css-tricks.com/the-great-divide/) - an excellent piece that hits the nail on the head for me in terms of how the term 'frontend developer' is too broad and unspecific as a job description. Instead developers tend to specialise in JavaScript or in the UI/UX side of things (personally I want to be more UI/X orientated)."
+- "[The Great Divide, CSS Tricks](https://css-tricks.com/the-great-divide/) - an excellent piece that hits the nail on the head for me in terms of how the term 'frontend developer' is too broad and unspecific as a job description. Instead developers tend to specialise in JavaScript or in the UI/UX side of things (personally I want to be more UI/UX orientated)."
 ---
 
 

@@ -34,6 +34,6 @@ I group my posts by years in the codebase, in order to make navigating the code 
 
 I post this once a week. To generate a new one, type `hugo new dev-diary/2019-02-05-dev-diary.markdown` at the command line, replacing the date in the title. The YAML should be `title`, `date` and `interests` (this field name is a hangover from when the page used to be called "Interesting" and it still sounds best to me). `interests` is a list (bullets are hyphens). Content of the post is posted at the top, followed by the `interests` list.
 
-## SEO page title and descrptions.
+## SEO page title and descriptions.
 
 Each page should have unique meta description tag content, i.e. `<meta name="description" content="foobar">`, for SEO and appearing in search results. Additionally, each page has a `<title>` tag which sets the title at the top of each tab in the browser. Since this is a small site, I've set this specifically on each page rather than putting it in the generic `head.html` template. Although the format is generally the same for each page, this allows you to customise it easily per page: if you want to hardcode a description or title, go ahead. If you want to use the site title, or the generic site description, you can do (`Site.Title` and `Site.Params.Description`). Since not every page has an associated content template either, the method of checking for parameters won't be the same. This method gives the most flexibility.

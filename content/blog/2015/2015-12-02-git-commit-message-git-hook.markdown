@@ -9,9 +9,9 @@ published: false
 
 ## What is a Git hook?
 
-A Git hook is some code that executes when you you hit a trigger in Git commands. They can be tagged on to lots of different events.
+A Git hook is some code that executes when you hit a trigger in Git commands. They can be tagged on to lots of different events.
 
-Eveny time you `git init` a repo and the hidden `.git` directory is created, a directory is created inside this called `hooks`. In this live all the hook scripts, with `.sample` suffixes. They each have a bit a of demo code. In order to use one, just remove the extension and put your code in.
+Eveny time you `git init` a repo and the hidden `.git` directory is created, a directory is created inside this called `hooks`. In this live all the hook scripts, with `.sample` suffixes. They each have a bit of demo code. In order to use one, just remove the extension and put your code in.
 
 Remember the hook files are just executed as shell scripts: you can have shell scripts execute whatever you want: Ruby, Python, Perl scripts or just simple bash commands to do what you want with them.
 

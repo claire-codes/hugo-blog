@@ -9,7 +9,7 @@ categories:
 
 In some forms, the “Confirm email address” or “Confirm password” fields don't allow users to paste text into them. The idea is to make users type their email or password twice to help catch any typos they might have made in those important "Email" and "Password" values.
 
-How is this functionality achieved? How can you stop your users from pasting content into a HTML input field?
+How is this functionality achieved? How can you stop your users from pasting content into an HTML input field?
 
 We can use JavaScript to target an input field’s [paste event](https://developer.mozilla.org/en-US/docs/Web/Events/paste) and change how it works:
 

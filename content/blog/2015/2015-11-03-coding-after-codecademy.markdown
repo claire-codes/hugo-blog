@@ -15,11 +15,11 @@ Here's some of the points I mentioned in my talk. This isn't a list of tutorials
 
 It's scary leaving the comfort blanket of guided tutorials and earning badges each time you write a function, but you have to take the plunge eventually. Think of a simple app and start googling: adding search terms like 'example', 'how to' or 'tutorial' can lead you in the right direction. What's a simple app? The trusty To-Do List app is dull but great practice for standard tasks like creating, deleting and editing data and interacting with the DOM. A multiple choice quiz is another old faithful, like in this [excellent tutorial](http://javascriptissexy.com/how-to-learn-javascript-properly/).
 
-But once you've got an idea of what you want to achieve, don't get trapped in a cycle of reading endless tutorials or textbooks or watching videos, remember to write some code! When you're following an example, start up the dev console in the broswer or open a new file and try the code out yourself so you ensure you're actively learning what you're reading about.
+But once you've got an idea of what you want to achieve, don't get trapped in a cycle of reading endless tutorials or textbooks or watching videos, remember to write some code! When you're following an example, start up the dev console in the browser or open a new file and try the code out yourself so you ensure you're actively learning what you're reading about.
 
 Don't know where to start? Break the task down into tiny steps, for example:
 
-  * Create a HTML page that says 'Hello World' and display it in your browser.
+  * Create an HTML page that says 'Hello World' and display it in your browser.
   * Add a button to the page that says 'Click me!'.
   * Attach an event to the button, so that when you click it, it logs a message to the console.
   * Change the button event to change the text on the screen to 'Goodbye World'. And so on.
@@ -28,7 +28,7 @@ Don't forget to put your project on GitHub! You can learn about source control A
 
 ## Write bad code
 
-You will have to Google everything you do at this point, but that's OK! We devs spend a lot of pur time on StackOverflow. Avoid mindlessly copying-and-pasting: at least understand what the code is doing before hitting Control+V.
+You will have to Google everything you do at this point, but that's OK! We devs spend a lot of our time on StackOverflow. Avoid mindlessly copying-and-pasting: at least understand what the code is doing before hitting Control+V.
 
 When you're coding, experiment and break the code examples: what happens if you pass a string in instead of a number to that method? Become familiar with error messages and don't be scared of broken code!
 

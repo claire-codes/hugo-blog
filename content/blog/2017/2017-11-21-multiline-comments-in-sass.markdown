@@ -10,7 +10,7 @@ categories:
 - sass
 ---
 
-_Note_: These rules are specifically for [sass-lint](https://github.com/sasstools/sass-lint), because that's my linter of choice. However, equivalent rules will (probably) exist for other linters such as styelint or csslint.
+_Note_: These rules are specifically for [sass-lint](https://github.com/sasstools/sass-lint), because that's my linter of choice. However, equivalent rules will (probably) exist for other linters such as stylelint or csslint.
 
 If you lint your Sass code using an automated tool like sass-lint, you might have encountered the rule: `no-css-comments`. Depending on the severity level in your linter config, this will trigger an error or a warning when it encounters comments like this `/* I am a CSS style comment */`. The first time I saw this rule, I was confused - why shouldn't I be using comments like this:
 
@@ -92,7 +92,7 @@ These examples will cause errors in both CSS and Sass.
 
 ## However!
 
-The Sass guidelines do recommend using multiline comments, mainly for DocBlock type information at the top of a section. See the [SASS guidelines documemtation](https://sass-guidelin.es/#commenting).
+The Sass guidelines do recommend using multiline comments, mainly for DocBlock type information at the top of a section. See the [SASS guidelines documentation](https://sass-guidelin.es/#commenting).
 
 ## Workaround
 

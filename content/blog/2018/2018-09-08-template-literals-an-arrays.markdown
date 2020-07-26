@@ -49,7 +49,7 @@ Note that this only happens to arrays between the dollar and curly brackets. If 
 // "[3,2,1]"
 ```
 
-OK, but what if I really really want the square brackets in my resulting string? (The problem that inspired this whole blog post: I wanted to write a dynamic GraphQL query that took an array as a field argument).
+OK, but what if I really, really want the square brackets in my resulting string? (The problem that inspired this whole blog post: I wanted to write a dynamic GraphQL query that took an array as a field argument).
 
 Surround the variable interpolation syntax with square brackets and problem solved:
 

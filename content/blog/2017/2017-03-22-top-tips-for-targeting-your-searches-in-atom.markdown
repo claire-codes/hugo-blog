@@ -9,7 +9,7 @@ categories:
 - atom
 ---
 
-Are you working on a large project in Atom? Dozens of directories? Thousands of files? Innumerable node modules? You may have discovered that Atom isn't the fatest editor out there when executing search queries across an entire project. Give Atom a helping hand by narrowing down the scope of your search with a few simple glob patterns.
+Are you working on a large project in Atom? Dozens of directories? Thousands of files? Innumerable node modules? You may have discovered that Atom isn't the fastest editor out there when executing search queries across an entire project. Give Atom a helping hand by narrowing down the scope of your search with a few simple glob patterns.
 
 <div class="c-tldr">
     <h2 class="c-tldr__title">TL;DR</h2>

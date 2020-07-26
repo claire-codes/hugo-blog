@@ -32,7 +32,7 @@ You can't just randomly start chaining methods and hope they work. Chaining work
 1. methods within an object
 2. adding methods to a prototype
 
-Our object contains an internal property that we'll modify with our chianed methods. In addition it will have a method that takes a parameter to actually do something useful with, and a final method that returns this value - this function won't need to return `this` as it won't have any other methods chaining off it.
+Our object contains an internal property that we'll modify with our chained methods. In addition it will have a method that takes a parameter to actually do something useful with, and a final method that returns this value - this function won't need to return `this` as it won't have any other methods chaining off it.
 
 ## 1. Use an object
 

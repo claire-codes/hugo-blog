@@ -70,7 +70,7 @@ Play along at home in JSBin or JSFiddle if you don't believe me. So why is this?
 
 See it? It's that word __precede__. Applying the clear property to an element means that it doesn't want floats in front of it. It doesn't care if the element immediately after it floats, hence why BETA and GAMMA are adjacent. So the `clear: both` is a slight red herring in that it will only apply in one direction. Using `both` is like safe-guarding in case you don't know whether your element is floating to the left or the right.
 
-Why wouldn;t you know which side the preceding element is? Well, remember that 'preceding' looks different depending which direction you're floating in: let's float the boxes right and see what happens now:
+Why wouldn't you know which side the preceding element is? Well, remember that 'preceding' looks different depending which direction you're floating in: let's float the boxes right and see what happens now:
 
 ```html
 <style>

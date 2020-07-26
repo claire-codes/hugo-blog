@@ -1,7 +1,7 @@
 ---
 title: "Styling list bullets with emoji"
 date: 2019-04-26T11:48:09+01:00
-summary: "Explaining two methods for styling the bullets in a HTML list with emoji: the counter-style at-rule and the before pseudo-element."
+summary: "Explaining two methods for styling the bullets in an HTML list with emoji: the counter-style at-rule and the before pseudo-element."
 categories:
 - emoji
 - css
@@ -27,7 +27,7 @@ CSS [at-rules](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule) are sta
 
 The [`@counter-style` at-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style) was proposed in order to provide more options and functionality to the existing set of bullet styles in HTML lists.
 
-[`@counter-style` is a level 3 proposal](https://drafts.csswg.org/css-counter-styles-3/), at Candidate Recommendation stage, which means that the spec is stable enough to be implemented by browsers. However, as of April 2019 it is only supported by Firefox ([caniuse stats for `@counter-style`](https://caniuse.com/#feat=css-at-counter-style)). Example output in this post is provided as a image, although the code for all examples is available in the [CodePen at the bottom of the page](#codepen).
+[`@counter-style` is a level 3 proposal](https://drafts.csswg.org/css-counter-styles-3/), at Candidate Recommendation stage, which means that the spec is stable enough to be implemented by browsers. However, as of April 2019 it is only supported by Firefox ([caniuse stats for `@counter-style`](https://caniuse.com/#feat=css-at-counter-style)). Example output in this post is provided as an image, although the code for all examples is available in the [CodePen at the bottom of the page](#codepen).
 
 ### Counter-style rule example
 

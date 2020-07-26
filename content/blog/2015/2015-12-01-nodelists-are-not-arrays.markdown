@@ -73,7 +73,7 @@ var spreadArrayThing = [...whoami];
 
 #### P.S.
 
-Find the type of a object foo using:
+Find the type of an object foo using:
 `Object.prototype.toString.call(foo)`
 
 ### Further Reading

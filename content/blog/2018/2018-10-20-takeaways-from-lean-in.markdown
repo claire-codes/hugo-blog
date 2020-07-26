@@ -15,11 +15,11 @@ This was the title of a chapter in the book and Sheryl had a really refreshing t
 
 ## Partnerships
 
-There was lots of wonderful stuff written about how important it is to have a supportive partner in your journey for career success. Sheryl wrote about how she rarely saw high-ranking women whose partners didn't share childcare responsibility. I'd never read anything talking about this subject before, and the positive spin made me partiuclarly happy.
+There was lots of wonderful stuff written about how important it is to have a supportive partner in your journey for career success. Sheryl wrote about how she rarely saw high-ranking women whose partners didn't share childcare responsibility. I'd never read anything talking about this subject before, and the positive spin made me particularly happy.
 
 ## Child-rearing
 
-There was so much space in this book given up to having a family and how to handle having a career alongside chlidren. Again, this is something I don't hear many people talking about so it was great to see someone with real and positive experiences talk about it.
+There was so much space in this book given up to having a family and how to handle having a career alongside children. Again, this is something I don't hear many people talking about so it was great to see someone with real and positive experiences talk about it.
 
 ## Leadership
 

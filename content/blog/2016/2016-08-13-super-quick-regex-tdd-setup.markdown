@@ -126,7 +126,7 @@ Note that we'll add a variable to hold the regex but we won't fill it in correct
 
 Well OK, the `shouldn't work` block is passing, as our regex is wrong and won't match any of them, which we expect. We use those assertions as our safety net - when we start to write our regex properly, if some of these match then we know the regex is wrong.
 
-And then all is left is to write a regex that makes all of the tests pass: some strings are matched and others aren't. Spolier alert:
+And then all is left is to write a regex that makes all of the tests pass: some strings are matched and others aren't. Spoiler alert:
 
 ```javascript
 var myRegex = /^(?!en).*light(?!er)/;
