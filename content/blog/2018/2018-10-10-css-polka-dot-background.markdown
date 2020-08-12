@@ -2,6 +2,8 @@
 title: "CSS Polka Dot Background"
 date: 2018-10-10T23:14:56+01:00
 summary: Explaining how to create a polka dot effect background pattern in CSS.
+aliases:
+- /blog/2018/2018-10-10-css-polka-dot-background/
 categories:
 - blogtober
 - css

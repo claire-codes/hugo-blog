@@ -3,6 +3,8 @@ layout: post
 title: "NodeLists are not Arrays"
 date: 2015-12-01 00:00:16 +0000
 comments: true
+aliases:
+- /blog/2015/2015-12-01-nodelists-are-not-arrays/
 categories:
 - javascript
 published: true

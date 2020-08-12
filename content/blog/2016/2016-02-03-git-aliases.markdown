@@ -3,6 +3,8 @@ layout: post
 title: "Git Aliases"
 date: 2016-02-03 19:42:23 +0000
 comments: true
+aliases:
+- /blog/2016/2016-02-03-git-aliases/
 categories:
 - git
 ---

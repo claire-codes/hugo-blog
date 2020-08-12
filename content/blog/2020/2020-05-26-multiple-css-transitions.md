@@ -2,6 +2,8 @@
 title: "CSS Transitions for Multiple Properties on One Element"
 date: 2020-05-26T21:35:20+01:00
 summary: "How to declare more than one transition property in CSS when 'transition: all 1s ease' won't do."
+aliases:
+- /blog/2020/2020-05-26-multiple-css-transitions/
 categories:
   - css
 ---

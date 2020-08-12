@@ -2,6 +2,8 @@
 title: "Styling list bullets with emoji"
 date: 2019-04-26T11:48:09+01:00
 summary: "Explaining two methods for styling the bullets in an HTML list with emoji: the counter-style at-rule and the before pseudo-element."
+aliases:
+- /blog/2019/2019-04-26-styling-list-bullets-with-emoji/
 categories:
 - emoji
 - css

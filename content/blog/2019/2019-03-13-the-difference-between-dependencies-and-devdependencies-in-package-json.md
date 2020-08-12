@@ -2,6 +2,8 @@
 title: "The difference between dependencies and devDependencies in a JavaScript project"
 date: 2019-03-13T10:08:30Z
 summary: "Explaining where to install a package in your project's package.json file: dependencies or devDependencies."
+aliases:
+- /blog/2019/2019-03-13-the-difference-between-dependencies-and-devdependencies-in-package-json/
 categories:
   - javascript
 ---

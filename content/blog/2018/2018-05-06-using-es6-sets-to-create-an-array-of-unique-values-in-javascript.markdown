@@ -2,6 +2,8 @@
 title: "How to create an array of unique values in JavaScript using Sets"
 date: 2018-05-06T23:57:39+01:00
 summary: How to remove all duplicated values from an array by using the Set data object introduced in ES6.
+aliases:
+- /blog/2018/2018-05-06-using-es6-sets-to-create-an-array-of-unique-values-in-javascript/
 categories:
 - javascript
 ---

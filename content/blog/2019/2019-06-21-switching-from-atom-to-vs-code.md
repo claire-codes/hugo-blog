@@ -2,6 +2,8 @@
 title: "Switching From Atom to VS Code"
 date: 2019-06-21T11:43:45+01:00
 summary: "Reflecting on the last six months using VS Code as my code editor after three years with Atom"
+aliases:
+- /blog/2019/2019-06-21-switching-from-atom-to-vs-code/
 categories:
   - longread
 ---

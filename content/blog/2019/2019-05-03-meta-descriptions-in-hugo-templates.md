@@ -2,6 +2,8 @@
 title: "Meta Descriptions in Hugo Templates"
 date: 2019-05-03T15:35:48+01:00
 summary: "How to add meta description content to a Hugo page template."
+aliases:
+  - /blog/2019/2019-05-03-meta-descriptions-in-hugo-templates/
 categories:
   - hugo
   - meta

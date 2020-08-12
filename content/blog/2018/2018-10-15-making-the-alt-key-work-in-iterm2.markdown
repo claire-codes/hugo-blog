@@ -2,6 +2,8 @@
 title: "Making the Alt Key Work in iTerm2"
 date: 2018-10-15T22:13:26+01:00
 summary: A quick tip to enable using the Alt or Option key to skip words in iTerm2
+aliases:
+- /blog/2018/2018-10-15-making-the-alt-key-work-in-iterm2/
 categories:
   - blogtober
 ---
