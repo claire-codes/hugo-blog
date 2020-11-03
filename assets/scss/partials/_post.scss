@@ -34,3 +34,13 @@
 .c-post__date {
     font-family: $header-font-family;
 }
+
+.c-example-modal {
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 2px 2px #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 1em;
+}
