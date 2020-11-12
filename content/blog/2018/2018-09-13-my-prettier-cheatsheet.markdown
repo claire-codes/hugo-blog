@@ -60,7 +60,7 @@ There are many ways to add these rules to your configuration. Here are a few met
 2. Add the options to the `package.json` script in the CLI format:
 
     ```json
-    "prettier": "./node_modules/.bin/prettier --single-quote --trailing-comma es5 --tab-width 4 --write '*.js'"`
+    "prettier": "./node_modules/.bin/prettier --single-quote --trailing-comma es5 --tab-width 4 --write '*.js'"
     ```
 
 3. Add the rules under a key called `prettier` in the `package.json` file.
