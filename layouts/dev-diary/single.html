@@ -16,7 +16,36 @@
             <article class="o-main__wrapper c-post">
                 <h1 class="c-post__title">{{ .Title }}</h1>
                 <div>
+                    
                     <p>{{.Content}}</p>
+
+                    {{ if isset .Params "doing" }}
+                        <h2>What I've been doing this week:</h2>
+                        <ul class="c-dev-diary__entry-list">
+                            {{ range .Params.doing }}
+                            <li class="c-dev-diary__entry">{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+
+                    {{ if isset .Params "reading" }}
+                        <h2>What I've been reading this week:</h2>
+                        <ul class="c-dev-diary__entry-list">
+                            {{ range .Params.reading }}
+                            <li class="c-dev-diary__entry">{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+
+                    {{ if isset .Params "watching" }}
+                        <h2>What I've been watching this week:</h2>
+                        <ul class="c-dev-diary__entry-list">
+                            {{ range .Params.watching }}
+                            <li class="c-dev-diary__entry">{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                    
                     <ul class="c-dev-diary__entry-list">
                         {{ range .Params.interests }}
                         <li class="c-dev-diary__entry">{{ . | markdownify }}</li>
