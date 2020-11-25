@@ -23,7 +23,7 @@
 				{{ range .Data.Pages }}
 					<li class="c-dev-diary__item">
 						<h2 class="c-dev-diary__date">
-							<a class="c-dev-diary__link" href="{{ .Permalink }}">{{ .Date.Format "Monday, 2 January 2006" }}</a>
+							<a class="c-dev-diary__link" href="{{ .Permalink }}">{{ .Title }}</a>
 						</h2>
 
 						{{.Content}}
