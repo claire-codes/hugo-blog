@@ -10,6 +10,8 @@ A random emoji is prefixed to every commit message I write as a pre-commit hook.
 
 Install hugo with `brew install hugo`. Install node packages with `npm i`.
 
+Clone the `hugo-ted` theme repo in the themes folder.
+
 Run `hugo server` locally and go to `http://localhost:1313/`. Push changes and Netlify takes care of the rest.
 
 ## Sass
