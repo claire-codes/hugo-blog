@@ -207,3 +207,11 @@
     $color-dev 50%
   );
 }
+
+.icon--coffee {
+  background-image: linear-gradient(
+    to right,
+    $color-footer-icon-background-start 50%,
+    $color-coffee 50%
+  );
+}
