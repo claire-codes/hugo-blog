@@ -19,7 +19,7 @@
 					{{.Content}}
 				</div>
 
-				<ul class="c-dev-diary__list">
+				<ul class="c-dev-diary__list c-view-all--off js-post-list">
 				{{ range .Data.Pages }}
 					<li class="c-dev-diary__item">
 						<h2 class="c-dev-diary__date">
@@ -32,8 +32,12 @@
 					</li>
 				{{ end }}
 				</ul>
+				<div class="c-view-all__container"><button type="button" class="c-view-all__button js-view-all-button">View All</button>
+				</div>
 			</div>
 		</main>
 		{{ partial "footer.html" . }}
+
+		<script src="/js/view-all.js"></script>
 	</body>
 </html>

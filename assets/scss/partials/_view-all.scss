@@ -1,5 +1,6 @@
 .c-view-all--off {
-    .c-post-list__item:nth-child(n+11) {
+    .c-post-list__item:nth-child(n+11),
+    .c-dev-diary__item:nth-child(n+11) {
         display: none;
     }
 }
@@ -11,6 +12,7 @@
     background-color: $color-view-all-button;
     color: $color-view-all-button-text;
     border: none;
+    cursor: pointer;
 }
 
 .c-view-all__container {
