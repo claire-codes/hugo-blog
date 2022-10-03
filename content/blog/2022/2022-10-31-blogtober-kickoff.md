@@ -1,6 +1,6 @@
 ---
 title: "Blogtober 2022 Introduction"
-date: 2022-09-30T13:27:07+01:00
+date: 2022-10-01T13:27:07+01:00
 summary: "Introduction and contents page for Blogtober 2022"
 categories:
 - blogtober
@@ -9,6 +9,8 @@ categories:
 ## All Blogtober 2022 Posts
 
 - 1st October: this post
+- 2nd October: [My Experience With a Standing Desk](/blog/2022-10-02-my-experience-with-a-standing-desk)
+- 3rd October: [Accessible Grey Colour Combinations](/blog/2022-10-03-accessible-grey-colour-combinations/)
 
 ## Blogtober 2022
 
