@@ -4,6 +4,7 @@ title = "clairecodes"
 theme = "hugo-ted"
 author = "Claire Parker-Jones"
 googleAnalytics = "UA-67279079-1"
+googleAnalytics4ID = "G-D6XYX34TL2"
 enableRobotsTXT = true
 
 [menu]
