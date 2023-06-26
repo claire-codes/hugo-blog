@@ -1,7 +1,8 @@
-{{ if .Site.Params.GoogleAnalytics4ID }}
-<meta name="theme-color" content="#7E6DD2">
-{{ partial "analytics-gtag.html" . }}
+{{ if .Site.Params.GoogleAnalyticsID }}
+    {{ partial "analytics-gtag.html" . }}
 {{ end }}
+
+<meta name="theme-color" content="#7E6DD2">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,6 +31,3 @@
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
-
-{{ template "_internal/google_analytics_async.html" . }}
-

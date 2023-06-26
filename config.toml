@@ -3,8 +3,6 @@ languageCode = "en-gb"
 title = "clairecodes"
 theme = "hugo-ted"
 author = "Claire Parker-Jones"
-googleAnalytics = "UA-67279079-1"
-googleAnalytics4ID = "G-D6XYX34TL2"
 enableRobotsTXT = true
 
 [menu]
@@ -32,6 +30,7 @@ enableRobotsTXT = true
   Description = "The personal website, blog and dev diary of clairecodes"
   EmailAddress = "claire@clairecodes.com"
   DevToId =  "clairecodes"
+  GoogleAnalyticsID = "G-D6XYX34TL2"
 [permalinks]
   blog = "/blog/:year-:month-:day-:title/`"
   dev-diary = "/dev-diary/:year-:month-:day/"
