@@ -19,10 +19,10 @@
 					{{.Content}}
 				</div>
 
-				<div>There are now {{ len .Data.Pages }} dev diaries! But only the latest 5 are posted here. I'll be posting the older ones under an archive soon.</div>
+				<div>There are now {{ len .Pages }} dev diaries! But only the latest 5 are posted here. I'll be posting the older ones under an archive soon.</div>
 				
 				<ul class="c-dev-diary__list c-view-all--off js-post-list">
-				{{ range first 5 .Data.Pages }}
+				{{ range first 5 .Pages }}
 					<li class="c-dev-diary__item">
 						<h2 class="c-dev-diary__date">
 							<a class="c-dev-diary__link" href="{{ .Permalink }}">{{ .Title }}</a>
