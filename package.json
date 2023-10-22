@@ -15,7 +15,7 @@
     "sass-lint": "^1.13.1"
   },
   "dependencies": {
-    "autoprefixer": "^8.1.0",
-    "postcss-cli": "^7.1.0"
+    "autoprefixer": "^10.4.16",
+    "postcss-cli": "^10.1.0"
   }
 }
