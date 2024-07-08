@@ -21,7 +21,6 @@ enableRobotsTXT = true
 
 [params]
   GitHubID = "claire-codes"
-  TwitterID = "claireparkerpen"
   GitHubRepoID = "hugo-blog"
   CodePenID = "clairecodes"
   LinkedInID = "claireparkerjones"
